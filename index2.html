@@ -1,0 +1,1493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peak Renewable - Sustainable Energy Solutions</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Custom font import and Tailwind configuration */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+        :root {
+            --color-primary-green: #047857;
+            /* Emerald-600 */
+            --color-secondary-blue: #1d4ed8;
+            /* Blue-700 */
+            --color-accent-yellow: #facc15;
+            /* Yellow-400 */
+            --font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-family);
+            background-color: white;
+            transition: background-color 0.3s;
+        }
+
+        .text-green-peak {
+            color: var(--color-primary-green);
+        }
+
+        .bg-green-peak {
+            background-color: var(--color-primary-green);
+        }
+
+        .bg-blue-peak {
+            background-color: var(--color-secondary-blue);
+        }
+
+        .bg-yellow-accent {
+            background-color: var(--color-accent-yellow);
+        }
+
+        /* Mobile menu specific styles */
+        #mobile-menu {
+            transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+        }
+
+        #mobile-menu.open {
+            max-height: 500px;
+            /* Arbitrary large enough number */
+            opacity: 1;
+        }
+        
+        /* Ensure prose styles apply within the article content */
+        .prose {
+            max-width: 100%;
+        }
+        
+        /* Ensure images in prose are rounded */
+        .prose img {
+            border-radius: 0.75rem; /* rounded-xl */
+        }
+
+        /* Style for the chat messages area */
+        #advisor-messages {
+            max-height: 20rem; /* Fixed height for chat window */
+            height: 20rem;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding-bottom: 0.5rem;
+        }
+
+        /* Message bubble styling for responsiveness */
+        .max-w-chat-bubble {
+            max-width: 80%; /* Limit chat bubble width on mobile */
+        }
+        @media (min-width: 768px) {
+             .max-w-chat-bubble {
+                max-width: 75%; /* Increase width limit on desktop */
+            }
+        }
+        
+        /* Style for share buttons */
+        .share-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem; /* rounded-lg */
+            font-weight: 500; /* font-medium */
+            transition: opacity 0.2s;
+            text-decoration: none;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .share-button:hover {
+            opacity: 0.9;
+        }
+        .share-button i {
+            width: 1.25rem; /* w-5 */
+            height: 1.25rem; /* h-5 */
+            margin-right: 0.5rem; /* mr-2 */
+        }
+        
+    </style>
+
+</head>
+
+<body class="min-h-screen flex flex-col">
+    <!-- Navigation Header (MODIFIED) -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <!-- Logo/Company Name -->
+            <a href="#" onclick="showPage('home')" class="flex items-center space-x-2">
+                <div class="p-2 rounded-full bg-yellow-accent">
+                    <i data-lucide="sun" class="w-6 h-6 text-green-peak"></i>
+                </div>
+                <span class="text-2xl font-bold text-blue-peak">Peak Renewable</span>
+            </a>
+
+            <!-- Desktop Navigation (MODIFIED) -->
+            <nav class="hidden md:flex space-x-8 font-medium">
+                <a href="#" onclick="showPage('home')" class="text-gray-700 hover:text-green-peak transition duration-150">Home</a>
+                <!-- NEW: About Us Link -->
+                <a href="#" onclick="showPage('about')" class="text-gray-700 hover:text-green-peak transition duration-150">About Us</a>
+                <a href="#" onclick="showPage('services')" class="text-gray-700 hover:text-green-peak transition duration-150">Services</a>
+                <a href="#" onclick="showPage('articles')" class="text-gray-700 hover:text-green-peak transition duration-150">Articles</a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100" aria-label="Toggle menu">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu (MODIFIED) -->
+        <nav id="mobile-menu" class="md:hidden bg-gray-50 border-t border-gray-200">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#" onclick="showPage('home')" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-200 transition duration-150">Home</a>
+                <!-- NEW: About Us Link -->
+                <a href="#" onclick="showPage('about')" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-200 transition duration-150">About Us</a>
+                <a href="#" onclick="showPage('services')" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-200 transition duration-150">Services</a>
+                <a href="#" onclick="showPage('articles')" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-200 transition duration-150">Articles</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main id="content" class="flex-grow">
+        <!-- --------------------------------- HOME PAGE (MODIFIED) --------------------------------- -->
+        <section id="home" class="page-content py-12 md:py-24 bg-white hidden">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Hero Section (MODIFIED) -->
+                <div class="bg-blue-peak text-white rounded-3xl p-8 md:p-16 shadow-xl mb-16">
+                    <div class="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
+                        <div class="order-2 lg:order-1">
+                            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">Powering Your Future with <span class="text-yellow-accent">Solar Energy.</span></h1>
+                            <p class="text-xl md:text-2xl mb-8 opacity-90">
+                                Peak Renewable is your trusted partner for professional <strong>Solar Installation, Maintenance, and Expert Consultation</strong> in Nigeria. Achieve energy independence today.
+                            </p>
+                            <a href="#" onclick="showPage('services')" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg shadow-lg transition duration-300 ease-in-out bg-yellow-accent text-gray-900 hover:bg-yellow-500 text-lg">
+                                Explore Our Solutions
+                                <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
+                            </a>
+                        </div>
+                        <!-- NEW: Replaced icon with placeholder image -->
+                        <div class="order-1 lg:order-2 flex justify-center p-8">
+                            <img src="https://placehold.co/500x400/facc15/047857?text=Modern+Solar+Setup" 
+                                 alt="Modern solar panel installation" 
+                                 class="w-full h-auto max-w-md rounded-2xl shadow-lg"
+                                 onerror="this.src='https://placehold.co/500x400/facc15/047857?text=Image+Placeholder'">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Core Services Overview (UNCHANGED) -->
+                <h2 class="text-3xl font-bold text-center text-green-peak mb-12">Our Commitment to Clean Energy</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="p-6 bg-gray-50 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-green-peak">
+                        <i data-lucide="handshake" class="w-10 h-10 text-blue-peak mb-4"></i>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Solar Installation</h3>
+                        <p class="text-gray-600">Expert design and installation of residential and commercial solar systems for maximum efficiency and savings.</p>
+                    </div>
+                    <div class="p-6 bg-gray-50 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-green-peak">
+                        <i data-lucide="wrench" class="w-10 h-10 text-blue-peak mb-4"></i>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">System Maintenance</h3>
+                        <p class="text-gray-600">Proactive and corrective maintenance services to ensure your system performs optimally year after year.</p>
+                    </div>
+                    <div class="p-6 bg-gray-50 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-green-peak">
+                        <i data-lucide="lightbulb" class="w-10 h-10 text-blue-peak mb-4"></i>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Energy Consultation</h3>
+                        <p class="text-gray-600">Personalized consultation to help you choose the right renewable energy solution for your specific needs.</p>
+                    </div>
+                </div>
+
+                <!-- Products Section (UNCHANGED) -->
+                <div class="mt-16 bg-gray-100 p-8 rounded-2xl shadow-inner">
+                    <h2 class="text-3xl font-bold text-center text-blue-peak mb-8">Quality Products</h2>
+                    <p class="text-center text-gray-600 mb-8 max-w-2xl mx-auto">We supply premium solar components to ensure reliability and longevity for your power system.</p>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                        <div class="p-4 bg-white rounded-lg shadow-md">
+                            <i data-lucide="battery-charging" class="w-8 h-8 text-green-peak mx-auto mb-2"></i>
+                            <p class="text-lg font-medium">Batteries</p>
+                        </div>
+                        <div class="p-4 bg-white rounded-lg shadow-md">
+                            <i data-lucide="panel-top" class="w-8 h-8 text-green-peak mx-auto mb-2"></i>
+                            <p class="text-lg font-medium">Solar Panels</p>
+                        </div>
+                        <div class="p-4 bg-white rounded-lg shadow-md">
+                            <i data-lucide="plug" class="w-8 h-8 text-green-peak mx-auto mb-2"></i>
+                            <p class="text-lg font-medium">Inverters</p>
+                        </div>
+                        <div class="p-4 bg-white rounded-lg shadow-md">
+                            <i data-lucide="box" class="w-8 h-8 text-green-peak mx-auto mb-2"></i>
+                            <p class="text-lg font-medium">Accessories</p>
+                        </div>
+                    </div>
+                    <!-- Get Product Quote Link with FIXED WhatsApp Icon -->
+                    <div class="mt-10 text-center">
+                        <a href="https://wa.me/2348087829365?text=Hello%20Peak%20Renewable,%20I%20need%20a%20quote%20for%20products." target="_blank" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg shadow-lg transition duration-300 ease-in-out bg-green-peak text-white hover:bg-green-700 text-lg">
+                            <!-- Inline SVG for WhatsApp Icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 mr-2">
+                                <path d="M12 0C5.373 0 0 5.373 0 12c0 2.247.604 4.341 1.768 6.136l-1.127 4.144 4.254-1.118A11.97 11.97 0 0 0 12 24c6.627 0 12-5.373 12-12C24 5.373 18.627 0 12 0zM12 22a9.982 9.982 0 0 1-5.11-.989l-.364-.216-3.79 1l1.01-3.743-.24-.383A9.998 9.998 0 0 1 12 2C6.477 2 2 6.477 2 12a9.983 9.983 0 0 0 2.63 6.64l.115.176-1.077 3.974 4.075-1.071.18.106A9.969 9.969 0 0 0 12 22zm3.3-6.42a.846.846 0 0 0-.251-.212c-.1-.055-.65-.32-.756-.358a.833.833 0 0 0-.154.025c-.097.037-.563.687-.69.832a.56.56 0 0 1-.3.26c-.15.056-.27-.015-.46-.07-.49-.15-1.896-.7-3.61-2.222a4.99 4.99 0 0 1-1.116-1.503.738.738 0 0 1 .15-.71c.07-.076.155-.18.225-.262.068-.08.136-.17.18-.25a.333.333 0 0 0 .044-.24.78.78 0 0 0-.115-.195c-.06-.115-.55-.66-.757-.89a.955.955 0 0 0-.36-.26c-.15-.054-.31-.03-.47-.03-.17 0-.35.06-.52.27-.17.21-1.11 1.07-1.11 2.607 0 1.537 1.135 2.923 1.285 3.123.15.2.29.23.56.23 1.04 0 2.93-.9 3.69-1.24a5.05 5.05 0 0 0 2.06-.678.868.868 0 0 0 .53-.88c-.02-.21-.085-.355-.16-.47z" />
+                            </svg>
+                            Get Product Quote via WhatsApp
+                        </a>
+                        <p class="text-sm text-gray-600 mt-3">Or <a href="mailto:oluwanifemis919@gmail.com?subject=Product%20Quote%20Request" class="text-blue-peak hover:underline font-medium">email us</a> for product details and pricing.</p>
+                    </div>
+                </div>
+
+                <!-- Coming Soon Section (MODIFIED) -->
+                <div class="mt-16 text-center">
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">Future of Energy, Starting Now.</h2>
+                    <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                        We are actively expanding our portfolio to include specialized services in <strong>other renewable energy aspects</strong>. Stay tuned for updates on our wind, hydro, and biomass solutions!
+                    </p>
+                    <!-- MODIFIED: Link to new 'about' page which contains contact info -->
+                    <a href="#" onclick="showPage('about')" class="mt-6 inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg shadow-lg transition duration-300 ease-in-out bg-green-peak text-white hover:bg-green-700">
+                        Get Future Updates
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- --------------------------------- SERVICES PAGE (MODIFIED) --------------------------------- -->
+        <section id="services" class="page-content py-12 md:py-20 bg-gray-50 hidden">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-extrabold text-blue-peak">Our Renewable Energy Services</h2>
+                    <p class="text-xl text-gray-600 mt-3">Solutions designed for reliability, efficiency, and sustainability.</p>
+                </div>
+
+                <div class="space-y-12">
+                    <!-- Service Block 1: Solar Installation (MODIFIED) -->
+                    <div class="p-8 bg-white rounded-xl shadow-2xl lg:grid lg:grid-cols-3 lg:gap-10 border-l-8 border-yellow-accent">
+                        <div class="col-span-2">
+                            <i data-lucide="sun" class="w-10 h-10 text-green-peak mb-4"></i>
+                            <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-3">Solar System Installation</h3>
+                            <p class="text-gray-700 mb-4 leading-relaxed">
+                                From site assessment and custom system design to final commissioning, our certified technicians handle the entire installation process. We use the highest-quality <strong>solar panels, inverters, and battery storage</strong> systems to provide you with a reliable and powerful off-grid or grid-tied solution.
+                            </p>
+                            <ul class="list-disc pl-5 text-gray-600 space-y-1">
+                                <li>Residential and Commercial Projects</li>
+                                <li>Load Auditing and Sizing</li>
+                                <li>Quality Assurance and Warranty</li>
+                            </ul>
+                        </div>
+                        <div class="mt-6 lg:mt-0 flex flex-col space-y-4">
+                            <!-- NEW: Placeholder Image -->
+                            <img src="https://placehold.co/400x300/047857/ffffff?text=Installation+Service" 
+                                 alt="Solar panel installation in progress" 
+                                 class="w-full h-auto rounded-xl shadow-md mb-4"
+                                 onerror="this.src='https://placehold.co/400x300/047857/ffffff?text=Image+Placeholder'">
+                            <h4 class="text-lg font-semibold text-gray-700">Ready to install?</h4>
+                            <a href="https://wa.me/2348087829365?text=Hello%20Peak%20Renewable,%20I%20am%20interested%20in%20Solar%20Installation%20Services." target="_blank" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg shadow-lg transition duration-300 ease-in-out bg-green-peak text-white hover:bg-green-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 mr-2">
+                                    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.247.604 4.341 1.768 6.136l-1.127 4.144 4.254-1.118A11.97 11.97 0 0 0 12 24c6.627 0 12-5.373 12-12C24 5.373 18.627 0 12 0zM12 22a9.982 9.982 0 0 1-5.11-.989l-.364-.216-3.79 1l1.01-3.743-.24-.383A9.998 9.998 0 0 1 12 2C6.477 2 2 6.477 2 12a9.983 9.983 0 0 0 2.63 6.64l.115.176-1.077 3.974 4.075-1.071.18.106A9.969 9.969 0 0 0 12 22zm3.3-6.42a.846.846 0 0 0-.251-.212c-.1-.055-.65-.32-.756-.358a.833.833 0 0 0-.154.025c-.097.037-.563.687-.69.832a.56.56 0 0 1-.3.26c-.15.056-.27-.015-.46-.07-.49-.15-1.896-.7-3.61-2.222a4.99 4.99 0 0 1-1.116-1.503.738.738 0 0 1 .15-.71c.07-.076.155-.18.225-.262.068-.08.136-.17.18-.25a.333.333 0 0 0 .044-.24.78.78 0 0 0-.115-.195c-.06-.115-.55-.66-.757-.89a.955.955 0 0 0-.36-.26c-.15-.054-.31-.03-.47-.03-.17 0-.35.06-.52.27-.17.21-1.11 1.07-1.11 2.607 0 1.537 1.135 2.923 1.285 3.123.15.2.29.23.56.23 1.04 0 2.93-.9 3.69-1.24a5.05 5.05 0 0 0 2.06-.678.868.868 0 0 0 .53-.88c-.02-.21-.085-.355-.16-.47z" />
+                                </svg>
+                                Chat on WhatsApp
+                            </a>
+                            <a href="mailto:oluwanifemis919@gmail.com?subject=Inquiry:%20Solar%20Installation%20Service" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg shadow-lg transition duration-300 ease-in-out bg-yellow-accent text-gray-900 hover:bg-yellow-500">
+                                <i data-lucide="mail" class="w-5 h-5 mr-2"></i>
+                                Email for Quote
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Service Block 2: Maintenance & Repair (MODIFIED) -->
+                    <div class="p-8 bg-white rounded-xl shadow-2xl lg:grid lg:grid-cols-3 lg:gap-10 border-l-8 border-yellow-accent">
+                        <div class="col-span-2">
+                            <i data-lucide="wrench" class="w-10 h-10 text-green-peak mb-4"></i>
+                            <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-3">Preventive & Corrective Maintenance</h3>
+                            <p class="text-gray-700 mb-4 leading-relaxed">
+                                Regular maintenance is key to maximizing your system's output and lifespan. We offer comprehensive service plans, fault diagnosis, and quick repairs for <strong>inverters, batteries, and panel cleaning</strong>. Don't wait for a breakdown—keep your power at its peak.
+                            </p>
+                            <ul class="list-disc pl-5 text-gray-600 space-y-1">
+                                <li>Annual Service Contracts</li>
+                                <li>Inverter and Battery Health Checks</li>
+                                <li>Emergency Repair Call-outs</li>
+                            </ul>
+                        </div>
+                        <div class="mt-6 lg:mt-0 flex flex-col space-y-4">
+                            <!-- NEW: Placeholder Image -->
+                            <img src="https://placehold.co/400x300/047857/ffffff?text=Maintenance+Service" 
+                                 alt="Technician maintaining solar panels" 
+                                 class="w-full h-auto rounded-xl shadow-md mb-4"
+                                 onerror="this.src='https://placehold.co/400x300/047857/ffffff?text=Image+Placeholder'">
+                            <h4 class="text-lg font-semibold text-gray-700">Need maintenance?</h4>
+                            <a href="https://wa.me/2348087829365?text=Hello%20Peak%20Renewable,%20I%20need%20Maintenance%20Service." target="_blank" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg shadow-lg transition duration-300 ease-in-out bg-green-peak text-white hover:bg-green-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 mr-2">
+                                    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.247.604 4.341 1.768 6.136l-1.127 4.144 4.254-1.118A11.97 11.97 0 0 0 12 24c6.627 0 12-5.373 12-12C24 5.373 18.627 0 12 0zM12 22a9.982 9.982 0 0 1-5.11-.989l-.364-.216-3.79 1l1.01-3.743-.24-.383A9.998 9.998 0 0 1 12 2C6.477 2 2 6.477 2 12a9.983 9.983 0 0 0 2.63 6.64l.115.176-1.077 3.974 4.075-1.071.18.106A9.969 9.969 0 0 0 12 22zm3.3-6.42a.846.846 0 0 0-.251-.212c-.1-.055-.65-.32-.756-.358a.833.833 0 0 0-.154.025c-.097.037-.563.687-.69.832a.56.56 0 0 1-.3.26c-.15.056-.27-.015-.46-.07-.49-.15-1.896-.7-3.61-2.222a4.99 4.99 0 0 1-1.116-1.503.738.738 0 0 1 .15-.71c.07-.076.155-.18.225-.262.068-.08.136-.17.18-.25a.333.333 0 0 0 .044-.24.78.78 0 0 0-.115-.195c-.06-.115-.55-.66-.757-.89a.955.955 0 0 0-.36-.26c-.15-.054-.31-.03-.47-.03-.17 0-.35.06-.52.27-.17.21-1.11 1.07-1.11 2.607 0 1.537 1.135 2.923 1.285 3.123.15.2.29.23.56.23 1.04 0 2.93-.9 3.69-1.24a5.05 5.05 0 0 0 2.06-.678.868.868 0 0 0 .53-.88c-.02-.21-.085-.355-.16-.47z" />
+                                </svg>
+                                Chat on WhatsApp
+                            </a>
+                            <a href="mailto:oluwanifemis919@gmail.com?subject=Inquiry:%20Maintenance%20and%20Repair%20Service" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg shadow-lg transition duration-300 ease-in-out bg-yellow-accent text-gray-900 hover:bg-yellow-500">
+                                <i data-lucide="mail" class="w-5 h-5 mr-2"></i>
+                                Email Service Request
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Service Block 3: Consultation & Design (MODIFIED) -->
+                    <div class="p-8 bg-white rounded-xl shadow-2xl lg:grid lg:grid-cols-3 lg:gap-10 border-l-8 border-yellow-accent">
+                        <div class="col-span-2">
+                            <i data-lucide="lightbulb" class="w-10 h-10 text-green-peak mb-4"></i>
+                            <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-3">Expert Energy Consultation</h3>
+                            <p class="text-gray-700 mb-4 leading-relaxed">
+                                Unsure where to start? Our consultation services provide you with a clear roadmap to energy independence. We analyze your consumption, budget, and location to recommend the perfect mix of <strong>equipment (inverter, panel, battery)</strong> and services.
+                            </p>
+                            <ul class="list-disc pl-5 text-gray-600 space-y-1">
+                                <li>Feasibility Studies and ROI Analysis</li>
+                                <li>Optimal System Sizing and Component Selection</li>
+                                <li>Future-proofing Advice</li>
+                            </ul>
+                        </div>
+                        <div class="mt-6 lg:mt-0 flex flex-col space-y-4">
+                            <!-- NEW: Placeholder Image -->
+                            <img src="https://placehold.co/400x300/047857/ffffff?text=Consultation+Service" 
+                                 alt="Expert consultation" 
+                                 class="w-full h-auto rounded-xl shadow-md mb-4"
+                                 onerror="this.src='https://placehold.co/400x300/047857/ffffff?text=Image+Placeholder'">
+                            <h4 class="text-lg font-semibold text-gray-700">Need expert advice?</h4>
+                            <a href="https://wa.me/2348087829365?text=Hello%20Peak%20Renewable,%20I%20need%20Energy%20Consultation." target="_blank" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg shadow-lg transition duration-300 ease-in-out bg-green-peak text-white hover:bg-green-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 mr-2">
+                                    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.247.604 4.341 1.768 6.136l-1.127 4.144 4.254-1.118A11.97 11.97 0 0 0 12 24c6.627 0 12-5.373 12-12C24 5.373 18.627 0 12 0zM12 22a9.982 9.982 0 0 1-5.11-.989l-.364-.216-3.79 1l1.01-3.743-.24-.383A9.998 9.998 0 0 1 12 2C6.477 2 2 6.477 2 12a9.983 9.983 0 0 0 2.63 6.64l.115.176-1.077 3.974 4.075-1.071.18.106A9.969 9.969 0 0 0 12 22zm3.3-6.42a.846.846 0 0 0-.251-.212c-.1-.055-.65-.32-.756-.358a.833.833 0 0 0-.154.025c-.097.037-.563.687-.69.832a.56.56 0 0 1-.3.26c-.15.056-.27-.015-.46-.07-.49-.15-1.896-.7-3.61-2.222a4.99 4.99 0 0 1-1.116-1.503.738.738 0 0 1 .15-.71c.07-.076.155-.18.225-.262.068-.08.136-.17.18-.25a.333.333 0 0 0 .044-.24.78.78 0 0 0-.115-.195c-.06-.115-.55-.66-.757-.89a.955.955 0 0 0-.36-.26c-.15-.054-.31-.03-.47-.03-.17 0-.35.06-.52.27-.17.21-1.11 1.07-1.11 2.607 0 1.537 1.135 2.923 1.285 3.123.15.2.29.23.56.23 1.04 0 2.93-.9 3.69-1.24a5.05 5.05 0 0 0 2.06-.678.868.868 0 0 0 .53-.88c-.02-.21-.085-.355-.16-.47z" />
+                                </svg>
+                                Chat on WhatsApp
+                            </a>
+                            <a href="mailto:oluwanifemis919@gmail.com?subject=Inquiry:%20Energy%20Consultation%20Service" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg shadow-lg transition duration-300 ease-in-out bg-yellow-accent text-gray-900 hover:bg-yellow-500">
+                                <i data-lucide="mail" class="w-5 h-5 mr-2"></i>
+                                Email for Consultation
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Service Block 4: Other Renewable Energy (Coming Soon) (MODIFIED) -->
+                    <div class="p-8 bg-white rounded-xl shadow-2xl text-center border-l-8 border-blue-peak">
+                        <i data-lucide="wind" class="w-10 h-10 text-blue-peak mb-4 mx-auto"></i>
+                        <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-3">Other Renewable Energy Solutions (Coming Soon)</h3>
+                        <p class="text-gray-700 mb-4 leading-relaxed max-w-3xl mx-auto">
+                            We are expanding beyond solar to integrate other forms of sustainable energy, including <strong>wind, hydro, and geothermal power</strong>. Stay connected to be the first to utilize these cutting-edge services!
+                        </p>
+                        <!-- MODIFIED: Link to new 'about' page -->
+                        <a href="#" onclick="showPage('about')" class="mt-2 inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg shadow-lg transition duration-300 ease-in-out bg-green-peak text-white hover:bg-green-700">
+                            Notify Me When Available
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- --------------------------------- ARTICLES PAGE (UNCHANGED) --------------------------------- -->
+        <section id="articles" class="page-content py-12 md:py-20 bg-white hidden">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-extrabold text-green-peak">Renewable Energy Insights</h2>
+                    <p class="text-xl text-gray-600 mt-3">Stay informed with the latest trends and guides from Peak Renewable experts.</p>
+                </div>
+
+                <!-- Articles will be injected here by JavaScript -->
+                <div id="articles-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Dynamic content goes here -->
+                </div>
+                <div id="articles-loading" class="text-center py-8">
+                    <p class="text-lg text-gray-600">Loading articles...</p>
+                </div>
+
+                <!-- Call to Action (MODIFIED) -->
+                <div class="mt-16 text-center p-8 bg-blue-peak rounded-xl">
+                    <h3 class="text-3xl font-bold text-white mb-4">Have a burning question?</h3>
+                    <p class="text-lg text-white opacity-90 mb-6">Reach out to our experts for a personalized consultation today.</p>
+                    <!-- MODIFIED: Link to new 'about' page -->
+                    <a href="#" onclick="showPage('about')" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg shadow-lg transition duration-300 ease-in-out bg-yellow-accent text-gray-900 hover:bg-yellow-500">Contact Us Now</a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- --------------------------------- ARTICLE DETAIL PAGE (MODIFIED) --------------------------------- -->
+        <section id="article-detail" class="page-content py-12 md:py-20 bg-white hidden">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+                <button onclick="showPage('articles')" class="flex items-center text-blue-peak hover:text-green-peak mb-8 font-semibold">
+                    <i data-lucide="arrow-left" class="w-5 h-5 mr-2"></i>
+                    Back to Articles
+                </button>
+                <div id="article-content-container" class="bg-gray-50 p-6 md:p-8 rounded-xl shadow-2xl prose prose-lg max-w-full">
+                    <!-- Full article content will be injected here by JavaScript -->
+                </div>
+                
+                <!-- NEW: Share Buttons Section -->
+                <div id="share-buttons-container" class="mt-8 pt-8 border-t border-gray-200">
+                    <!-- Share buttons will be injected here by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- --------------------------------- ABOUT US PAGE (NEW: Replaced Contact) --------------------------------- -->
+        <section id="about" class="page-content py-12 md:py-20 bg-gray-50 hidden">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-extrabold text-blue-peak">About Peak Renewable</h2>
+                    <p class="text-xl text-gray-600 mt-3">Powering a sustainable future for Nigeria.</p>
+                </div>
+
+                <div class="max-w-4xl mx-auto space-y-12">
+                    
+                    <!-- NEW: Company Overview -->
+                    <div class="bg-white p-8 rounded-xl shadow-2xl border-t-8 border-green-peak">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                            <i data-lucide="building-2" class="w-8 h-8 mr-3 text-green-peak"></i>
+                            Our Company
+                        </h3>
+                        <p class="text-gray-700 leading-relaxed text-lg">
+                            Peak Renewable is a premier sustainable energy company based in Lagos, Nigeria, specializing in high-quality solar energy solutions. We are dedicated to providing reliable, efficient, and cost-effective solar installations, maintenance services, and expert energy consultation for both residential and commercial clients. Our goal is to empower our communities with energy independence and contribute to a cleaner, more sustainable environment.
+                        </p>
+                    </div>
+
+                    <!-- NEW: Mission Statement -->
+                    <div class="bg-blue-peak p-8 rounded-xl shadow-2xl text-white">
+                        <h3 class="text-2xl font-bold mb-4 flex items-center">
+                            <i data-lucide="rocket" class="w-8 h-8 mr-3 text-yellow-accent"></i>
+                            Our Mission
+                        </h3>
+                        <blockquote class="text-xl md:text-2xl italic border-l-4 border-yellow-accent pl-6 leading-relaxed">
+                            "To accelerate Nigeria's transition to renewable energy by delivering exceptional, reliable, and accessible solar solutions, one installation at a time."
+                        </blockquote>
+                    </div>
+
+                    <!-- NEW: Customer Testimonials -->
+                    <div class="bg-white p-8 rounded-xl shadow-2xl border-t-8 border-yellow-accent">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">What Our Customers Say</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <!-- Testimonial 1 -->
+                            <div class="bg-gray-50 p-6 rounded-lg shadow-inner">
+                                <div class="flex items-center mb-2">
+                                    <span class="w-10 h-10 rounded-full bg-blue-peak text-white flex items-center justify-center font-bold text-lg mr-3">T</span>
+                                    <div>
+                                        <p class="font-semibold text-gray-900">Tunde A.</p>
+                                        <p class="text-sm text-gray-500">Lekki, Lagos</p>
+                                    </div>
+                                </div>
+                                <p class="text-gray-700 italic">"Peak Renewable transformed our home. The installation was professional, and our electricity bills have dropped significantly. Highly recommend their team!"</p>
+                            </div>
+                            <!-- Testimonial 2 -->
+                            <div class="bg-gray-50 p-6 rounded-lg shadow-inner">
+                                <div class="flex items-center mb-2">
+                                    <span class="w-10 h-10 rounded-full bg-green-peak text-white flex items-center justify-center font-bold text-lg mr-3">C</span>
+                                    <div>
+                                        <p class="font-semibold text-gray-900">Chioma E.</p>
+                                        <p class="text-sm text-gray-500">Ikeja, Lagos</p>
+                                    </div>
+                                </div>
+                                <p class="text-gray-700 italic">"The maintenance service was thorough and efficient. Their AI advisor gave me great tips even before I called them. True professionals."</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- RE-INTEGRATED: Contact Details -->
+                    <div class="bg-white p-8 rounded-xl shadow-2xl border-t-8 border-blue-peak">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">Get in Touch</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <!-- WhatsApp Button -->
+                            <div class="flex items-start space-x-4">
+                                <!-- SVG Icon -->
+                                <div class="flex-shrink-0 w-10 h-10 p-2 bg-green-100 rounded-full flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-green-peak">
+                                        <path d="M12 0C5.373 0 0 5.373 0 12c0 2.247.604 4.341 1.768 6.136l-1.127 4.144 4.254-1.118A11.97 11.97 0 0 0 12 24c6.627 0 12-5.373 12-12C24 5.373 18.627 0 12 0zM12 22a9.982 9.982 0 0 1-5.11-.989l-.364-.216-3.79 1l1.01-3.743-.24-.383A9.998 9.998 0 0 1 12 2C6.477 2 2 6.477 2 12a9.983 9.983 0 0 0 2.63 6.64l.115.176-1.077 3.974 4.075-1.071.18.106A9.969 9.969 0 0 0 12 22zm3.3-6.42a.846.846 0 0 0-.251-.212c-.1-.055-.65-.32-.756-.358a.833.833 0 0 0-.154.025c-.097.037-.563.687-.69.832a.56.56 0 0 1-.3.26c-.15.056-.27-.015-.46-.07-.49-.15-1.896-.7-3.61-2.222a4.99 4.99 0 0 1-1.116-1.503.738.738 0 0 1 .15-.71c.07-.076.155-.18.225-.262.068-.08.136-.17.18-.25a.333.333 0 0 0 .044-.24.78.78 0 0 0-.115-.195c-.06-.115-.55-.66-.757-.89a.955.955 0 0 0-.36-.26c-.15-.054-.31-.03-.47-.03-.17 0-.35.06-.52.27-.17.21-1.11 1.07-1.11 2.607 0 1.537 1.135 2.923 1.285 3.123.15.2.29.23.56.23 1.04 0 2.93-.9 3.69-1.24a5.05 5.05 0 0 0 2.06-.678.868.868 0 0 0 .53-.88c-.02-.21-.085-.355-.16-.47z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-lg font-semibold text-gray-800">Chat with Us (Preferred)</p>
+                                    <p class="text-gray-600 mb-2">Get an immediate response for quotes and support.</p>
+                                    <a href="https://wa.me/2348087829365?text=Hello%20Peak%20Renewable,%20I%20am%20contacting%20you%20from%20your%20website." target="_blank" class="inline-flex items-center justify-center px-5 py-2.5 border border-transparent text-base font-medium rounded-lg shadow-lg transition duration-300 ease-in-out bg-green-peak text-white hover:bg-green-700">
+                                        Open WhatsApp
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 w-10 h-10 p-2 bg-blue-100 rounded-full flex items-center justify-center">
+                                    <i data-lucide="mail" class="w-6 h-6 text-blue-peak"></i>
+                                </div>
+                                <div>
+                                    <p class="text-lg font-semibold text-gray-800">Email Us</p>
+                                    <p class="text-gray-600">For detailed inquiries and official communication.</p>
+                                    <a href="mailto:oluwanifemis919@gmail.com" class="text-blue-peak font-medium hover:underline text-lg">oluwanifemis919@gmail.com</a>
+                                </div>
+                            </div>
+                            
+                            <!-- Phone -->
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 w-10 h-10 p-2 bg-yellow-100 rounded-full flex items-center justify-center">
+                                    <i data-lucide="phone" class="w-6 h-6 text-yellow-600"></i>
+                                </div>
+                                <div>
+                                    <p class="text-lg font-semibold text-gray-800">Call Us</p>
+                                    <p class="text-gray-600">Speak directly with our team during business hours.</p>
+                                    <a href="tel:+2348087829365" class="text-blue-peak font-medium hover:underline text-lg">+234 808 782 9365</a>
+                                </div>
+                            </div>
+
+                            <!-- Address -->
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 w-10 h-10 p-2 bg-gray-100 rounded-full flex items-center justify-center">
+                                    <i data-lucide="map-pin" class="w-6 h-6 text-gray-600"></i>
+                                </div>
+                                <div>
+                                    <p class="text-lg font-semibold text-gray-800">Our Office</p>
+                                    <p class="text-gray-600">Lagos, Nigeria</p>
+                                    <p class="text-gray-500 text-sm">(Meetings by appointment only)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- RE-INTEGRATED: AI Solar Advisor Section -->
+                    <div class="bg-blue-peak p-4 md:p-8 rounded-xl shadow-2xl">
+                        <h3 class="text-3xl font-bold text-white mb-4 flex items-center justify-center">
+                            <i data-lucide="bot" class="w-8 h-8 mr-3 text-yellow-accent"></i>
+                            AI Solar Advisor ✨
+                        </h3>
+                        <p class="text-white opacity-80 text-center mb-6 max-w-lg mx-auto">Ask our AI any question about solar power, maintenance, or equipment sizing. Powered by Gemini's grounded search capability.</p>
+                        
+                        <div class="bg-white rounded-lg p-4 shadow-inner flex flex-col">
+                            <!-- Message Display Area -->
+                            <div id="advisor-messages" class="flex-grow overflow-y-auto space-y-4 mb-4 p-2">
+                                <div class="flex justify-start">
+                                    <div class="bg-green-100 text-green-800 p-3 rounded-xl rounded-bl-none max-w-chat-bubble shadow-md">
+                                        Welcome! I can provide quick, grounded answers about renewable energy. Try asking: **"What are the benefits of a hybrid inverter system?"**
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Input Form -->
+                            <form id="advisor-form" class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2 pt-2 border-t border-gray-200">
+                                <input type="text" id="advisor-input" placeholder="Ask your solar question here..." required class="flex-grow p-3 border border-gray-300 rounded-lg focus:ring-green-peak focus:border-green-peak shadow-sm w-full">
+                                <button type="submit" id="advisor-submit-button" class="bg-yellow-accent text-gray-900 px-4 py-3 rounded-lg font-semibold hover:bg-yellow-500 transition disabled:opacity-50 w-full sm:w-auto">
+                                    Ask
+                                </button>
+                            </form>
+                            
+                            <div id="advisor-status" class="text-sm mt-2 text-gray-600 text-center"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- --------------------------------- ADMIN PANEL PAGE (MODIFIED) --------------------------------- -->
+        <section id="admin-panel" class="page-content py-12 md:py-20 bg-white hidden">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+                
+                <!-- Section to Manage Existing Articles -->
+                <div class="mb-12">
+                    <div class="flex justify-between items-center mb-6">
+                        <h2 class="text-3xl font-extrabold text-blue-peak">Manage Articles</h2>
+                        <button onclick="loadArticlesForAdmin(true)" id="refresh-articles-btn" class="flex items-center px-4 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-50 transition">
+                            <i data-lucide="refresh-cw" class="w-4 h-4 mr-2"></i>
+                            Refresh List
+                        </button>
+                    </div>
+                    <div id="admin-articles-list" class="bg-gray-50 p-4 rounded-xl shadow-inner space-y-3 max-h-96 overflow-y-auto">
+                        <!-- Admin article list will be injected here -->
+                    </div>
+                </div>
+                
+                <!-- NEW: Image Management Guidance -->
+                <div class="mb-12">
+                     <h2 class="text-3xl font-extrabold text-green-peak mb-4">Image Management Guide</h2>
+                     <div class="bg-gray-50 p-8 rounded-xl shadow-2xl space-y-4 prose max-w-full">
+                        <p>This website is built as a static application, which means it doesn't have a direct "upload" feature for images like WordPress or other CMS platforms.</p>
+                        <p>To add images to your articles or pages, you must use images that are already hosted on the internet. Here is the recommended workflow:</p>
+                        <ol>
+                            <li><strong>Upload your image:</strong> Use a free and reliable image hosting service like <a href="https://imgur.com/upload" target="_blank">Imgur</a> or a cloud storage service (like Google Photos, Dropbox, etc.).</li>
+                            <li><strong>Get the Direct Link:</strong> After uploading, get the "Direct Link" (usually ends in .jpg, .png, or .webp). Right-clicking the image and selecting "Copy Image Address" often works.</li>
+                            <li><strong>Add to Article Content:</strong> When writing your article in the form below, use the standard HTML <code>&lt;img&gt;</code> tag.</li>
+                        </ol>
+                        <p><strong>Example HTML for an image:</strong></p>
+                        <pre><code>&lt;img src="https://i.imgur.com/your-image-code.jpg" alt="A descriptive alt text" style="width:100%; height:auto; border-radius: 8px;"&gt;</code></pre>
+                        <p><strong>To replace placeholder images (like on the Home or Services page):</strong></p>
+                        <p>This currently requires editing the <code>index.html</code> file directly. Find the <code>&lt;img&gt;</code> tag with the <code>https://placehold.co/...</code> URL and replace the <code>src</code> attribute with your new direct image link.</p>
+                     </div>
+                </div>
+
+                <!-- Section to Add/Edit Articles -->
+                <div>
+                    <h2 class="text-3xl font-extrabold text-blue-peak text-center mb-2" id="form-title">Publish New Article</h2>
+                    <p class="text-lg text-gray-600 mt-1 text-center mb-8">Use this form to add a new article or update an existing one.</p>
+
+                    <form id="article-form" class="bg-gray-50 p-8 rounded-xl shadow-2xl space-y-6">
+                        <div>
+                            <label for="article-title" class="block text-sm font-medium text-gray-700 mb-2">Article Title</label>
+                            <input type="text" id="article-title" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-green-peak focus:border-green-peak shadow-sm" placeholder="e.g., The Future of Lithium Batteries">
+                        </div>
+
+                        <div>
+                            <label for="article-date" class="block text-sm font-medium text-gray-700 mb-2">Publication Date</label>
+                            <input type="text" id="article-date" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-green-peak focus:border-green-peak shadow-sm" placeholder="e.g., October 25, 2024">
+                        </div>
+
+                        <div>
+                            <label for="article-content" class="block text-sm font-medium text-gray-700 mb-2">Article Content (HTML or Markdown)</label>
+                            <textarea id="article-content" rows="15" required class="w-full p-4 border border-gray-300 rounded-lg focus:ring-green-peak focus:border-green-peak shadow-sm font-mono text-sm" placeholder="Start writing your detailed article content here. Use HTML tags like <h2>, <p>, <ul>..."></textarea>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row sm:space-x-4 space-y-2 sm:space-y-0">
+                            <button type="submit" id="publish-button" class="w-full flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg shadow-lg transition duration-300 ease-in-out bg-blue-peak text-white hover:bg-blue-700 disabled:opacity-50">
+                                <i data-lucide="upload-cloud" class="w-5 h-5 mr-2"></i>
+                                <span id="publish-button-text">Publish Article</span>
+                            </button>
+                            <button type="button" onclick="cancelEdit()" id="cancel-edit-button" class="w-full sm:w-auto flex items-center justify-center px-6 py-3 border border-gray-300 text-base font-medium rounded-lg shadow-sm transition duration-300 ease-in-out bg-white text-gray-700 hover:bg-gray-50 hidden">
+                                Cancel Edit
+                            </button>
+                        </div>
+
+                        <div id="form-message" class="text-center font-medium mt-4 p-3 rounded-lg hidden" role="alert"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- --------------------------------- MODALS (UNCHANGED) --------------------------------- -->
+        
+        <!-- PIN Prompt Modal -->
+        <div id="pin-modal" class="fixed inset-0 z-[100] flex items-center justify-center bg-gray-900 bg-opacity-75 hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+            <div class="bg-white rounded-lg shadow-xl p-6 w-full max-w-sm mx-4">
+                <h3 class="text-xl font-bold text-gray-900 mb-4" id="modal-title">Admin Access Required</h3>
+                <p class="text-gray-600 mb-4">Please enter the admin PIN to continue.</p>
+                <form id="pin-form">
+                    <label for="pin-input" class="sr-only">Admin PIN</label>
+                    <input type="password" id="pin-input" class="w-full p-3 border border-gray-300 rounded-lg shadow-sm text-center text-lg tracking-widest" placeholder="****" required>
+                    <p id="pin-error" class="text-red-600 text-sm mt-2 h-5"></p>
+                    <div class="mt-4 flex space-x-3">
+                        <button type="button" id="pin-cancel" class="w-full px-4 py-2 bg-gray-200 text-gray-800 rounded-lg font-medium hover:bg-gray-300 transition">Cancel</button>
+                        <button type="submit" id="pin-submit" class="w-full px-4 py-2 bg-blue-peak text-white rounded-lg font-medium hover:bg-blue-700 transition">Unlock</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Delete Confirmation Modal -->
+        <div id="delete-confirm-modal" class="fixed inset-0 z-[100] flex items-center justify-center bg-gray-900 bg-opacity-75 hidden" aria-labelledby="delete-modal-title" role="dialog" aria-modal="true">
+            <div class="bg-white rounded-lg shadow-xl p-6 w-full max-w-sm mx-4">
+                <div class="flex items-center">
+                    <div class="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-red-100 sm:mx-0 sm:h-10 sm:w-10">
+                        <i data-lucide="alert-triangle" class="h-6 w-6 text-red-600"></i>
+                    </div>
+                    <div class="ml-4 text-left">
+                         <h3 class="text-lg font-medium text-gray-900" id="delete-modal-title">Delete Article</h3>
+                         <p class="text-sm text-gray-500 mt-1">Are you sure you want to delete this article? This action cannot be undone.</p>
+                    </div>
+                </div>
+                <!-- Hidden input to store ID -->
+                <input type="hidden" id="delete-confirm-id">
+                <div class="mt-5 sm:mt-4 sm:flex sm:flex-row-reverse">
+                    <button type="button" id="delete-confirm-button" class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-red-600 text-base font-medium text-white hover:bg-red-700 sm:ml-3 sm:w-auto sm:text-sm">
+                        Delete
+                    </button>
+                    <button type="button" id="delete-cancel-button" class="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 sm:mt-0 sm:w-auto sm:text-sm">
+                        Cancel
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer (MODIFIED) -->
+    <footer class="bg-gray-900 text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div>
+                    <a href="#" onclick="showPage('home')" class="flex items-center space-x-2 mb-4">
+                        <div class="p-2 rounded-full bg-yellow-accent">
+                            <i data-lucide="sun" class="w-6 h-6 text-green-peak"></i>
+                        </div>
+                        <span class="text-2xl font-bold text-white">Peak Renewable</span>
+                    </a>
+                    <p class="text-gray-400">Your trusted partner in renewable energy solutions in Nigeria. Powering a sustainable future, one installation at a time.</p>
+                </div>
+
+                <!-- Quick Links (MODIFIED) -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" onclick="showPage('home')" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <!-- NEW: About Us Link -->
+                        <li><a href="#" onclick="showPage('about')" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="#" onclick="showPage('services')" class="text-gray-400 hover:text-white transition">Services</a></li>
+                        <li><a href="#" onclick="showPage('articles')" class="text-gray-400 hover:text-white transition">Articles</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services (UNCHANGED) -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Our Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" onclick="showPage('services')" class="text-gray-400 hover:text-white transition">Solar Installation</a></li>
+                        <li><a href="#" onclick="showPage('services')" class="text-gray-400 hover:text-white transition">System Maintenance</a></li>
+                        <li><a href="#" onclick="showPage('services')" class="text-gray-400 hover:text-white transition">Energy Consultation</a></li>
+                        <li><a href="#" onclick="showPage('home')" class="text-gray-400 hover:text-white transition">Product Supply</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact (UNCHANGED) -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center space-x-2">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-gray-400"></i>
+                            <span class="text-gray-400">Lagos, Nigeria</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i data-lucide="phone" class="w-5 h-5 text-gray-400"></i>
+                            <a href="tel:+2348087829365" class="text-gray-400 hover:text-white transition">+234 808 782 9365</a>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i data-lucide="mail" class="w-5 h-5 text-gray-400"></i>
+                            <a href="mailto:oluwanifemis919@gmail.com" class="text-gray-400 hover:text-white transition truncate">oluwanifemis919@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-8 border-t border-gray-700 pt-8 text-center text-gray-500 flex justify-between items-center flex-wrap">
+                <p>&copy; 2024 Peak Renewable. All rights reserved. Built for a sustainable tomorrow.</p>
+                <!-- Admin Panel Link (UNCHANGED) -->
+                <a href="#" onclick="promptForPin()" class="text-sm text-gray-600 hover:text-yellow-accent transition mt-2 md:mt-0">Admin Panel</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Firebase SDK and Custom JavaScript -->
+    <script type="module">
+        // Global variables for Firebase
+        const appId = typeof __app_id !== 'undefined' ? __app_id : 'peak-renewable-demo';
+        const firebaseConfig = JSON.parse(typeof __firebase_config !== 'undefined' ? __firebase_config : '{"apiKey":"DEMO_KEY","authDomain":"DEMO.firebaseapp.com","projectId":"DEMO_PROJECT"}');
+        const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : undefined;
+
+        // Gemini API Configuration
+        const GEMINI_MODEL = 'gemini-2.5-flash-preview-09-2025';
+        const GEMINI_API_KEY = ""; // Kept as empty string
+
+        // Admin Panel Configuration
+        const ADMIN_PIN = "0697"; // <-- CHANGE THIS PIN
+        let currentEditId = null; // Tracks which article is being edited
+
+        // Firebase Service Imports
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { 
+            getFirestore, collection, getDocs, addDoc, doc, getDoc, updateDoc, deleteDoc, setLogLevel
+        } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+        // Initialize Firebase
+        let app, auth, db;
+        let userId = null;
+        let articlesCache = []; // Cache for public article data
+
+        try {
+            app = initializeApp(firebaseConfig);
+            auth = getAuth(app);
+            db = getFirestore(app);
+            setLogLevel('Debug'); // Enable Firestore logging
+            console.log("Firebase initialized successfully.");
+            authenticateUser();
+        } catch (error) {
+            console.error("Firebase initialization failed:", error);
+        }
+
+        /**
+         * Authenticates the user with Firebase.
+         */
+        async function authenticateUser() {
+            onAuthStateChanged(auth, async (user) => {
+                if (user) {
+                    console.log("User is signed in:", user.uid);
+                    userId = user.uid;
+                } else {
+                    console.log("No user signed in, attempting authentication.");
+                    try {
+                        if (initialAuthToken) {
+                            await signInWithCustomToken(auth, initialAuthToken);
+                            console.log("Signed in with custom token.");
+                        } else {
+                            await signInAnonymously(auth);
+                            console.log("Signed in anonymously.");
+                        }
+                        userId = auth.currentUser?.uid;
+                    } catch (error) {
+                        console.error("Authentication error:", error);
+                    }
+                }
+                // Once auth is ready, load initial content
+                showPage('home');
+            });
+        }
+        
+        /**
+         * Global function to show a specific page and hide others.
+         * @param {string} pageId - The ID of the page section to show.
+         */
+        window.showPage = function(pageId) {
+            // Hide all page content sections
+            document.querySelectorAll('.page-content').forEach(section => {
+                section.classList.add('hidden');
+            });
+
+            // Show the target page
+            const targetPage = document.getElementById(pageId);
+            if (targetPage) {
+                targetPage.classList.remove('hidden');
+                window.scrollTo(0, 0); // Scroll to top
+            } else {
+                console.warn(`Page with ID '${pageId}' not found.`);
+                // Fallback to home if page not found
+                document.getElementById('home').classList.remove('hidden');
+            }
+            
+            // Close mobile menu on navigation
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenu.classList.contains('open')) {
+                mobileMenu.classList.remove('open');
+                // Update menu icon
+                document.getElementById('mobile-menu-button').innerHTML = `<i data-lucide="menu" class="w-6 h-6"></i>`;
+                lucide.createIcons();
+            }
+
+            // Specific logic for articles page
+            if (pageId === 'articles') {
+                loadArticles(); // Use cache if available
+            }
+            
+            // Specific logic for admin page
+            if (pageId === 'admin-panel') {
+                loadArticlesForAdmin(false); // Load articles for admin view
+            }
+        }
+        
+        /**
+         * Loads articles from Firestore for the public 'Articles' page. Uses cache.
+         */
+        async function loadArticles() {
+            if (articlesCache.length > 0) {
+                console.log("Loading articles from cache.");
+                renderArticles(articlesCache);
+                return;
+            }
+
+            if (!db) {
+                console.error("Firestore DB is not initialized.");
+                document.getElementById('articles-container').innerHTML = `<p class="text-red-500 text-center">Error: Database not connected.</p>`;
+                return;
+            }
+
+            const loadingEl = document.getElementById('articles-loading');
+            const containerEl = document.getElementById('articles-container');
+            loadingEl.style.display = 'block';
+            containerEl.innerHTML = ''; // Clear previous articles
+
+            try {
+                // Public data path: /artifacts/{appId}/public/data/articles
+                const articlesRef = collection(db, `artifacts/${appId}/public/data/articles`);
+                const querySnapshot = await getDocs(articlesRef);
+                
+                const articles = [];
+                querySnapshot.forEach((doc) => {
+                    articles.push({ id: doc.id, ...doc.data() });
+                });
+                
+                // Sort by timestamp, newest first
+                articles.sort((a, b) => (b.timestamp || 0) - (a.timestamp || 0));
+
+                if (articles.length === 0) {
+                    containerEl.innerHTML = `<p class="text-gray-600 text-center col-span-full">No articles found at this time. Please check back later.</p>`;
+                } else {
+                    articlesCache = articles; // Cache the results
+                    renderArticles(articles);
+                }
+                
+            } catch (error) {
+                console.error("Error loading articles: ", error);
+                containerEl.innerHTML = `<p class="text-red-500 text-center col-span-full">Failed to load articles. Please check your connection and try again.</p>`;
+            } finally {
+                loadingEl.style.display = 'none';
+            }
+        }
+        
+        /**
+         * Renders the loaded articles into the public DOM.
+         * @param {Array} articles - Array of article objects.
+         */
+        function renderArticles(articles) {
+            const container = document.getElementById('articles-container');
+            container.innerHTML = ''; // Clear existing content
+            
+            articles.forEach(article => {
+                const articleEl = document.createElement('div');
+                articleEl.className = "bg-white rounded-xl shadow-lg overflow-hidden flex flex-col hover:shadow-2xl transition duration-300 border-b-4 border-yellow-accent";
+                
+                // Truncate content for preview and strip HTML/Markdown
+                const rawContent = article.content || '';
+                const previewText = rawContent.substring(0, 100).replace(/<[^>]+>/g, '').trim();
+                
+                articleEl.innerHTML = `
+                    <div class="p-6 flex-grow">
+                        <span class="text-sm text-gray-500">${article.date || 'Jan 1, 2024'}</span>
+                        <h3 class="text-xl font-semibold text-blue-peak mt-2 mb-2">${article.title}</h3>
+                        <p class="text-gray-600 text-sm mb-4">${previewText}${rawContent.length > 100 ? '...' : ''}</p>
+                    </div>
+                    <div class="p-6 bg-gray-50">
+                        <button onclick="showArticleDetail('${article.id}')" class="font-semibold text-green-peak hover:text-green-700 flex items-center">
+                            Read Full Article <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                        </button>
+                    </div>
+                `;
+                container.appendChild(articleEl);
+            });
+            lucide.createIcons(); // Re-render icons
+        }
+
+        /**
+         * Shows the detail view for a single article.
+         * @param {string} articleId - The ID of the article to show.
+         */
+        window.showArticleDetail = function(articleId) {
+            const article = articlesCache.find(a => a.id === articleId);
+            const detailContainer = document.getElementById('article-content-container');
+            const shareContainer = document.getElementById('share-buttons-container');
+
+            if (!article) {
+                console.error("Article not found in cache.");
+                detailContainer.innerHTML = `<p>Error: Article not found. Please go back to the articles list.</p>`;
+                shareContainer.innerHTML = ''; // Clear share buttons
+                showPage('article-detail');
+                return;
+            }
+            
+            // 1. Populate Article Content
+            detailContainer.innerHTML = `
+                <span class="text-base text-gray-600">${article.date || 'Jan 1, 2024'}</span>
+                <h1 class="text-3xl md:text-4xl font-extrabold text-blue-peak mt-2 mb-6">${article.title}</h1>
+                <div class="prose-img:rounded-xl prose-headings:text-gray-800">
+                    ${article.content}
+                </div>
+            `;
+            
+            // 2. Populate Share Buttons
+            const articleUrl = encodeURIComponent(window.location.origin || window.location.href); // Get base URL
+            const shareText = encodeURIComponent(`"${article.title}" - Read on Peak Renewable`);
+            
+            const whatsappUrl = `https://api.whatsapp.com/send?text=${shareText}%20${articleUrl}`;
+            const twitterUrl = `https://twitter.com/intent/tweet?text=${shareText}&url=${articleUrl}`;
+            const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${articleUrl}&quote=${shareText}`;
+
+            shareContainer.innerHTML = `
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Share this article</h3>
+                <div class="flex flex-wrap gap-3">
+                    <a href="${whatsappUrl}" target="_blank" rel="noopener noreferrer" class="share-button" style="background-color: #25D366;" aria-label="Share on WhatsApp">
+                        <i data-lucide="smartphone"></i> <!-- Using smartphone as a proxy for WhatsApp -->
+                        WhatsApp
+                    </a>
+                    <a href="${twitterUrl}" target="_blank" rel="noopener noreferrer" class="share-button" style="background-color: #1DA1F2;" aria-label="Share on X (Twitter)">
+                        <i data-lucide="twitter"></i>
+                        Twitter
+                    </a>
+                    <a href="${facebookUrl}" target="_blank" rel="noopener noreferrer" class="share-button" style="background-color: #1877F2;" aria-label="Share on Facebook">
+                        <i data-lucide="facebook"></i>
+                        Facebook
+                    </a>
+                </div>
+            `;
+            
+            // 3. Show the page and render icons
+            showPage('article-detail');
+            lucide.createIcons();
+        }
+
+        // --- ADMIN PANEL FUNCTIONS ---
+
+        /**
+         * Shows the PIN prompt modal.
+         */
+        window.promptForPin = function() {
+            document.getElementById('pin-modal').classList.remove('hidden');
+            document.getElementById('pin-input').value = '';
+            document.getElementById('pin-input').focus();
+            document.getElementById('pin-error').textContent = '';
+        }
+
+        /**
+         * Handles the PIN submission.
+         */
+        function handlePinSubmit(event) {
+            event.preventDefault();
+            const pinInput = document.getElementById('pin-input');
+            const pinError = document.getElementById('pin-error');
+            
+            if (pinInput.value === ADMIN_PIN) {
+                document.getElementById('pin-modal').classList.add('hidden');
+                pinError.textContent = '';
+                pinInput.value = '';
+                showPage('admin-panel');
+            } else {
+                pinError.textContent = 'Invalid PIN. Please try again.';
+                pinInput.value = '';
+                pinInput.focus();
+            }
+        }
+
+        /**
+         * Loads articles into the admin management list.
+         * @param {boolean} forceRefresh - If true, bypasses cache.
+         */
+        window.loadArticlesForAdmin = async function(forceRefresh = false) {
+            const container = document.getElementById('admin-articles-list');
+            const refreshBtn = document.getElementById('refresh-articles-btn');
+            refreshBtn.disabled = true;
+
+            // Use cache unless forced
+            if (articlesCache.length > 0 && !forceRefresh) {
+                console.log("Loading admin articles from cache.");
+                renderArticlesForAdmin(articlesCache);
+                refreshBtn.disabled = false;
+                return;
+            }
+
+            if (!db) {
+                container.innerHTML = `<p class="text-red-500">Error: Database not connected.</p>`;
+                refreshBtn.disabled = false;
+                return;
+            }
+            
+            container.innerHTML = `<p class="text-gray-600">Loading articles...</p>`;
+
+            try {
+                const articlesRef = collection(db, `artifacts/${appId}/public/data/articles`);
+                const querySnapshot = await getDocs(articlesRef);
+                
+                const articles = [];
+                querySnapshot.forEach((doc) => {
+                    articles.push({ id: doc.id, ...doc.data() });
+                });
+
+                // Sort by timestamp, newest first
+                articles.sort((a, b) => (b.timestamp || 0) - (a.timestamp || 0));
+                
+                articlesCache = articles; // Re-fill the cache
+                renderArticlesForAdmin(articles);
+                
+            } catch (error) {
+                console.error("Error loading articles for admin: ", error);
+                container.innerHTML = `<p class="text-red-500">Failed to load articles: ${error.message}</p>`;
+            } finally {
+                refreshBtn.disabled = false;
+            }
+        }
+
+        /**
+         * Renders articles into the admin list with Edit/Delete buttons.
+         * @param {Array} articles - Array of article objects.
+         */
+        function renderArticlesForAdmin(articles) {
+            const container = document.getElementById('admin-articles-list');
+            if (articles.length === 0) {
+                container.innerHTML = `<p class="text-gray-600 text-center">No articles found. Add one below!</p>`;
+                return;
+            }
+            
+            container.innerHTML = articles.map(article => `
+                <div class="flex justify-between items-center bg-white p-3 rounded-lg shadow-sm">
+                    <div>
+                        <p class="font-semibold text-blue-peak">${article.title}</p>
+                        <p class="text-sm text-gray-500">${article.date}</p>
+                    </div>
+                    <div class="flex-shrink-0 space-x-2">
+                        <button onclick="editArticle('${article.id}')" class="p-2 text-gray-600 hover:text-green-peak transition rounded-full hover:bg-green-100" aria-label="Edit article">
+                            <i data-lucide="file-pen-line" class="w-4 h-4"></i>
+                        </button>
+                        <button onclick="showDeleteConfirm('${article.id}')" class="p-2 text-gray-600 hover:text-red-600 transition rounded-full hover:bg-red-100" aria-label="Delete article">
+                            <i data-lucide="trash-2" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+            
+            lucide.createIcons(); // Render new icons
+        }
+
+        /**
+         * Handles article submission (Create or Update).
+         */
+        async function handleArticleSubmission(event) {
+            event.preventDefault();
+            
+            const titleInput = document.getElementById('article-title');
+            const dateInput = document.getElementById('article-date');
+            const contentInput = document.getElementById('article-content');
+            const messageEl = document.getElementById('form-message');
+            const publishButton = document.getElementById('publish-button');
+
+            messageEl.classList.add('hidden');
+            publishButton.disabled = true;
+
+            const newArticle = {
+                title: titleInput.value.trim(),
+                date: dateInput.value.trim(),
+                content: contentInput.value.trim(),
+                timestamp: Date.now() // Always update timestamp
+            };
+
+            if (!db) {
+                displayMessage(messageEl, "Error: Database not connected.", 'bg-red-100 text-red-700');
+                publishButton.disabled = false;
+                return;
+            }
+
+            try {
+                if (currentEditId) {
+                    // --- UPDATE logic ---
+                    const docRef = doc(db, `artifacts/${appId}/public/data/articles`, currentEditId);
+                    await updateDoc(docRef, newArticle);
+                    displayMessage(messageEl, "Article updated successfully!", 'bg-green-100 text-green-700');
+                    
+                } else {
+                    // --- CREATE logic ---
+                    const articlesRef = collection(db, `artifacts/${appId}/public/data/articles`);
+                    await addDoc(articlesRef, newArticle);
+                    displayMessage(messageEl, "Article published successfully!", 'bg-green-100 text-green-700');
+                }
+                
+                articlesCache = []; // Clear cache
+                cancelEdit(); // Reset form
+                loadArticlesForAdmin(true); // Refresh admin list
+
+            } catch (error)
+            {
+                console.error("Error publishing/updating article: ", error);
+                displayMessage(messageEl, `Failed to submit: ${error.message}`, 'bg-red-100 text-red-700');
+            } finally {
+                publishButton.disabled = false;
+            }
+        }
+        
+        /**
+         * Prepares the form for editing an article.
+         * @param {string} articleId - The ID of the article to edit.
+         */
+        window.editArticle = async function(articleId) {
+            // Find article in cache first
+            let article = articlesCache.find(a => a.id === articleId);
+            
+            if (!article) {
+                console.error("Article not in cache, fetching...");
+                // This shouldn't happen if list is loaded, but as a fallback:
+                try {
+                    const docRef = doc(db, `artifacts/${appId}/public/data/articles`, articleId);
+                    const docSnap = await getDoc(docRef);
+                    if (docSnap.exists()) {
+                        article = docSnap.data();
+                    } else {
+                         displayMessage(document.getElementById('form-message'), "Error: Could not find article to edit.", 'bg-red-100 text-red-700');
+                        return;
+                    }
+                } catch (err) {
+                     displayMessage(document.getElementById('form-message'), `Error: ${err.message}`, 'bg-red-100 text-red-700');
+                    return;
+                }
+            }
+            
+            // Populate form
+            document.getElementById('article-title').value = article.title;
+            document.getElementById('article-date').value = article.date;
+            document.getElementById('article-content').value = article.content;
+            
+            // Set edit state
+            currentEditId = articleId;
+            
+            // Update UI
+            document.getElementById('form-title').textContent = "Edit Article";
+            document.getElementById('publish-button-text').textContent = "Update Article";
+            document.getElementById('cancel-edit-button').classList.remove('hidden');
+            
+            // Scroll to form
+            document.getElementById('article-form').scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        /**
+         * Resets the article form and edit state.
+         */
+        window.cancelEdit = function() {
+            document.getElementById('article-form').reset();
+            currentEditId = null;
+            
+            document.getElementById('form-title').textContent = "Publish New Article";
+            document.getElementById('publish-button-text').textContent = "Publish Article";
+            document.getElementById('cancel-edit-button').classList.add('hidden');
+            document.getElementById('form-message').classList.add('hidden');
+        }
+
+        /**
+         * Shows the delete confirmation modal.
+         * @param {string} articleId - The ID of the article to delete.
+         */
+        window.showDeleteConfirm = function(articleId) {
+            document.getElementById('delete-confirm-id').value = articleId;
+            document.getElementById('delete-confirm-modal').classList.remove('hidden');
+        }
+
+        /**
+         * Handles the actual deletion of an article.
+         */
+        async function confirmDelete() {
+            const articleId = document.getElementById('delete-confirm-id').value;
+            if (!articleId || !db) return;
+            
+            const deleteBtn = document.getElementById('delete-confirm-button');
+            deleteBtn.disabled = true;
+            
+            try {
+                const docRef = doc(db, `artifacts/${appId}/public/data/articles`, articleId);
+                await deleteDoc(docRef);
+                
+                // Success
+                articlesCache = []; // Clear cache
+                loadArticlesForAdmin(true); // Refresh admin list
+                document.getElementById('delete-confirm-modal').classList.add('hidden');
+                
+            } catch (error) {
+                console.error("Error deleting article:", error);
+                // Show error (maybe inside modal?)
+            } finally {
+                deleteBtn.disabled = false;
+                document.getElementById('delete-confirm-id').value = '';
+            }
+        }
+        
+        /** Helper function to display messages */
+        function displayMessage(el, text, className) {
+            el.textContent = text;
+            el.className = `text-center font-medium mt-4 p-3 rounded-lg ${className}`;
+            el.classList.remove('hidden');
+        }
+
+        // --- GEMINI API INTEGRATION LOGIC ---
+
+        /**
+         * Utility function to handle the Gemini API call with exponential backoff and grounding.
+         * @param {string} userQuery - The user's prompt.
+         * @param {string} systemPrompt - The instruction for the model.
+         * @param {number} [retryCount=0] - Current retry attempt count.
+         * @returns {Promise<{text: string, sources: Array}>} - Generated text and sources.
+         */
+        async function geminiApiCall(userQuery, systemPrompt, retryCount = 0) {
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${GEMINI_API_KEY}`;
+            const maxRetries = 3;
+            const baseDelay = 1000;
+
+            const payload = {
+                contents: [{ parts: [{ text: userQuery }] }],
+                tools: [{ "google_search": {} }],
+                systemInstruction: {
+                    parts: [{ text: systemPrompt }]
+                },
+            };
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) {
+                    if (response.status === 429 && retryCount < maxRetries) {
+                        const delay = baseDelay * Math.pow(2, retryCount);
+                        await new Promise(resolve => setTimeout(resolve, delay));
+                        return geminiApiCall(userQuery, systemPrompt, retryCount + 1);
+                    }
+                    throw new Error(`API call failed with status: ${response.status}`);
+                }
+
+                const result = await response.json();
+                const candidate = result.candidates?.[0];
+
+                if (candidate && candidate.content?.parts?.[0]?.text) {
+                    const text = candidate.content.parts[0].text;
+                    
+                    let sources = [];
+                    const groundingMetadata = candidate.groundingMetadata;
+                    if (groundingMetadata && groundingMetadata.groundingAttributions) {
+                        sources = groundingMetadata.groundingAttributions
+                            .map(attribution => ({
+                                uri: attribution.web?.uri,
+                                title: attribution.web?.title,
+                            }))
+                            .filter(source => source.uri && source.title);
+                    }
+                    return { text, sources };
+
+                } else {
+                    // Check for safety ratings or other reasons for no content
+                    let errorMsg = "Invalid response structure from Gemini.";
+                    if (result.promptFeedback) {
+                        errorMsg = `Response blocked due to: ${result.promptFeedback.blockReason}`;
+                    }
+                    throw new Error(errorMsg);
+                }
+
+            } catch (error) {
+                console.error("Gemini API error after retries:", error);
+                // Re-throw a generic, user-friendly error message
+                throw new Error("Could not connect to the Solar Advisor. Please try again later.");
+            }
+        }
+        
+        /**
+         * Handles the submission of the AI Solar Advisor form.
+         */
+        async function handleAdvisorSubmit(event) {
+            event.preventDefault();
+            
+            const inputEl = document.getElementById('advisor-input');
+            const messagesEl = document.getElementById('advisor-messages');
+            const statusEl = document.getElementById('advisor-status');
+            const submitBtn = document.getElementById('advisor-submit-button');
+            
+            const userQuery = inputEl.value.trim();
+            if (!userQuery) return;
+            
+            submitBtn.disabled = true;
+            inputEl.value = ''; // Clear input immediately
+            statusEl.textContent = '';
+            
+            // Display user message
+            messagesEl.innerHTML += `
+                <div classT="flex justify-end">
+                    <div class="bg-blue-200 text-gray-900 p-3 rounded-xl rounded-br-none max-w-chat-bubble shadow-md">
+                        ${userQuery.replace(/</g, "&lt;").replace(/>/g, "&gt;")}
+                    </div>
+                </div>
+            `;
+            messagesEl.scrollTop = messagesEl.scrollHeight;
+            
+            // Display loading message
+            const loadingMessageId = `loading-${Date.now()}`;
+            messagesEl.innerHTML += `
+                <div class="flex justify-start" id="${loadingMessageId}">
+                    <div class="bg-gray-100 text-gray-600 p-3 rounded-xl rounded-bl-none max-w-chat-bubble shadow-md animate-pulse">
+                        Thinking... (I will reply shortly)
+                    </div>
+                </div>
+            `;
+            messagesEl.scrollTop = messagesEl.scrollHeight;
+
+            try {
+                statusEl.textContent = 'Searching the web for current, grounded advice...';
+                const systemPrompt = "You are the Peak Renewable Solar Advisor, an expert in renewable energy, solar installation, and maintenance, especially focused on Nigerian contexts. Provide concise, helpful, and technically accurate advice based on your search results. Always be polite and encourage users to contact the human team for installation quotes and note that Adesina Oluwanifemi samuel is the CEO.";
+
+                const { text, sources } = await geminiApiCall(userQuery, systemPrompt);
+                
+                // Remove loading message
+                document.getElementById(loadingMessageId).remove();
+                
+                // Construct the full response message with sources
+                let sourceHtml = '';
+                if (sources.length > 0) {
+                    sourceHtml = `<div class="mt-2 pt-2 border-t border-green-300 text-xs text-green-800 opacity-80">
+                        <p class="font-semibold mb-1">Sources consulted:</p>
+                        <ul class="list-disc pl-5 space-y-0.5">
+                            ${sources.map((s, index) => `<li><a href="${s.uri}" target="_blank" class="hover:underline text-blue-peak font-medium">${s.title}</a></li>`).join('')}
+                        </ul>
+                    </div>`;
+                }
+                
+                // Display AI response
+                messagesEl.innerHTML += `
+                    <div class="flex justify-start">
+                        <div class="bg-green-100 text-green-800 p-3 rounded-xl rounded-bl-none max-w-chat-bubble shadow-md">
+                            ${text.replace(/\n/g, '<br>')}
+                            ${sourceHtml}
+                        </div>
+                    </div>
+                `;
+                messagesEl.scrollTop = messagesEl.scrollHeight;
+                statusEl.textContent = 'Response ready.';
+
+            } catch (error) {
+                // Remove loading message
+                document.getElementById(loadingMessageId)?.remove();
+                
+                // Display error message
+                messagesEl.innerHTML += `
+                    <div class="flex justify-start">
+                        <div class="bg-red-100 text-red-700 p-3 rounded-xl rounded-bl-none max-w-chat-bubble shadow-md">
+                            System Error: ${error.message}
+                        </div>
+                    </div>
+                `;
+                messagesEl.scrollTop = messagesEl.scrollHeight;
+                statusEl.textContent = 'Error: Failed to get advice.';
+
+            } finally {
+                submitBtn.disabled = false;
+            }
+        }
+
+        /**
+         * Initializes all event listeners for static content and new features.
+         */
+        function initializeEventListeners() {
+            // Mobile menu toggle
+            const menuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            menuButton.addEventListener('click', () => {
+                const isOpen = mobileMenu.classList.toggle('open');
+                if (isOpen) {
+                    menuButton.innerHTML = `<i data-lucide="x" class="w-6 h-6"></i>`;
+                } else {
+                    menuButton.innerHTML = `<i data-lucide="menu" class="w-6 h-6"></i>`;
+                }
+                lucide.createIcons();
+            });
+            
+            // Admin Panel Form Submission
+            document.getElementById('article-form')?.addEventListener('submit', handleArticleSubmission);
+
+            // AI Solar Advisor Form Submission
+            document.getElementById('advisor-form')?.addEventListener('submit', handleAdvisorSubmit);
+            
+            // PIN Modal Listeners
+            document.getElementById('pin-form')?.addEventListener('submit', handlePinSubmit);
+            document.getElementById('pin-cancel')?.addEventListener('click', () => {
+                document.getElementById('pin-modal').classList.add('hidden');
+            });
+
+            // Delete Modal Listeners
+            document.getElementById('delete-confirm-button')?.addEventListener('click', confirmDelete);
+            document.getElementById('delete-cancel-button')?.addEventListener('click', () => {
+                document.getElementById('delete-confirm-modal').classList.add('hidden');
+            });
+        }
+        
+        // Initial setup on DOM content loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize Lucide icons
+            lucide.createIcons();
+            
+            // Setup event listeners
+            initializeEventListeners();
+        });
+
+    </script>
+</body>
+</html>
