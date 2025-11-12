@@ -654,10 +654,10 @@
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
                     <ul class="space-y-2">
-                        <li><a href="home" onclick="showPage('home')" class="text-gray-400 hover:text-white transition">Home</a></li>
-                        <li><a href="about" onclick="showPage('about')" class="text-gray-400 hover:text-white transition">About Us</a></li>
-                        <li><a href="services" onclick="showPage('services')" class="text-gray-400 hover:text-white transition">Services</a></li>
-                        <li><a href="articles" onclick="showPage('articles')" class="text-gray-400 hover:text-white transition">Articles</a></li>
+                        <li><a href="#" onclick="showPage('home')" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#" onclick="showPage('about')" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="#" onclick="showPage('services')" class="text-gray-400 hover:text-white transition">Services</a></li>
+                        <li><a href="#" onclick="showPage('articles')" class="text-gray-400 hover:text-white transition">Articles</a></li>
                     </ul>
                 </div>
 
@@ -1052,7 +1052,7 @@
             try {
                 statusEl.textContent = 'Searching the web for current, grounded advice...';
                 
-                const systemPrompt = "You are the Peak Renewable AI Advisor. Your role is to be polite, helpful, and straightforward. Your goal is to guide customers and provide information about renewable energy. You MUST NOT, under any circumstances, mention prices, costs, or any amount of money. If a user asks about pricing, products, or installation quotes, you MUST politely refer them to the human assistance team via the WhatsApp or Email links on the website. You can note that Adesina Oluwanifemi Samuel is the CEO.";
+                const systemPrompt = "You are the Peak Renewable AI Advisor. Your role is to be polite, helpful, and straightforward. Your goal is to guide customers and provide information about renewable energy. You MUST NOT, under any circumstances, mention prices, costs, or any amount of money. If a user asks about pricing, products, or installation quotes, you MUST politely refer them to the human assistance team via the WhatsApp or Email links on the website.";
 
                 const { text, sources } = await geminiApiCall(userQuery, systemPrompt);
                 
