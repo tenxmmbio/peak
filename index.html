@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Peak Renewable - Sustainable Energy Solutions</title>
+    <!-- NOTE: Ensure these image files (1000693979.png, mo1.jpg) are in the same directory as this HTML file -->
     <link rel="icon" type="image/png" href="1000693979.png">
    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4818572928864743"
      crossorigin="anonymous"></script> 
@@ -73,77 +74,6 @@
             opacity: 1;
         }
         
-        /* Ensure prose styles apply within the article content */
-        .prose {
-            max-width: 100%;
-        }
-        
-        /* Ensure images in prose are rounded */
-        .prose img {
-            border-radius: 0.75rem; /* rounded-xl */
-        }
-        
-        /* Ensure user-added images in prose are responsive and styled */
-        /* This style targets images that are direct children of <p> tags, which is common in CMS/HTML content */
-        .prose > p > img {
-            width: 100%;
-            height: auto;
-            border-radius: 0.75rem; /* rounded-xl */
-            margin-top: 1.5em;
-            margin-bottom: 1.5em;
-            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-        }
-
-        /* Style for the chat messages area */
-        #advisor-messages {
-            max-height: 20rem; /* Fixed height for chat window */
-            height: 20rem;
-            overflow-y: auto;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            padding-bottom: 0.5rem;
-        }
-
-        /* Message bubble styling for responsiveness */
-        .max-w-chat-bubble {
-            max-width: 80%; /* Limit chat bubble width on mobile */
-        }
-        @media (min-width: 768px) {
-             .max-w-chat-bubble {
-                max-width: 75%; /* Increase width limit on desktop */
-            }
-        }
-        
-        /* Style for share buttons */
-        .share-button {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0.5rem 1rem;
-            border-radius: 0.5rem; /* rounded-lg */
-            font-weight: 500; /* font-medium */
-            transition: opacity 0.2s;
-            text-decoration: none;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-        .share-button:hover {
-            opacity: 0.9;
-        }
-        .share-button i {
-            width: 1.25rem; /* w-5 */
-            height: 1.25rem; /* h-5 */
-            margin-right: 0.5rem; /* mr-2 */
-        }
-        /* Style for share button inline SVGs */
-         .share-button svg {
-            width: 1.25rem; /* w-5 */
-            height: 1.25rem; /* h-5 */
-            margin-right: 0.5rem; /* mr-2 */
-        }
-        
     </style>
 
 </head>
@@ -153,19 +83,20 @@
     <header class="sticky top-0 z-50 bg-white shadow-md">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
             <!-- Logo/Company Name -->
-            <a href="#" onclick="showPage('home')" class="flex items-center space-x-2">
+            <a href="index.html" class="flex items-center space-x-2">
                 <!-- MODIFIED: Replaced icon div with <img> tag for your logo -->
-                <!-- IMPORTANT: '1000693979.png' must be in the same folder as this HTML file. -->
                 <img src="1000693979.png" alt="Peak Renewable Logo" class="w-10 h-10 rounded-full">
                 <span class="text-2xl font-bold text-blue-peak">Peak Renewable</span>
             </a>
 
-            <!-- Desktop Navigation (UNCHANGED) -->
+            <!-- Desktop Navigation (MODIFIED) -->
             <nav class="hidden md:flex space-x-8 font-medium">
-                <a href="#" onclick="showPage('home')" class="text-gray-700 hover:text-green-peak transition duration-150">Home</a>
-                <a href="#" onclick="showPage('about')" class="text-gray-700 hover:text-green-peak transition duration-150">About Us</a>
-                <a href="#" onclick="showPage('services')" class="text-gray-700 hover:text-green-peak transition duration-150">Services</a>
-                <a href="#" onclick="showPage('articles')" class="text-gray-700 hover:text-green-peak transition duration-150">Articles</a>
+                <a href="index.html" class="text-gray-700 hover:text-green-peak transition duration-150">Home</a>
+                <a href="about.html" class="text-gray-700 hover:text-green-peak transition duration-150">About Us</a>
+                <a href="services.html" class="text-gray-700 hover:text-green-peak transition duration-150">Services</a>
+                <!-- NEW PAGE LINK -->
+                <a href="product.html" class="text-gray-700 hover:text-green-peak transition duration-150">Products</a>
+                <a href="articles.html" class="text-gray-700 hover:text-green-peak transition duration-150">Articles</a>
             </nav>
 
             <!-- Mobile Menu Button (UNCHANGED) -->
@@ -174,13 +105,15 @@
             </button>
         </div>
 
-        <!-- Mobile Menu (UNCHANGED) -->
+        <!-- Mobile Menu (MODIFIED) -->
         <nav id="mobile-menu" class="md:hidden bg-gray-50 border-t border-gray-200">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#" onclick="showPage('home')" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-200 transition duration-150">Home</a>
-                <a href="#" onclick="showPage('about')" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-200 transition duration-150">About Us</a>
-                <a href="#" onclick="showPage('services')" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-200 transition duration-150">Services</a>
-                <a href="#" onclick="showPage('articles')" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-200 transition duration-150">Articles</a>
+                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-200 transition duration-150">Home</a>
+                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-200 transition duration-150">About Us</a>
+                <a href="services.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-200 transition duration-150">Services</a>
+                <!-- NEW PAGE LINK -->
+                <a href="product.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-200 transition duration-150">Products</a>
+                <a href="articles.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-200 transition duration-150">Articles</a>
             </div>
         </nav>
     </header>
@@ -188,7 +121,8 @@
     <!-- Main Content Area -->
     <main id="content" class="flex-grow">
         <!-- --------------------------------- HOME PAGE (UNCHANGED) --------------------------------- -->
-        <section id="home" class="page-content py-12 md:py-24 bg-white hidden">
+        <!-- This is the only section visible on index.html -->
+        <section id="home" class="page-content py-12 md:py-24 bg-white">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <!-- Hero Section (UNCHANGED) -->
                 <div class="bg-blue-peak text-white rounded-3xl p-8 md:p-16 shadow-xl mb-16">
@@ -198,7 +132,7 @@
                             <p class="text-xl md:text-2xl mb-8 opacity-90">
                                 Peak Renewable is your trusted partner for professional <strong>Solar Installation, Maintenance, and Expert Consultation</strong> in Nigeria. Achieve energy independence today.
                             </p>
-                            <a href="#" onclick="showPage('services')" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg shadow-lg transition duration-300 ease-in-out bg-yellow-accent text-gray-900 hover:bg-yellow-500 text-lg">
+                            <a href="services.html" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg shadow-lg transition duration-300 ease-in-out bg-yellow-accent text-gray-900 hover:bg-yellow-500 text-lg">
                                 Explore Our Solutions
                                 <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
                             </a>
@@ -233,7 +167,7 @@
                     </div>
                 </div>
 
-                <!-- Products Section (UNCHANGED) -->
+                <!-- Products Section (MODIFIED) -->
                 <div class="mt-16 bg-gray-100 p-8 rounded-2xl shadow-inner">
                     <h2 class="text-3xl font-bold text-center text-blue-peak mb-8">Quality Products</h2>
                     <p class="text-center text-gray-600 mb-8 max-w-2xl mx-auto">We supply premium solar components to ensure reliability and longevity for your power system.</p>
@@ -255,7 +189,7 @@
                             <p class="text-lg font-medium">Accessories</p>
                         </div>
                     </div>
-                    <!-- Get Product Quote Link (UNCHANGED) -->
+                    <!-- Get Product Quote Link (MODIFIED) -->
                     <div class="mt-10 text-center">
                         <a href="https://wa.me/2348087829365?text=Hello%20Peak%20Renewable,%20I%20need%20a%20quote%20for%20products." target="_blank" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg shadow-lg transition duration-300 ease-in-out bg-green-peak text-white hover:bg-green-700 text-lg">
                             <!-- Inline SVG for WhatsApp Icon -->
@@ -264,361 +198,26 @@
                             </svg>
                             Get Product Quote via WhatsApp
                         </a>
-                        <p class="text-sm text-gray-600 mt-3">Or <a href="mailto:oluwanifemis919@gmail.com?subject=Product%20Quote%20Request" class="text-blue-peak hover:underline font-medium">email us</a> for product details and pricing.</p>
+                        <!-- EMAIL UPDATED HERE -->
+                        <p class="text-sm text-gray-600 mt-3">Or <a href="mailto:peakrenewable@gmail.com?subject=Product%20Quote%20Request" class="text-blue-peak hover:underline font-medium">email us</a> for product details and pricing.</p>
                     </div>
                 </div>
 
-                <!-- Coming Soon Section (UNCHANGED) -->
+                <!-- Coming Soon Section (MODIFIED) -->
                 <div class="mt-16 text-center">
                     <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">Future of Energy, Starting Now.</h2>
                     <p class="text-lg text-gray-600 max-w-3xl mx-auto">
                         We are actively expanding our portfolio to include specialized services in <strong>other renewable energy aspects</strong>. Stay tuned for updates on our wind, hydro, and biomass solutions!
                     </p>
-                    <a href="#" onclick="showPage('about')" class="mt-6 inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg shadow-lg transition duration-300 ease-in-out bg-green-peak text-white hover:bg-green-700">
+                    <a href="about.html" class="mt-6 inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg shadow-lg transition duration-300 ease-in-out bg-green-peak text-white hover:bg-green-700">
                         Get Future Updates
                     </a>
                 </div>
 
             </div>
         </section>
-
-        <!-- --------------------------------- SERVICES PAGE (UNCHANGED) --------------------------------- -->
-        <section id="services" class="page-content py-12 md:py-20 bg-gray-50 hidden">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-12">
-                    <h2 class="text-4xl font-extrabold text-blue-peak">Our Renewable Energy Services</h2>
-                    <p class="text-xl text-gray-600 mt-3">Solutions designed for reliability, efficiency, and sustainability.</p>
-                </div>
-
-                <div class="space-y-12">
-                    <!-- Service Block 1: Solar Installation (UNCHANGED) -->
-                    <div class="p-8 bg-white rounded-xl shadow-2xl lg:grid lg:grid-cols-3 lg:gap-10 border-l-8 border-yellow-accent">
-                        <div class="col-span-2">
-                            <i data-lucide="sun" class="w-10 h-10 text-green-peak mb-4"></i>
-                            <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-3">Solar System Installation</h3>
-                            <p class="text-gray-700 mb-4 leading-relaxed">
-                                From site assessment and custom system design to final commissioning, our certified technicians handle the entire installation process. We use the highest-quality <strong>solar panels, inverters, and battery storage</strong> systems to provide you with a reliable and powerful off-grid or grid-tied solution.
-                            </p>
-                            <ul class="list-disc pl-5 text-gray-600 space-y-1">
-                                <li>Residential and Commercial Projects</li>
-                                <li>Load Auditing and Sizing</li>
-                                <li>Quality Assurance and Warranty</li>
-                            </ul>
-                        </div>
-                        <div class="mt-6 lg:mt-0 flex flex-col space-y-4">
-                            <!-- Placeholder Image (UNCHANGED) -->
-                            <img src="in2.jpg" 
-                                 alt="Solar panel installation in progress" 
-                                 class="w-full h-auto rounded-xl shadow-md mb-4"
-                                 onerror="this.src='https://placehold.co/400x300/047857/ffffff?text=Image+Placeholder'">
-                            <h4 class="text-lg font-semibold text-gray-700">Ready to install?</h4>
-                            <a href="https://wa.me/2348087829365?text=Hello%20Peak%20Renewable,%20I%20am%20interested%20in%20Solar%20Installation%20Services." target="_blank" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg shadow-lg transition duration-300 ease-in-out bg-green-peak text-white hover:bg-green-700">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 mr-2">
-                                    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.247.604 4.341 1.768 6.136l-1.127 4.144 4.254-1.118A11.97 11.97 0 0 0 12 24c6.627 0 12-5.373 12-12C24 5.373 18.627 0 12 0zM12 22a9.982 9.982 0 0 1-5.11-.989l-.364-.216-3.79 1l1.01-3.743-.24-.383A9.998 9.998 0 0 1 12 2C6.477 2 2 6.477 2 12a9.983 9.983 0 0 0 2.63 6.64l.115.176-1.077 3.974 4.075-1.071.18.106A9.969 9.969 0 0 0 12 22zm3.3-6.42a.846.846 0 0 0-.251-.212c-.1-.055-.65-.32-.756-.358a.833.833 0 0 0-.154.025c-.097.037-.563.687-.69.832a.56.56 0 0 1-.3.26c-.15.056-.27-.015-.46-.07-.49-.15-1.896-.7-3.61-2.222a4.99 4.99 0 0 1-1.116-1.503.738.738 0 0 1 .15-.71c.07-.076.155-.18.225-.262.068-.08.136-.17.18-.25a.333.333 0 0 0 .044-.24.78.78 0 0 0-.115-.195c-.06-.115-.55-.66-.757-.89a.955.955 0 0 0-.36-.26c-.15-.054-.31-.03-.47-.03-.17 0-.35.06-.52.27-.17.21-1.11 1.07-1.11 2.607 0 1.537 1.135 2.923 1.285 3.123.15.2.29.23.56.23 1.04 0 2.93-.9 3.69-1.24a5.05 5.05 0 0 0 2.06-.678.868.868 0 0 0 .53-.88c-.02-.21-.085-.355-.16-.47z" />
-                                </svg>
-                                Chat on WhatsApp
-                            </a>
-                            <a href="mailto:peakrenewable@gmail.com?subject=Inquiry:%20Solar%20Installation%20Service" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg shadow-lg transition duration-300 ease-in-out bg-yellow-accent text-gray-900 hover:bg-yellow-500">
-                                <i data-lucide="mail" class="w-5 h-5 mr-2"></i>
-                                Email for Quote
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Service Block 2: Maintenance & Repair (UNCHANGED) -->
-                    <div class="p-8 bg-white rounded-xl shadow-2xl lg:grid lg:grid-cols-3 lg:gap-10 border-l-8 border-yellow-accent">
-                        <div class="col-span-2">
-                            <i data-lucide="wrench" class="w-10 h-10 text-green-peak mb-4"></i>
-                            <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-3">Preventive & Corrective Maintenance</h3>
-                            <p class="text-gray-700 mb-4 leading-relaxed">
-                                Regular maintenance is key to maximizing your system's output and lifespan. We offer comprehensive service plans, fault diagnosis, and quick repairs for <strong>inverters, batteries, and panel cleaning</strong>. Don't wait for a breakdown—keep your power at its peak.
-                            </p>
-                            <ul class="list-disc pl-5 text-gray-600 space-y-1">
-                                <li>Annual Service Contracts</li>
-                                <li>Inverter and Battery Health Checks</li>
-                                <li>Emergency Repair Call-outs</li>
-                            </ul>
-                        </div>
-                        <div class="mt-6 lg:mt-0 flex flex-col space-y-4">
-                            <!-- Placeholder Image (UNCHANGED) -->
-                            <img src="me1.jpg" 
-                                 alt="Technician maintaining solar panels" 
-                                 class="w-full h-auto rounded-xl shadow-md mb-4"
-                                 onerror="this.src='https://placehold.co/400x300/047857/ffffff?text=Image+Placeholder'">
-                            <h4 class="text-lg font-semibold text-gray-700">Need maintenance?</h4>
-                            <a href="https://wa.me/2348087829365?text=Hello%20Peak%20Renewable,%20I%20need%20Maintenance%20Service." target="_blank" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg shadow-lg transition duration-300 ease-in-out bg-green-peak text-white hover:bg-green-700">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 mr-2">
-                                    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.247.604 4.341 1.768 6.136l-1.127 4.144 4.254-1.118A11.97 11.97 0 0 0 12 24c6.627 0 12-5.373 12-12C24 5.373 18.627 0 12 0zM12 22a9.982 9.982 0 0 1-5.11-.989l-.364-.216-3.79 1l1.01-3.743-.24-.383A9.998 9.998 0 0 1 12 2C6.477 2 2 6.477 2 12a9.983 9.983 0 0 0 2.63 6.64l.115.176-1.077 3.974 4.075-1.071.18.106A9.969 9.969 0 0 0 12 22zm3.3-6.42a.846.846 0 0 0-.251-.212c-.1-.055-.65-.32-.756-.358a.833.833 0 0 0-.154.025c-.097.037-.563.687-.69.832a.56.56 0 0 1-.3.26c-.15.056-.27-.015-.46-.07-.49-.15-1.896-.7-3.61-2.222a4.99 4.99 0 0 1-1.116-1.503.738.738 0 0 1 .15-.71c.07-.076.155-.18.225-.262.068-.08.136-.17.18-.25a.333.333 0 0 0 .044-.24.78.78 0 0 0-.115-.195c-.06-.115-.55-.66-.757-.89a.955.955 0 0 0-.36-.26c-.15-.054-.31-.03-.47-.03-.17 0-.35.06-.52.27-.17.21-1.11 1.07-1.11 2.607 0 1.537 1.135 2.923 1.285 3.123.15.2.29.23.56.23 1.04 0 2.93-.9 3.69-1.24a5.05 5.05 0 0 0 2.06-.678.868.868 0 0 0 .53-.88c-.02-.21-.085-.355-.16-.47z" />
-                                </svg>
-                                Chat on WhatsApp
-                            </a>
-                            <a href="mailto:peakrenewable@gmail.com?subject=Inquiry:%20Maintenance%20and%20Repair%20Service" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg shadow-lg transition duration-300 ease-in-out bg-yellow-accent text-gray-900 hover:bg-yellow-500">
-                                <i data-lucide="mail" class="w-5 h-5 mr-2"></i>
-                                Email Service Request
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Service Block 3: Consultation & Design (UNCHANGED) -->
-                    <div class="p-8 bg-white rounded-xl shadow-2xl lg:grid lg:grid-cols-3 lg:gap-10 border-l-8 border-yellow-accent">
-                        <div class="col-span-2">
-                            <i data-lucide="lightbulb" class="w-10 h-10 text-green-peak mb-4"></i>
-                            <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-3">Expert Energy Consultation</h3>
-                            <p class="text-gray-700 mb-4 leading-relaxed">
-                                Unsure where to start? Our consultation services provide you with a clear roadmap to energy independence. We analyze your consumption, budget, and location to recommend the perfect mix of <strong>equipment (inverter, panel, battery)</strong> and services.
-                            </p>
-                            <ul class="list-disc pl-5 text-gray-600 space-y-1">
-                                <li>Feasibility Studies and ROI Analysis</li>
-                                <li>Optimal System Sizing and Component Selection</li>
-                                <li>Future-proofing Advice</li>
-                            </ul>
-                        </div>
-                        <div class="mt-6 lg:mt-0 flex flex-col space-y-4">
-                            <!-- Placeholder Image (UNCHANGED) -->
-                            <img src="co1.jpg" 
-                                 alt="Expert consultation" 
-                                 class="w-full h-auto rounded-xl shadow-md mb-4"
-                                 onerror="this.src='https://placehold.co/400x300/047857/ffffff?text=Image+Placeholder'">
-                            <h4 class="text-lg font-semibold text-gray-700">Need expert advice?</h4>
-                            <a href="https://wa.me/2348087829365?text=Hello%20Peak%20Renewable,%20I%20need%20Energy%20Consultation." target="_blank" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg shadow-lg transition duration-300 ease-in-out bg-green-peak text-white hover:bg-green-700">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 mr-2">
-                                    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.247.604 4.341 1.768 6.136l-1.127 4.144 4.254-1.118A11.97 11.97 0 0 0 12 24c6.627 0 12-5.373 12-12C24 5.373 18.627 0 12 0zM12 22a9.982 9.982 0 0 1-5.11-.989l-.364-.216-3.79 1l1.01-3.743-.24-.383A9.998 9.998 0 0 1 12 2C6.477 2 2 6.477 2 12a9.983 9.983 0 0 0 2.63 6.64l.115.176-1.077 3.974 4.075-1.071.18.106A9.969 9.969 0 0 0 12 22zm3.3-6.42a.846.846 0 0 0-.251-.212c-.1-.055-.65-.32-.756-.358a.833.833 0 0 0-.154.025c-.097.037-.563.687-.69.832a.56.56 0 0 1-.3.26c-.15.056-.27-.015-.46-.07-.49-.15-1.896-.7-3.61-2.222a4.99 4.99 0 0 1-1.116-1.503.738.738 0 0 1 .15-.71c.07-.076.155-.18.225-.262.068-.08.136-.17.18-.25a.333.333 0 0 0 .044-.24.78.78 0 0 0-.115-.195c-.06-.115-.55-.66-.757-.89a.955.955 0 0 0-.36-.26c-.15-.054-.31-.03-.47-.03-.17 0-.35.06-.52.27-.17.21-1.11 1.07-1.11 2.607 0 1.537 1.135 2.923 1.285 3.123.15.2.29.23.56.23 1.04 0 2.93-.9 3.69-1.24a5.05 5.05 0 0 0 2.06-.678.868.868 0 0 0 .53-.88c-.02-.21-.085-.355-.16-.47z" />
-                                </svg>
-                                Chat on WhatsApp
-                            </a>
-                            <a href="mailto:peakrenewable@gmail.com?subject=Inquiry:%20Energy%20Consultation%20Service" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg shadow-lg transition duration-300 ease-in-out bg-yellow-accent text-gray-900 hover:bg-yellow-500">
-                                <i data-lucide="mail" class="w-5 h-5 mr-2"></i>
-                                Email for Consultation
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Service Block 4: Other Renewable Energy (Coming Soon) (UNCHANGED) -->
-                    <div class="p-8 bg-white rounded-xl shadow-2xl text-center border-l-8 border-blue-peak">
-                        <i data-lucide="wind" class="w-10 h-10 text-blue-peak mb-4 mx-auto"></i>
-                        <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-3">Other Renewable Energy Solutions (Coming Soon)</h3>
-                        <p class="text-gray-700 mb-4 leading-relaxed max-w-3xl mx-auto">
-                            We are expanding beyond solar to integrate other forms of sustainable energy, including <strong>wind, hydro, and geothermal power</strong>. Stay connected to be the first to utilize these cutting-edge services!
-                        </p>
-                        <a href="#" onclick="showPage('about')" class="mt-2 inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg shadow-lg transition duration-300 ease-in-out bg-green-peak text-white hover:bg-green-700">
-                            Notify Me When Available
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- --------------------------------- ARTICLES PAGE (UNCHANGED) --------------------------------- -->
-        <section id="articles" class="page-content py-12 md:py-20 bg-white hidden">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-12">
-                    <h2 class="text-4xl font-extrabold text-green-peak">Renewable Energy Insights</h2>
-                    <p class="text-xl text-gray-600 mt-3">Stay informed with the latest trends and guides from Peak Renewable experts.</p>
-                </div>
-                
-                <!-- Search Bar (UNCHANGED) -->
-                <div class="mb-10 max-w-2xl mx-auto">
-                    <div class="relative">
-                        <input type="search" id="article-search-input" placeholder="Search for articles by title or content..." class="w-full p-4 pl-12 border border-gray-300 rounded-lg shadow-sm focus:ring-green-peak focus:border-green-peak">
-                        <i data-lucide="search" class="w-5 h-5 text-gray-400 absolute left-4 top-1/2 -translate-y-1/2"></i>
-                    </div>
-                </div>
-
-                <!-- Articles will be injected here by JavaScript -->
-                <div id="articles-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Dynamic content goes here -->
-                </div>
-                <!-- Message for loading or no results -->
-                <div id="articles-status" class="text-center py-8">
-                    <p class="text-lg text-gray-600">Loading articles...</p>
-                </div>
-
-                <!-- Call to Action (UNCHANGED) -->
-                <div class="mt-16 text-center p-8 bg-blue-peak rounded-xl">
-                    <h3 class="text-3xl font-bold text-white mb-4">Have a burning question?</h3>
-                    <p class="text-lg text-white opacity-90 mb-6">Reach out to our experts for a personalized consultation today.</p>
-                    <a href="#" onclick="showPage('about')" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg shadow-lg transition duration-300 ease-in-out bg-yellow-accent text-gray-900 hover:bg-yellow-500">Contact Us Now</a>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- --------------------------------- ARTICLE DETAIL PAGE (UNCHANGED) --------------------------------- -->
-        <section id="article-detail" class="page-content py-12 md:py-20 bg-white hidden">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
-                <button onclick="showPage('articles')" class="flex items-center text-blue-peak hover:text-green-peak mb-8 font-semibold">
-                    <i data-lucide="arrow-left" class="w-5 h-5 mr-2"></i>
-                    Back to Articles
-                </button>
-                <div id="article-content-container" class="bg-gray-50 p-6 md:p-8 rounded-xl shadow-2xl prose prose-lg max-w-full">
-                    <!-- Full article content will be injected here by JavaScript -->
-                </div>
-                
-                <!-- Share Buttons Section (UNCHANGED) -->
-                <div id="share-buttons-container" class="mt-8 pt-8 border-t border-gray-200">
-                    <!-- Share buttons will be injected here by JavaScript -->
-                </div>
-            </div>
-        </section>
-
-        <!-- --------------------------------- ABOUT US PAGE (UNCHANGED) --------------------------------- -->
-        <section id="about" class="page-content py-12 md:py-20 bg-gray-50 hidden">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-12">
-                    <h2 class="text-4xl font-extrabold text-blue-peak">About Peak Renewable</h2>
-                    <p class="text-xl text-gray-600 mt-3">Powering a sustainable future for Nigeria.</p>
-                </div>
-
-                <div class="max-w-4xl mx-auto space-y-12">
-                    
-                    <!-- Company Overview (UNCHANGED) -->
-                    <div class="bg-white p-8 rounded-xl shadow-2xl border-t-8 border-green-peak">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
-                            <i data-lucide="building-2" class="w-8 h-8 mr-3 text-green-peak"></i>
-                            Our Company
-                        </h3>
-                        <p class="text-gray-700 leading-relaxed text-lg">
-                            Peak Renewable is a premier sustainable energy company based in Lagos, Nigeria, specializing in high-quality solar energy solutions. We are dedicated to providing reliable, efficient, and cost-effective solar installations, maintenance services, and expert energy consultation for both residential and commercial clients. Our goal is to empower our communities with energy independence and contribute to a cleaner, more sustainable environment.
-                        </p>
-                    </div>
-
-                    <!-- Mission Statement (UNCHANGED) -->
-                    <div class="bg-blue-peak p-8 rounded-xl shadow-2xl text-white">
-                        <h3 class="text-2xl font-bold mb-4 flex items-center">
-                            <i data-lucide="rocket" class="w-8 h-8 mr-3 text-yellow-accent"></i>
-                            Our Mission
-                        </h3>
-                        <blockquote class="text-xl md:text-2xl italic border-l-4 border-yellow-accent pl-6 leading-relaxed">
-                            "To accelerate Nigeria's transition to renewable energy by delivering exceptional, reliable, and accessible solar solutions, one installation at a time."
-                        </blockquote>
-                    </div>
-
-                    <!-- Customer Testimonials (UNCHANGED) -->
-                    <div class="bg-white p-8 rounded-xl shadow-2xl border-t-8 border-yellow-accent">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">What Our Customers Say</h3>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <!-- Testimonial 1 -->
-                            <div class="bg-gray-50 p-6 rounded-lg shadow-inner">
-                                <div class="flex items-center mb-2">
-                                    <span class="w-10 h-10 rounded-full bg-blue-peak text-white flex items-center justify-center font-bold text-lg mr-3">T</span>
-                                    <div>
-                                        <p class="font-semibold text-gray-900">Tunde A.</p>
-                                        <p class="text-sm text-gray-500">Lekki, Lagos</p>
-                                    </div>
-                                </div>
-                                <p class="text-gray-700 italic">"Peak Renewable transformed our home. The installation was professional, and our electricity bills have dropped significantly. Highly recommend their team!"</p>
-                            </div>
-                            <!-- Testimonial 2 -->
-                            <div class="bg-gray-50 p-6 rounded-lg shadow-inner">
-                                <div class="flex items-center mb-2">
-                                    <span class="w-10 h-10 rounded-full bg-green-peak text-white flex items-center justify-center font-bold text-lg mr-3">C</span>
-                                    <div>
-                                        <p class="font-semibold text-gray-900">Chioma E.</p>
-                                        <p class="text-sm text-gray-500">Ikeja, Lagos</p>
-                                    </div>
-                                </div>
-                                <p class="text-gray-700 italic">"The maintenance service was thorough and efficient. Their AI advisor gave me great tips even before I called them. True professionals."</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Contact Details (UNCHANGED) -->
-                    <div class="bg-white p-8 rounded-xl shadow-2xl border-t-8 border-blue-peak">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">Get in Touch</h3>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <!-- WhatsApp Button -->
-                            <div class="flex items-start space-x-4">
-                                <!-- SVG Icon -->
-                                <div class="flex-shrink-0 w-10 h-10 p-2 bg-green-100 rounded-full flex items-center justify-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-green-peak">
-                                        <path d="M12 0C5.373 0 0 5.373 0 12c0 2.247.604 4.341 1.768 6.136l-1.127 4.144 4.254-1.118A11.97 11.97 0 0 0 12 24c6.627 0 12-5.373 12-12C24 5.373 18.627 0 12 0zM12 22a9.982 9.982 0 0 1-5.11-.989l-.364-.216-3.79 1l1.01-3.743-.24-.383A9.998 9.998 0 0 1 12 2C6.477 2 2 6.477 2 12a9.983 9.983 0 0 0 2.63 6.64l.115.176-1.077 3.974 4.075-1.071.18.106A9.969 9.969 0 0 0 12 22zm3.3-6.42a.846.846 0 0 0-.251-.212c-.1-.055-.65-.32-.756-.358a.833.833 0 0 0-.154.025c-.097.037-.563.687-.69.832a.56.56 0 0 1-.3.26c-.15.056-.27-.015-.46-.07-.49-.15-1.896-.7-3.61-2.222a4.99 4.99 0 0 1-1.116-1.503.738.738 0 0 1 .15-.71c.07-.076.155-.18.225-.262.068-.08.136-.17.18-.25a.333.333 0 0 0 .044-.24.78.78 0 0 0-.115-.195c-.06-.115-.55-.66-.757-.89a.955.955 0 0 0-.36-.26c-.15-.054-.31-.03-.47-.03-.17 0-.35.06-.52.27-.17.21-1.11 1.07-1.11 2.607 0 1.537 1.135 2.923 1.285 3.123.15.2.29.23.56.23 1.04 0 2.93-.9 3.69-1.24a5.05 5.05 0 0 0 2.06-.678.868.868 0 0 0 .53-.88c-.02-.21-.085-.355-.16-.47z" />
-                                    </svg>
-                                </div>
-                                <div>
-                                    <p class="text-lg font-semibold text-gray-800">Chat with Us (Preferred)</p>
-                                    <p class="text-gray-600 mb-2">Get an immediate response for quotes and support.</p>
-                                    <a href="https://wa.me/2348087829365?text=Hello%20Peak%20Renewable,%20I%20am%20contacting%20you%20from%20your%20website." target="_blank" class="inline-flex items-center justify-center px-5 py-2.5 border border-transparent text-base font-medium rounded-lg shadow-lg transition duration-300 ease-in-out bg-green-peak text-white hover:bg-green-700">
-                                        Open WhatsApp
-                                    </a>
-                                </div>
-                            </div>
-
-                            <!-- Email -->
-                            <div class="flex items-start space-x-4">
-                                <div class="flex-shrink-0 w-10 h-10 p-2 bg-blue-100 rounded-full flex items-center justify-center">
-                                    <i data-lucide="mail" class="w-6 h-6 text-blue-peak"></i>
-                                </div>
-                                <div>
-                                    <p class="text-lg font-semibold text-gray-800">Email Us</p>
-                                    <p class="text-gray-600">For detailed inquiries and official communication.</p>
-                                    <a href="mailto:peakrenewable@gmail.com" class="text-blue-peak font-medium hover:underline text-lg">oluwanifemis919@gmail.com</a>
-                                </div>
-                            </div>
-                            
-                            <!-- Phone -->
-                            <div class="flex items-start space-x-4">
-                                <div class="flex-shrink-0 w-10 h-10 p-2 bg-yellow-100 rounded-full flex items-center justify-center">
-                                    <i data-lucide="phone" class="w-6 h-6 text-yellow-600"></i>
-                                </div>
-                                <div>
-                                    <p class="text-lg font-semibold text-gray-800">Call Us</p>
-                                    <p class="text-gray-600">Speak directly with our team during business hours.</p>
-                                    <a href="tel:+2348087829365" class="text-blue-peak font-medium hover:underline text-lg">+234 808 782 9365</a>
-                                </div>
-                            </div>
-
-                            <!-- Address -->
-                            <div class="flex items-start space-x-4">
-                                <div class="flex-shrink-0 w-10 h-10 p-2 bg-gray-100 rounded-full flex items-center justify-center">
-                                    <i data-lucide="map-pin" class="w-6 h-6 text-gray-600"></i>
-                                </div>
-                                <div>
-                                    <p class="text-lg font-semibold text-gray-800">Our Office</p>
-                                    <p class="text-gray-600">Lagos, Nigeria</p>
-                                    <p class="text-gray-500 text-sm">(Meetings by appointment only)</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- AI Solar Advisor Section (UNCHANGED) -->
-                    <!-- Logic is preserved in <script> tag -->
-                    <div class="bg-blue-peak p-4 md:p-8 rounded-xl shadow-2xl">
-                        <h3 class="text-3xl font-bold text-white mb-4 flex items-center justify-center">
-                            <i data-lucide="bot" class="w-8 h-8 mr-3 text-yellow-accent"></i>
-                            AI Solar Advisor ✨
-                        </h3>
-                        <p class="text-white opacity-80 text-center mb-6 max-w-lg mx-auto">Ask our AI any question about solar power, maintenance, or equipment sizing. Powered by Gemini's grounded search capability.</p>
-                        
-                        <div class="bg-white rounded-lg p-4 shadow-inner flex flex-col">
-                            <!-- Message Display Area -->
-                            <div id="advisor-messages" class="flex-grow overflow-y-auto space-y-4 mb-4 p-2">
-                                <div class="flex justify-start">
-                                    <div class="bg-green-100 text-green-800 p-3 rounded-xl rounded-bl-none max-w-chat-bubble shadow-md">
-                                        Welcome! I'm the Peak Renewable AI Advisor. I can answer questions about solar energy and guide you through our services. Please note, I cannot provide pricing or product quotes, but I can refer you to our human team who will be happy to help!
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Input Form (UNCHANGED) -->
-                            <form id="advisor-form" class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2 pt-2 border-t border-gray-200">
-                                <input type="text" id="advisor-input" placeholder="Ask your solar question here..." required class="flex-grow p-3 border border-gray-300 rounded-lg focus:ring-green-peak focus:border-green-peak shadow-sm w-full">
-                                <button type="submit" id="advisor-submit-button" class="bg-yellow-accent text-gray-900 px-4 py-3 rounded-lg font-semibold hover:bg-yellow-500 transition disabled:opacity-50 w-full sm:w-auto">
-                                    Ask
-                                </button>
-                            </form>
-                            
-                            <div id="advisor-status" class="text-sm mt-2 text-gray-600 text-center"></div>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </section>
-
-        <!-- --------------------------------- DOCUMENTATION PAGE (REMOVED) --------------------------------- -->
+        
+        <!-- All other sections (Services, About, Articles) are REMOVED from this file -->
         
     </main>
 
@@ -628,15 +227,13 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <!-- Company Info -->
                 <div>
-                    <a href="#" onclick="showPage('home')" class="flex items-center space-x-2 mb-4">
-                        <!-- MODIFIED: Replaced icon div with <img> tag for your logo -->
-                        <!-- IMPORTANT: '1000693979.png' must be in the same folder as this HTML file. -->
+                    <a href="index.html" class="flex items-center space-x-2 mb-4">
                         <img src="1000693979.png" alt="Peak Renewable Logo" class="w-10 h-10 rounded-full">
                         <span class="text-2xl font-bold text-white">Peak Renewable</span>
                     </a>
                     <p class="text-gray-400">Your trusted partner in renewable energy solutions in Nigeria. Powering a sustainable future, one installation at a time.</p>
                     
-                    <!-- Social Media Links -->
+                    <!-- Social Media Links (UNCHANGED) -->
                     <div class="flex space-x-4 mt-4">
                         <a href="https://www.facebook.com/profile.php?id=61571879765300" target="_blank" rel="noopener" class="text-gray-400 hover:text-white" aria-label="Peak Renewable on Facebook">
                             <i data-lucide="facebook" class="w-6 h-6"></i>
@@ -650,29 +247,32 @@
                     </div>
                 </div>
 
-                <!-- Quick Links (UNCHANGED) -->
+                <!-- Quick Links (MODIFIED) -->
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
                     <ul class="space-y-2">
-                        <li><a href="#" onclick="showPage('home')" class="text-gray-400 hover:text-white transition">Home</a></li>
-                        <li><a href="#" onclick="showPage('about')" class="text-gray-400 hover:text-white transition">About Us</a></li>
-                        <li><a href="#" onclick="showPage('services')" class="text-gray-400 hover:text-white transition">Services</a></li>
-                        <li><a href="#" onclick="showPage('articles')" class="text-gray-400 hover:text-white transition">Articles</a></li>
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition">Services</a></li>
+                        <!-- NEW PAGE LINK -->
+                        <li><a href="product.html" class="text-gray-400 hover:text-white transition">Products</a></li>
+                        <li><a href="articles.html" class="text-gray-400 hover:text-white transition">Articles</a></li>
                     </ul>
                 </div>
 
-                <!-- Services (UNCHANGED) -->
+                <!-- Services (MODIFIED) -->
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Our Services</h3>
                     <ul class="space-y-2">
-                        <li><a href="#" onclick="showPage('services')" class="text-gray-400 hover:text-white transition">Solar Installation</a></li>
-                        <li><a href="#" onclick="showPage('services')" class="text-gray-400 hover:text-white transition">System Maintenance</a></li>
-                        <li><a href="#" onclick="showPage('services')" class="text-gray-400 hover:text-white transition">Energy Consultation</a></li>
-                        <li><a href="#" onclick="showPage('home')" class="text-gray-400 hover:text-white transition">Product Supply</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition">Solar Installation</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition">System Maintenance</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition">Energy Consultation</a></li>
+                        <!-- NEW PAGE LINK -->
+                        <li><a href="product.html" class="text-gray-400 hover:text-white transition">Product Supply</a></li>
                     </ul>
                 </div>
 
-                <!-- Contact (UNCHANGED) -->
+                <!-- Contact (MODIFIED) -->
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
                     <ul class="space-y-3">
@@ -686,15 +286,25 @@
                         </li>
                         <li class="flex items-center space-x-2">
                             <i data-lucide="mail" class="w-5 h-5 text-gray-400"></i>
-                            <a href="mailto:peakrenewable@gmail.com" class="text-gray-400 hover:text-white transition truncate">oluwanifemis919@gmail.com</a>
+                            <!-- EMAIL UPDATED HERE -->
+                            <a href="mailto:peakrenewable@gmail.com" class="text-gray-400 hover:text-white transition truncate">peakrenewable@gmail.com</a>
                         </li>
                     </ul>
                 </div>
             </div>
 
-            <div class="mt-8 border-t border-gray-700 pt-8 text-center text-gray-500 flex justify-center items-center">
+            <!-- COPYRIGHT SECTION (MODIFIED) -->
+            <div class="mt-8 border-t border-gray-700 pt-8 text-center text-gray-500">
                 <p>&copy; 2024 Peak Renewable. All rights reserved. Built for a sustainable tomorrow.</p>
-                <!-- MODIFIED: Removed the documentation link -->
+                <!-- NEW: Time Studio Credit -->
+                <p class="mt-2 text-sm">
+                    Website created by Time Studio. 
+                    <!-- IMPORTANT: Replace 'YOUR_NUMBER_HERE' with the correct international phone number (e.g., 2348012345678) -->
+                    <a href="https://wa.me/2348087829365" target="_blank" rel="noopener" class="text-gray-400 hover:text-white underline" aria-label="Contact Time Studio on WhatsApp">
+                        Contact them
+                    </a>
+                </p>
+                <!-- END: Time Studio Credit -->
             </div>
         </div>
     </footer>
@@ -703,471 +313,38 @@
     <!-- ----------------- Custom JavaScript (MODIFIED) ----------------- -->
     <!-- ----------------------------------------------------------------------------------- -->
     <script type="module">
-        // Gemini API Configuration
-        const GEMINI_MODEL = 'gemini-2.5-flash-preview-09-2025';
-        // Kept as empty string per instructions. The environment will provide the key.
-        const GEMINI_API_KEY = "AIzaSyCRViBTVg26a5CtlEw8cYwXqepy5nfCSNM"; 
-
-        // ----------------------------------------------------------------------------------
-        // --- NEW ARTICLE MANAGEMENT SYSTEM ---
-        // To add, edit, or delete articles, modify this 'allArticles' array.
-        // See the 'Site Documentation' page (link in footer) for instructions.
-        // ----------------------------------------------------------------------------------
-        const allArticles = [
-            {
-                id: '1',
-                title: 'The Future of Solar: What to Expect in the Next 5 Years',
-                date: 'November 5, 2025',
-                content: `
-                    <p>The solar industry is evolving at an incredible pace. From breakthroughs in panel efficiency to new battery storage technologies, the next five years promise even more significant advancements.</p>
-                   
-                    <h2>Perovskite Cells</h2>
-                    <p>One of the most exciting developments is the rise of perovskite solar cells. These materials are cheaper to produce than traditional silicon and have shown rapidly increasing efficiency in lab settings. We may soon see them integrated into consumer panels, drastically lowering costs.</p>
-                    <h2>Bifacial Panels</h2>
-                    <p>Bifacial solar panels, which can capture sunlight from both sides, are becoming more common. This increases energy generation, especially in commercial or ground-mounted installations where light can reflect off the ground.</p>
-                    <ul>
-                        <li>Increased Efficiency</li>
-                        <li>Lower Manufacturing Costs</li>
-                        <li>Better Battery Integration</li>
-                    </ul>
-                    <p>At Peak Renewable, we are closely monitoring these trends to ensure we always offer our clients the best and most current technology available.</p>
-                `
-            },
-            {
-                id: '2',
-                title: 'How to Choose the Right Inverter for Your Home',
-                date: 'October 28, 2025',
-                content: `
-                    <p>Your inverter is the "brain" of your solar system. It converts the Direct Current (DC) electricity your panels produce into Alternating Current (AC) electricity that your home appliances use. Choosing the right one is crucial.</p>
-                    <h2>String Inverters vs. Microinverters</h2>
-                    <p><strong>String Inverters:</strong> These are the most common and cost-effective option. Your solar panels are arranged in "strings," and all the DC power is sent to a single inverter for conversion. They are reliable but can be affected by shading; if one panel is shaded, the output of the entire string can drop.</p>
-                    <p><strong>Microinverters:</strong> With this setup, a small inverter is installed on the back of every single panel. This means each panel operates independently, maximizing production even if some panels are shaded. They are more expensive upfront but often yield more power over the system's life.</p>
-                    <h2>Hybrid Inverters</h2>
-                    <p>A hybrid inverter, also known as a battery-ready inverter, can function as both an inverter for your solar panels and a battery charger/inverter. If you plan to add battery storage now or in the future, a hybrid inverter is the best choice.</p>
-                    <p>Contact us for a consultation, and we can help you analyze your home's needs to select the perfect inverter.</p>
-                `
-            },
-            {
-                id: '3',
-                title: 'Simple Maintenance Tips to Keep Your Solar System at Peak Performance',
-                date: 'October 15, 2025',
-                content: `
-                    <p>Solar panel systems are remarkably low-maintenance, but a few simple checks can ensure you get the most out of your investment for decades to come.</p>
-
-                    <h2>1. Keep them Clean</h2>
-                    <p>In many places, regular rainfall is enough to keep your panels clean. However, in dry or dusty areas (like during Harmattan in Nigeria), a layer of dust can build up and reduce efficiency. We recommend scheduling a professional cleaning service with us every 6-12 months.</p>
-                    <h2>2. Check for Shading</h2>
-                    <p>Trees can grow quickly! Periodically check to make sure new branches aren't beginning to cast shadows on your panels, especially during peak sun hours. Trimming trees back can be a simple way to boost your energy production.</p>
-                    <h2>3. Monitor Your System</h2>
-                    <p>Get familiar with your system's monitoring app or display. A sudden, unexplained drop in production can be an early sign of a problem with an inverter or a specific panel. If you notice anything unusual, call us for a maintenance check.</p>
-                    <p>By following these simple tips, you can ensure your solar system operates at peak efficiency for its entire 25+ year lifespan.</p>
-                `
-            },
-             {
-    id: '4',
-    title: 'What is Renewable Energy? A Comprehensive Guide',
-    date: 'November 14, 2025',
-    content: `
-        <p>Energy is the engine of modern civilization, powering our homes, industries, and transportation systems. For centuries, we have overwhelmingly relied on **fossil fuels**—coal, oil, and natural gas—to meet these demands. However, this reliance has come at a significant cost. Fossil fuels are finite, and their combustion releases greenhouse gases that drive climate change. This challenge has brought a critical solution to the forefront: **renewable energy**.</p>
-        <p>But what is it, exactly? In simple terms, renewable energy is energy derived from natural sources that are replenished at a rate equal to or faster than they are consumed. Unlike fossil fuels, which take millions of years to form, renewable sources are, for all practical purposes, inexhaustible.</p>
-
-        <h2>What Defines Renewable Energy?</h2>
-        <p>The core concept of renewable energy rests on sustainability. These energy sources are part of the planet's natural, ongoing processes. Think of the sun that shines every day, the wind that blows, the rivers that flow, and the heat that radiates from the Earth's core. We can harness power from these processes without significantly depleting their source. This stands in stark contrast to **non-renewable energy**, where every barrel of oil burned or ton of coal mined is one less that will be available in the future.</p>
-
-        <h2>The Primary Types of Renewable Energy</h2>
-        <p>Renewable energy isn't a single entity but a diverse category of sources, each with unique technologies and applications. Here are the most prominent types:</p>
-        
-        <p><strong>1. Solar Energy:</strong> This is the most abundant renewable source, derived from the sun's radiation. We harness it primarily through **photovoltaic (PV) panels**, which convert sunlight directly into electricity. It can also be used in concentrated solar power (CSP) systems, which use mirrors to concentrate sunlight to heat liquid and produce steam, turning a turbine.</p>
-        
-        <p><strong>2. Wind Energy:</strong> This source uses the kinetic energy of moving air. Large **wind turbines**, often grouped in wind farms (both onshore and offshore), have blades that are pushed by the wind. This rotation spins a generator to create electricity. Wind is, in effect, a form of solar energy, as it's a result of the sun unevenly heating the atmosphere.</p>
-        
-        <p><strong>3. Hydropower (Water Energy):</strong> This is one of the oldest and most established forms of renewable energy. It harnesses the energy of moving water. The most common form is conventional hydropower, which uses **dams** to create a reservoir. Water released from the reservoir flows through a turbine, spinning it to generate electricity. Other forms, like tidal and wave energy, are less common but hold significant future potential.</p>
-        
-        <p><strong>4. Geothermal Energy:</strong> This energy comes from the heat within the Earth. In areas with high geothermal activity, this heat can be accessed by drilling wells to tap into reservoirs of steam or hot water. This steam can then be used to power turbines. Geothermal is exceptionally reliable as it is not dependent on weather and is available 24/7.</p>
-        
-        <p><strong>5. Biomass Energy:</strong> This energy is generated from organic materials, known as biomass. This can include wood, agricultural crops, food waste, and even sewage. This material can be burned directly to produce heat or converted into **biofuels** (like ethanol and biodiesel) to power vehicles. When managed sustainably, biomass can be considered carbon-neutral, as the carbon dioxide released during combustion was previously absorbed by the plants as they grew.</p>
-
-        <h2>The Urgent Case for Renewables</h2>
-        <p>The global shift toward renewable energy is driven by several critical advantages over traditional fossil fuels.</p>
-        <ul>
-            <li><strong>Environmental Benefits:</strong> This is the most significant driver. Renewable sources produce little to no greenhouse gas emissions, making them our most powerful tool in the fight against climate change. They also drastically reduce air pollution, improving public health and saving lives.</li>
-            <li><strong>Energy Security:</strong> Most renewable sources are domestic. By developing wind, solar, and geothermal, nations can reduce their dependence on foreign oil and gas imports, which are often subject to market volatility and geopolitical conflicts.</li>
-            <li><strong>Economic Advantages:</strong> While the upfront cost of building a solar farm or wind turbine can be high, the fuel (sunlight, wind) is free. This leads to stable, predictable energy prices. The renewable sector is also a massive creator of jobs in manufacturing, installation, and maintenance.</li>
-        </ul>
-
-        <h2>Challenges on the Path to a Green Future</h2>
-        <p>Despite their immense benefits, transitioning to 100% renewable energy is not without its challenges. The most-discussed issue is **intermittency**. The sun doesn't shine at night, and the wind doesn't always blow. This creates a need for reliable energy storage.</p>
-        <p>This is where technologies like **grid-scale batteries** become crucial. They store excess energy produced during peak times (like sunny afternoons) and release it when demand is high, or production is low (like at night). Other challenges include the land required for large-scale farms and the need to modernize our electrical grids to handle these new, decentralized energy sources.</p>
-
-        <h2>The Future is Renewable</h2>
-        <p>Renewable energy is no longer a niche concept; it is the cornerstone of our global energy future. Technological advancements are rapidly driving down costs—solar and wind are now the cheapest forms of new electricity generation in many parts of the world. The challenges of intermittency are being solved through innovation in battery storage, smart grids, and diversifying our renewable portfolio.</p> '
-        <p>Ultimately, renewable energy represents more than just a different way to power our lights. It's a fundamental shift toward a more sustainable, secure, and resilient world, ensuring a cleaner, healthier planet for generations to come.</p>
-   `
-
-        },
-
-        ];
-        // ----------------------------------------------------------------------------------
-        // --- END OF ARTICLE MANAGEMENT SYSTEM ---
-        // ----------------------------------------------------------------------------------
+        // This script is now only for the mobile menu and icons on this page.
+        // All other logic (showPage, articles, AI) has been removed.
 
         /**
-         * Global function to show a specific page and hide others.
-         * @param {string} pageId - The ID of the page section to show.
-         */
-        window.showPage = function(pageId) {
-            // Hide all page content sections
-            document.querySelectorAll('.page-content').forEach(section => {
-                section.classList.add('hidden');
-            });
-
-            // Show the target page
-            const targetPage = document.getElementById(pageId);
-            if (targetPage) {
-                targetPage.classList.remove('hidden');
-                window.scrollTo(0, 0); // Scroll to top
-            } else {
-                console.warn(`Page with ID '${pageId}' not found.`);
-                // Fallback to home if page not found
-                document.getElementById('home').classList.remove('hidden');
-            }
-            
-            // Close mobile menu on navigation
-            const mobileMenu = document.getElementById('mobile-menu');
-            if (mobileMenu.classList.contains('open')) {
-                mobileMenu.classList.remove('open');
-                // Update menu icon
-                document.getElementById('mobile-menu-button').innerHTML = `<i data-lucide="menu" class="w-6 h-6"></i>`;
-                lucide.createIcons();
-            }
-
-            // If we are showing the articles page, render the articles from our array
-            if (pageId === 'articles') {
-                renderArticles(allArticles);
-            }
-        }
-        
-        /**
-         * Renders the loaded articles into the public DOM.
-         * @param {Array} articles - Array of article objects to render.
-         */
-        function renderArticles(articles) {
-            const container = document.getElementById('articles-container');
-            const statusEl = document.getElementById('articles-status');
-            container.innerHTML = ''; // Clear existing content
-            
-            if (articles.length === 0) {
-                 // Check if a search term is active
-                const searchTerm = document.getElementById('article-search-input').value;
-                if (searchTerm) {
-                    statusEl.innerHTML = `<p class="text-gray-600 text-center col-span-full">No articles found matching your search term.</p>`;
-                } else {
-                    statusEl.innerHTML = `<p class="text-gray-600 text-center col-span-full">No articles found at this time. Please check back later.</p>`;
-                }
-                statusEl.style.display = 'block';
-            } else {
-                statusEl.style.display = 'none'; // Hide status message
-            }
-            
-            articles.forEach(article => {
-                const articleEl = document.createElement('div');
-                articleEl.className = "bg-white rounded-xl shadow-lg overflow-hidden flex flex-col hover:shadow-2xl transition duration-300 border-b-4 border-yellow-accent";
-                
-                // Truncate content for preview and strip HTML/Markdown
-                const rawContent = article.content || '';
-                // Use regex to remove HTML tags for a cleaner preview
-                const previewText = rawContent.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim().substring(0, 100);
-                
-                articleEl.innerHTML = `
-                    <div class="p-6 flex-grow">
-                        <span class="text-sm text-gray-500">${article.date || 'Jan 1, 2024'}</span>
-                        <h3 class="text-xl font-semibold text-blue-peak mt-2 mb-2">${article.title}</h3>
-                        <p class="text-gray-600 text-sm mb-4">${previewText}${rawContent.length > 100 ? '...' : ''}</p>
-                    </div>
-                    <div class="p-6 bg-gray-50">
-                        <button onclick="showArticleDetail('${article.id}')" class="font-semibold text-green-peak hover:text-green-700 flex items-center">
-                            Read Full Article <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
-                        </button>
-                    </div>
-                `;
-                container.appendChild(articleEl);
-            });
-            lucide.createIcons(); // Re-render icons
-        }
-        
-        /**
-         * Handles the search input on the articles page.
-         */
-        function handleArticleSearch() {
-            const searchTerm = document.getElementById('article-search-input').value.toLowerCase();
-            
-            if (!searchTerm) {
-                renderArticles(allArticles); // Render all articles if search is empty
-                return;
-            }
-            
-            const filteredArticles = allArticles.filter(article => {
-                const title = article.title?.toLowerCase() || '';
-                const content = article.content?.toLowerCase() || '';
-                return title.includes(searchTerm) || content.includes(searchTerm);
-            });
-            
-            renderArticles(filteredArticles);
-        }
-
-        /**
-         * Shows the detail view for a single article.
-         * @param {string} articleId - The ID of the article to show.
-         */
-        window.showArticleDetail = function(articleId) {
-            // Find article from the hard-coded array
-            const article = allArticles.find(a => a.id === articleId);
-            const detailContainer = document.getElementById('article-content-container');
-            const shareContainer = document.getElementById('share-buttons-container');
-
-            if (!article) {
-                console.error("Article not found.");
-                detailContainer.innerHTML = `<p>Error: Article not found. Please go back to the articles list.</p>`;
-                shareContainer.innerHTML = ''; // Clear share buttons
-                showPage('article-detail');
-                return;
-            }
-            
-            // 1. Populate Article Content
-            detailContainer.innerHTML = `
-                <span class="text-base text-gray-600">${article.date || 'Jan 1, 2024'}</span>
-                <h1 class="text-3xl md:text-4xl font-extrabold text-blue-peak mt-2 mb-6">${article.title}</h1>
-                <div class="prose-img:rounded-xl prose-headings:text-gray-800">
-                    <!-- This content is rendered as HTML -->
-                    ${article.content}
-                </div>
-            `;
-            
-            // 2. Populate Share Buttons (MODIFIED)
-            const articleUrl = encodeURIComponent(window.location.origin || window.location.href); // Get base URL
-            const shareText = encodeURIComponent(`"${article.title}" - Read on Peak Renewable`);
-            
-            // MODIFIED: Fixed WhatsApp link
-            const whatsappUrl = `https://api.whatsapp.com/send?text=${shareText}%20${articleUrl}`;
-            const twitterUrl = `https://twitter.com/intent/tweet?text=${shareText}&url=${articleUrl}`;
-            const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${articleUrl}&quote=${shareText}`;
-
-            shareContainer.innerHTML = `
-                <h3 class="text-xl font-semibold text-gray-800 mb-4">Share this article</h3>
-                <div class="flex flex-wrap gap-3">
-                    <a href="${whatsappUrl}" target="_blank" rel="noopener noreferrer" class="share-button" style="background-color: #25D366;" aria-label="Share on WhatsApp">
-                        <!-- MODIFIED: Using inline SVG for WhatsApp icon -->
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.247.604 4.341 1.768 6.136l-1.127 4.144 4.254-1.118A11.97 11.97 0 0 0 12 24c6.627 0 12-5.373 12-12C24 5.373 18.627 0 12 0zM12 22a9.982 9.982 0 0 1-5.11-.989l-.364-.216-3.79 1l1.01-3.743-.24-.383A9.998 9.998 0 0 1 12 2C6.477 2 2 6.477 2 12a9.983 9.983 0 0 0 2.63 6.64l.115.176-1.077 3.974 4.075-1.071.18.106A9.969 9.969 0 0 0 12 22zm3.3-6.42a.846.846 0 0 0-.251-.212c-.1-.055-.65-.32-.756-.358a.833.833 0 0 0-.154.025c-.097.037-.563.687-.69.832a.56.56 0 0 1-.3.26c-.15.056-.27-.015-.46-.07-.49-.15-1.896-.7-3.61-2.222a4.99 4.99 0 0 1-1.116-1.503.738.738 0 0 1 .15-.71c.07-.076.155-.18.225-.262.068-.08.136-.17.18-.25a.333.333 0 0 0 .044-.24.78.78 0 0 0-.115-.195c-.06-.115-.55-.66-.757-.89a.955.955 0 0 0-.36-.26c-.15-.054-.31-.03-.47-.03-.17 0-.35.06-.52.27-.17.21-1.11 1.07-1.11 2.607 0 1.537 1.135 2.923 1.285 3.123.15.2.29.23.56.23 1.04 0 2.93-.9 3.69-1.24a5.05 5.05 0 0 0 2.06-.678.868.868 0 0 0 .53-.88c-.02-.21-.085-.355-.16-.47z" />
-                        </svg>
-                        WhatsApp
-                    </a>
-                    <a href="${twitterUrl}" target="_blank" rel="noopener noreferrer" class="share-button" style="background-color: #1DA1F2;" aria-label="Share on X (Twitter)">
-                        <i data-lucide="twitter"></i>
-                        Twitter
-                    </a>
-                    <a href="${facebookUrl}" target="_blank" rel="noopener noreferrer" class="share-button" style="background-color: #1877F2;" aria-label="Share on Facebook">
-                        <i data-lucide="facebook"></i>
-                        Facebook
-                    </a>
-                </div>
-            `;
-            
-            // 3. Show the page and render icons
-            showPage('article-detail');
-            lucide.createIcons();
-        }
-
-        // --- GEMINI API INTEGRATION LOGIC (UNCHANGED) ---
-
-        /**
-         * Utility function to handle the Gemini API call with exponential backoff and grounding.
-         * @param {string} userQuery - The user's prompt.
-         * @param {string} systemPrompt - The instruction for the model.
-         * @param {number} [retryCount=0] - Current retry attempt count.
-         * @returns {Promise<{text: string, sources: Array}>} - Generated text and sources.
-         */
-        async function geminiApiCall(userQuery, systemPrompt, retryCount = 0) {
-            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${GEMINI_API_KEY}`;
-            const maxRetries = 3;
-            const baseDelay = 1000;
-
-            const payload = {
-                contents: [{ parts: [{ text: userQuery }] }],
-                tools: [{ "google_search": {} }],
-                systemInstruction: {
-                    parts: [{ text: systemPrompt }]
-                },
-            };
-
-            try {
-                const response = await fetch(apiUrl, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(payload)
-                });
-
-                if (!response.ok) {
-                    // Handle rate limiting with backoff
-                    if (response.status === 429 && retryCount < maxRetries) {
-                        const delay = baseDelay * Math.pow(2, retryCount);
-                        // Do not log retry attempts to the console as errors
-                        await new Promise(resolve => setTimeout(resolve, delay));
-                        return geminiApiCall(userQuery, systemPrompt, retryCount + 1);
-                    }
-                    throw new Error(`API call failed with status: ${response.status}`);
-                }
-
-                const result = await response.json();
-                const candidate = result.candidates?.[0];
-
-                if (candidate && candidate.content?.parts?.[0]?.text) {
-                    const text = candidate.content.parts[0].text;
-                    
-                    let sources = [];
-                    const groundingMetadata = candidate.groundingMetadata;
-                    if (groundingMetadata && groundingMetadata.groundingAttributions) {
-                        sources = groundingMetadata.groundingAttributions
-                            .map(attribution => ({
-                                uri: attribution.web?.uri,
-                                title: attribution.web?.title,
-                            }))
-                            .filter(source => source.uri && source.title);
-                    }
-                    return { text, sources };
-
-                } else {
-                    // Check for safety ratings or other reasons for no content
-                    let errorMsg = "Invalid response structure from Gemini.";
-                    if (result.promptFeedback) {
-                        errorMsg = `Response blocked due to: ${result.promptFeedback.blockReason}`;
-                    }
-                    throw new Error(errorMsg);
-                }
-
-            } catch (error) {
-                // Log the final error after retries
-                console.error("Gemini API error after retries:", error);
-                // Re-throw a generic, user-friendly error message
-                throw new Error("Could not connect to the Solar Advisor. Please try again later.");
-            }
-        }
-        
-        /**
-         * Handles the submission of the AI Solar Advisor form.
-         */
-        async function handleAdvisorSubmit(event) {
-            event.preventDefault();
-            
-            const inputEl = document.getElementById('advisor-input');
-            const messagesEl = document.getElementById('advisor-messages');
-            const statusEl = document.getElementById('advisor-status');
-            const submitBtn = document.getElementById('advisor-submit-button');
-            
-            const userQuery = inputEl.value.trim();
-            if (!userQuery) return;
-            
-            submitBtn.disabled = true;
-            inputEl.value = ''; // Clear input immediately
-            statusEl.textContent = '';
-            
-            // Display user message
-            messagesEl.innerHTML += `
-                <div class="flex justify-end">
-                    <div class="bg-blue-200 text-gray-900 p-3 rounded-xl rounded-br-none max-w-chat-bubble shadow-md">
-                        ${userQuery.replace(/</g, "&lt;").replace(/>/g, "&gt;")}
-                    </div>
-                </div>
-            `;
-            messagesEl.scrollTop = messagesEl.scrollHeight;
-            
-            // Display loading message
-            const loadingMessageId = `loading-${Date.now()}`;
-            messagesEl.innerHTML += `
-                <div class="flex justify-start" id="${loadingMessageId}">
-                    <div class="bg-gray-100 text-gray-600 p-3 rounded-xl rounded-bl-none max-w-chat-bubble shadow-md animate-pulse">
-                        Thinking... (I will reply shortly)
-                    </div>
-                </div>
-            `;
-            messagesEl.scrollTop = messagesEl.scrollHeight;
-
-            try {
-                statusEl.textContent = 'Searching the web for current, grounded advice...';
-                
-                const systemPrompt = "You are the Peak Renewable AI Advisor. Your role is to be polite, helpful, and straightforward. Your goal is to guide customers and provide information about renewable energy. You MUST NOT, under any circumstances, mention prices, costs, or any amount of money. If a user asks about pricing, products, or installation quotes, you MUST politely refer them to the human assistance team via the WhatsApp or Email links on the website.";
-
-                const { text, sources } = await geminiApiCall(userQuery, systemPrompt);
-                
-                // Remove loading message
-                document.getElementById(loadingMessageId).remove();
-                
-                // Construct the full response message with sources
-                let sourceHtml = '';
-                if (sources.length > 0) {
-                    sourceHtml = `<div class="mt-2 pt-2 border-t border-green-300 text-xs text-green-800 opacity-80">
-                        <p class="font-semibold mb-1">Sources consulted:</p>
-                        <ul class="list-disc pl-5 space-y-0.5">
-                            ${sources.map((s, index) => `<li><a href="${s.uri}" target="_blank" class="hover:underline text-blue-peak font-medium">${s.title}</a></li>`).join('')}
-                        </ul>
-                    </div>`;
-                }
-                
-                // Display AI response
-                messagesEl.innerHTML += `
-                    <div class="flex justify-start">
-                        <div class="bg-green-100 text-green-800 p-3 rounded-xl rounded-bl-none max-w-chat-bubble shadow-md">
-                            ${text.replace(/\n/g, '<br>')}
-                            ${sourceHtml}
-                        </div>
-                    </div>
-                `;
-                messagesEl.scrollTop = messagesEl.scrollHeight;
-                statusEl.textContent = 'Response ready.';
-
-            } catch (error) {
-                // Remove loading message
-                document.getElementById(loadingMessageId)?.remove();
-                
-                // Display error message
-                messagesEl.innerHTML += `
-                    <div class="flex justify-start">
-                        <div class="bg-red-100 text-red-700 p-3 rounded-xl rounded-bl-none max-w-chat-bubble shadow-md">
-                            System Error: ${error.message}
-                        </div>
-                    </div>
-                `;
-                messagesEl.scrollTop = messagesEl.scrollHeight;
-                statusEl.textContent = 'Error: Failed to get advice.';
-
-            } finally {
-                submitBtn.disabled = false;
-            }
-        }
-
-        /**
-         * Initializes all event listeners for static content and new features.
+         * Initializes all event listeners for static content.
          */
         function initializeEventListeners() {
             // Mobile menu toggle
             const menuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
             
-            menuButton.addEventListener('click', () => {
-                const isOpen = mobileMenu.classList.toggle('open');
-                if (isOpen) {
-                    menuButton.innerHTML = `<i data-lucide="x" class="w-6 h-6"></i>`;
-                } else {
-                    menuButton.innerHTML = `<i data-lucide="menu" class="w-6 h-6"></i>`;
-                }
-                lucide.createIcons();
-            });
-            
-            // Search Bar Listener
-            document.getElementById('article-search-input')?.addEventListener('input', handleArticleSearch);
+            if (menuButton && mobileMenu) {
+                menuButton.addEventListener('click', () => {
+                    const isOpen = mobileMenu.classList.toggle('open');
+                    if (isOpen) {
+                        menuButton.innerHTML = `<i data-lucide="x" class="w-6 h-6"></i>`;
+                    } else {
+                        menuButton.innerHTML = `<i data-lucide="menu" class="w-6 h-6"></i>`;
+                    }
+                    lucide.createIcons();
+                });
+            }
 
-            // AI Solar Advisor Form Submission
-            document.getElementById('advisor-form')?.addEventListener('submit', handleAdvisorSubmit);
+            // Close mobile menu on link click (for single-page feel)
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                // We don't need to add new listeners, the default <a> behavior
+                // will navigate to the new page, and the menu will be closed
+                // on the next page's load. However, if we want to close it
+                // *before* navigating, we'd add a click listener here.
+                // For simplicity, we'll let it close on page load.
+            });
         }
         
         // Initial setup on DOM content loaded
@@ -1177,12 +354,8 @@
             
             // Setup event listeners
             initializeEventListeners();
-            
-            // Show the home page by default
-            showPage('home');
         });
 
     </script>
 </body>
 </html>
-
