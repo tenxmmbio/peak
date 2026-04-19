@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PeakRet Cloud – Coming Back Stronger</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --sun: #F5A623;
+      --solar: #FFD166;
+      --green: #06D6A0;
+      --dark: #0A0F0D;
+      --mid: #111A14;
+      --card: rgba(255,255,255,0.04);
+      --border: rgba(255,255,255,0.08);
+    }
+
+    body {
+      background: var(--dark);
+      color: #fff;
+      font-family: 'DM Sans', sans-serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    /* Animated background */
+    .bg {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .bg-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.25;
+      animation: drift 12s ease-in-out infinite alternate;
+    }
+
+    .bg-orb.a {
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, #F5A623, transparent);
+      top: -100px; left: -100px;
+      animation-delay: 0s;
+    }
+
+    .bg-orb.b {
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, #06D6A0, transparent);
+      bottom: -80px; right: -80px;
+      animation-delay: -6s;
+    }
+
+    .bg-orb.c {
+      width: 300px; height: 300px;
+      background: radial-gradient(circle, #FFD166, transparent);
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      animation-delay: -3s;
+    }
+
+    @keyframes drift {
+      from { transform: translate(0, 0) scale(1); }
+      to   { transform: translate(30px, 20px) scale(1.1); }
+    }
+
+    /* Grid lines */
+    .grid-lines {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    /* Main container */
+    .container {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 860px;
+      padding: 40px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      text-align: center;
+    }
+
+    /* Logo / Brand */
+    .brand {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      animation: fadeDown 0.8s ease both;
+    }
+
+    .sun-icon {
+      width: 64px; height: 64px;
+      position: relative;
+      animation: spin-slow 20s linear infinite;
+    }
+
+    .sun-icon svg {
+      width: 100%; height: 100%;
+    }
+
+    @keyframes spin-slow {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+
+    .brand-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.8rem, 8vw, 5rem);
+      letter-spacing: 0.06em;
+      line-height: 1;
+      background: linear-gradient(135deg, #F5A623 0%, #FFD166 40%, #06D6A0 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .brand-sub {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.25em;
+      color: rgba(255,255,255,0.4);
+      text-transform: uppercase;
+    }
+
+    /* Headline */
+    .headline {
+      animation: fadeUp 0.8s 0.2s ease both;
+    }
+
+    .headline h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2rem, 6vw, 3.6rem);
+      letter-spacing: 0.04em;
+      line-height: 1.1;
+      color: #fff;
+    }
+
+    .headline h1 span {
+      color: var(--sun);
+    }
+
+    .headline p {
+      margin-top: 14px;
+      font-size: 1rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.55);
+      max-width: 480px;
+      margin-inline: auto;
+      line-height: 1.7;
+    }
+
+    /* Countdown */
+    .countdown-wrap {
+      animation: fadeUp 0.8s 0.4s ease both;
+      width: 100%;
+    }
+
+    .countdown-label {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.3em;
+      color: var(--green);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .countdown {
+      display: flex;
+      justify-content: center;
+      gap: clamp(10px, 3vw, 28px);
+      flex-wrap: nowrap;
+    }
+
+    .unit {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .unit-box {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      width: clamp(72px, 18vw, 110px);
+      height: clamp(72px, 18vw, 110px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(8px);
+      transition: border-color 0.3s;
+    }
+
+    .unit-box::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(245,166,35,0.5), transparent);
+    }
+
+    .unit-box:hover {
+      border-color: rgba(245,166,35,0.3);
+    }
+
+    .unit-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2rem, 7vw, 3.4rem);
+      letter-spacing: 0.02em;
+      color: #fff;
+      line-height: 1;
+      transition: all 0.3s ease;
+    }
+
+    .unit-num.flash {
+      color: var(--sun);
+      transform: scale(1.05);
+    }
+
+    .unit-label {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.58rem;
+      letter-spacing: 0.2em;
+      color: rgba(255,255,255,0.35);
+      text-transform: uppercase;
+    }
+
+    .separator {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2rem, 7vw, 3.4rem);
+      color: rgba(245,166,35,0.3);
+      align-self: flex-start;
+      margin-top: clamp(16px, 4vw, 24px);
+      animation: blink 1s step-end infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0.1; }
+    }
+
+    /* Progress bar */
+    .progress-wrap {
+      width: 100%;
+      max-width: 500px;
+      margin-inline: auto;
+      margin-top: 24px;
+      animation: fadeUp 0.8s 0.5s ease both;
+    }
+
+    .progress-track {
+      height: 4px;
+      background: rgba(255,255,255,0.07);
+      border-radius: 99px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--sun), var(--green));
+      border-radius: 99px;
+      transition: width 1s linear;
+    }
+
+    .progress-text {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.3);
+      font-family: 'Space Mono', monospace;
+    }
+
+    /* WhatsApp CTA */
+    .cta-wrap {
+      animation: fadeUp 0.8s 0.6s ease both;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .cta-note {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.4);
+    }
+
+    .cta-note strong {
+      color: rgba(255,255,255,0.75);
+    }
+
+    .whatsapp-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 36px;
+      background: #25D366;
+      color: #fff;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      font-size: 1rem;
+      border-radius: 100px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 8px 30px rgba(37,211,102,0.25);
+    }
+
+    .whatsapp-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 40px rgba(37,211,102,0.4);
+    }
+
+    .whatsapp-btn:active {
+      transform: translateY(0);
+    }
+
+    .whatsapp-btn svg {
+      width: 22px; height: 22px;
+      flex-shrink: 0;
+    }
+
+    /* Services teaser */
+    .services {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+      animation: fadeUp 0.8s 0.7s ease both;
+    }
+
+    .tag {
+      padding: 7px 16px;
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.45);
+      backdrop-filter: blur(6px);
+      background: var(--card);
+      white-space: nowrap;
+    }
+
+    .tag .dot {
+      display: inline-block;
+      width: 6px; height: 6px;
+      background: var(--sun);
+      border-radius: 50%;
+      margin-right: 7px;
+      vertical-align: middle;
+    }
+
+    /* Footer */
+    .footer {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.62rem;
+      color: rgba(255,255,255,0.18);
+      letter-spacing: 0.1em;
+      animation: fadeUp 0.8s 0.9s ease both;
+    }
+
+    /* Animations */
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Done state */
+    .done-msg {
+      display: none;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.5rem;
+      color: var(--green);
+      letter-spacing: 0.1em;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bg">
+    <div class="bg-orb a"></div>
+    <div class="bg-orb b"></div>
+    <div class="bg-orb c"></div>
+  </div>
+  <div class="grid-lines"></div>
+
+  <div class="container">
+
+    <!-- Brand -->
+    <div class="brand">
+      <div class="sun-icon">
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="32" cy="32" r="14" fill="#F5A623" opacity="0.9"/>
+          <circle cx="32" cy="32" r="10" fill="#FFD166"/>
+          <!-- Rays -->
+          <line x1="32" y1="4" x2="32" y2="12" stroke="#F5A623" stroke-width="3" stroke-linecap="round"/>
+          <line x1="32" y1="52" x2="32" y2="60" stroke="#F5A623" stroke-width="3" stroke-linecap="round"/>
+          <line x1="4" y1="32" x2="12" y2="32" stroke="#F5A623" stroke-width="3" stroke-linecap="round"/>
+          <line x1="52" y1="32" x2="60" y2="32" stroke="#F5A623" stroke-width="3" stroke-linecap="round"/>
+          <line x1="11.5" y1="11.5" x2="17.2" y2="17.2" stroke="#F5A623" stroke-width="3" stroke-linecap="round"/>
+          <line x1="46.8" y1="46.8" x2="52.5" y2="52.5" stroke="#F5A623" stroke-width="3" stroke-linecap="round"/>
+          <line x1="52.5" y1="11.5" x2="46.8" y2="17.2" stroke="#F5A623" stroke-width="3" stroke-linecap="round"/>
+          <line x1="17.2" y1="46.8" x2="11.5" y2="52.5" stroke="#F5A623" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="brand-name">PeakRet</div>
+      <div class="brand-sub">Renewable Energy · Lagos, Nigeria</div>
+    </div>
+
+    <!-- Headline -->
+    <div class="headline">
+      <h1>We're <span>Upgrading</span><br>To Serve You Better</h1>
+      <p>Our website is getting a powerful upgrade — just like the solar systems we install. We'll be back with a brighter, stronger experience.</p>
+    </div>
+
+    <!-- Countdown -->
+    <div class="countdown-wrap">
+      <div class="countdown-label">⚡ Back online in</div>
+      <div class="countdown">
+        <div class="unit">
+          <div class="unit-box"><span class="unit-num" id="days">07</span></div>
+          <div class="unit-label">Days</div>
+        </div>
+        <div class="separator">:</div>
+        <div class="unit">
+          <div class="unit-box"><span class="unit-num" id="hours">00</span></div>
+          <div class="unit-label">Hours</div>
+        </div>
+        <div class="separator">:</div>
+        <div class="unit">
+          <div class="unit-box"><span class="unit-num" id="mins">00</span></div>
+          <div class="unit-label">Mins</div>
+        </div>
+        <div class="separator">:</div>
+        <div class="unit">
+          <div class="unit-box"><span class="unit-num" id="secs">00</span></div>
+          <div class="unit-label">Secs</div>
+        </div>
+      </div>
+      <div class="done-msg" id="done-msg">🎉 We're Back — Refresh the Page!</div>
+    </div>
+
+    <!-- Progress -->
+    <div class="progress-wrap">
+      <div class="progress-track">
+        <div class="progress-fill" id="progress-fill" style="width:0%"></div>
+      </div>
+      <div class="progress-text">
+        <span>Upgrade started</span>
+        <span id="pct">0% complete</span>
+      </div>
+    </div>
+
+    <!-- WhatsApp CTA -->
+    <div class="cta-wrap">
+      <div class="cta-note"><strong>Need solar solutions now?</strong> Reach us directly — we're still operating!</div>
+      <a class="whatsapp-btn" href="https://wa.me/2348087829365?text=Hello%20PeakRet!%20I%20saw%20your%20website%20is%20being%20upgraded.%20I%27d%20like%20to%20enquire%20about%20your%20solar%20services." target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        Chat Us on WhatsApp
+      </a>
+    </div>
+
+    <!-- Services -->
+    <div class="services">
+      <div class="tag"><span class="dot"></span>Solar Installation</div>
+      <div class="tag"><span class="dot"></span>Solar Maintenance</div>
+      <div class="tag"><span class="dot"></span>Energy Audit</div>
+      <div class="tag"><span class="dot"></span>Inverter Systems</div>
+      <div class="tag"><span class="dot"></span>Lagos & Beyond</div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">© 2026 PEAKRET CLOUD · ALL RIGHTS RESERVED · LAGOS, NIGERIA</div>
+
+  </div>
+
+  <script>
+    // Set deadline: 7 days from NOW
+    const DEADLINE_KEY = 'peakret_deadline';
+    let deadline = localStorage.getItem(DEADLINE_KEY);
+    if (!deadline) {
+      const d = new Date();
+      d.setDate(d.getDate() + 7);
+      deadline = d.toISOString();
+      localStorage.setItem(DEADLINE_KEY, deadline);
+    }
+    const endTime = new Date(deadline).getTime();
+    const startTime = endTime - (7 * 24 * 60 * 60 * 1000);
+
+    const daysEl  = document.getElementById('days');
+    const hoursEl = document.getElementById('hours');
+    const minsEl  = document.getElementById('mins');
+    const secsEl  = document.getElementById('secs');
+    const fillEl  = document.getElementById('progress-fill');
+    const pctEl   = document.getElementById('pct');
+    const doneEl  = document.getElementById('done-msg');
+
+    function pad(n) { return String(n).padStart(2, '0'); }
+
+    function flashEl(el) {
+      el.classList.add('flash');
+      setTimeout(() => el.classList.remove('flash'), 300);
+    }
+
+    let prevSec = null;
+
+    function tick() {
+      const now  = Date.now();
+      const diff = endTime - now;
+
+      if (diff <= 0) {
+        daysEl.closest('.countdown').style.display = 'none';
+        doneEl.style.display = 'block';
+        fillEl.style.width = '100%';
+        pctEl.textContent = '100% complete';
+        return;
+      }
+
+      const totalSecs = Math.floor(diff / 1000);
+      const d = Math.floor(totalSecs / 86400);
+      const h = Math.floor((totalSecs % 86400) / 3600);
+      const m = Math.floor((totalSecs % 3600) / 60);
+      const s = totalSecs % 60;
+
+      if (s !== prevSec) {
+        flashEl(secsEl);
+        prevSec = s;
+      }
+
+      daysEl.textContent  = pad(d);
+      hoursEl.textContent = pad(h);
+      minsEl.textContent  = pad(m);
+      secsEl.textContent  = pad(s);
+
+      // Progress
+      const elapsed = now - startTime;
+      const total   = endTime - startTime;
+      const pct = Math.min(100, Math.floor((elapsed / total) * 100));
+      fillEl.style.width = pct + '%';
+      pctEl.textContent  = pct + '% complete';
+    }
+
+    tick();
+    setInterval(tick, 1000);
+  </script>
+</body>
+</html>
