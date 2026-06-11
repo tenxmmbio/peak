@@ -1,380 +1,450 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Solar Services in Lagos, Ogun & Ibadan | Peak Renewable</title>
-<meta name="description" content="We offer expert solar installation, system maintenance and energy consultation across Lagos, Ogun and Ibadan. Contact Peak Renewable for a free quote today.">
-    <!-- NOTE: Ensure these image files (1000693979.png, in2.jpg, me1.jpg, co1.jpg) are in the same directory as this HTML file -->
+    <title>Solar Installation, Maintenance & Consultation in Lagos Nigeria | Peak Renewable</title>
+    <meta name="description" content="Professional solar installation, system maintenance and energy consultation across Lagos, Ogun and Ibadan. Get a free quote from Peak Renewable today.">
+    <meta name="keywords" content="solar installation Lagos, solar maintenance Nigeria, energy consultation Lagos, solar system repair Nigeria, solar panel installation Ogun, solar Ibadan, solar company Nigeria">
+    <meta property="og:title" content="Solar Services in Lagos, Ogun & Ibadan | Peak Renewable">
+    <meta property="og:description" content="Expert solar installation, maintenance and energy consultation. Serving Lagos, Ogun and Ibadan Nigeria.">
+    <meta property="og:url" content="https://www.peakret.cloud/services">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://www.peakret.cloud/services">
     <link rel="icon" type="image/png" href="/images/1000693979.png">
-   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4818572928864743"
-     crossorigin="anonymous"></script> 
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KMGYG29H2C"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-KMGYG29H2C');
-</script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4818572928864743"
-     crossorigin="anonymous"></script>
-    <!-- Load Tailwind CSS -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Solar Energy Services",
+      "provider": {"@type": "LocalBusiness", "name": "Peak Renewable Energy", "url": "https://www.peakret.cloud"},
+      "areaServed": ["Lagos", "Ogun", "Ibadan"],
+      "serviceType": ["Solar Installation", "Solar Maintenance", "Energy Consultation"]
+    }
+    </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KMGYG29H2C"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-KMGYG29H2C');</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4818572928864743" crossorigin="anonymous"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Load Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+
     <style>
-        /* Custom font import and Tailwind configuration */
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap');
         :root {
-            --color-primary-green: #047857;
-            /* Emerald-600 */
-            --color-secondary-blue: #1d4ed8;
-            /* Blue-700 */
-            --color-accent-yellow: #facc15;
-            /* Yellow-400 */
-            --font-family: 'Inter', sans-serif;
+            --green-900:#052e16;--green-800:#14532d;--green-700:#15803d;
+            --green-600:#16a34a;--green-500:#22c55e;--green-400:#4ade80;
+            --green-100:#dcfce7;--green-50:#f0fdf4;
         }
+        *{margin:0;padding:0;box-sizing:border-box;}
+        body{font-family:'Plus Jakarta Sans',sans-serif;background:white;color:#111827;}
+        #mobile-menu{transition:max-height 0.3s ease-out,opacity 0.3s ease-out;max-height:0;overflow:hidden;opacity:0;}
+        #mobile-menu.open{max-height:500px;opacity:1;}
 
-        body {
-            font-family: var(--font-family);
-            background-color: white;
-            transition: background-color 0.3s;
-        }
+        .page-hero{background:linear-gradient(135deg,var(--green-900) 0%,var(--green-800) 50%,var(--green-700) 100%);position:relative;overflow:hidden;}
+        .page-hero::before{content:'';position:absolute;top:-100px;right:-100px;width:400px;height:400px;background:radial-gradient(circle,rgba(74,222,128,0.12) 0%,transparent 70%);pointer-events:none;}
 
-        .text-green-peak {
-            color: var(--color-primary-green);
-        }
+        .service-block{background:white;border-radius:20px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.07);border:1px solid #e5e7eb;transition:box-shadow 0.3s;}
+        .service-block:hover{box-shadow:0 12px 40px rgba(22,163,74,0.12);}
+        .service-accent{width:6px;background:linear-gradient(180deg,var(--green-500),var(--green-700));border-radius:0;flex-shrink:0;}
 
-        .bg-green-peak {
-            background-color: var(--color-primary-green);
-        }
+        .step-badge{width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.1rem;flex-shrink:0;}
 
-        .bg-blue-peak {
-            background-color: var(--color-secondary-blue);
-        }
+        .process-card{background:var(--green-50);border:1px solid var(--green-100);border-radius:16px;padding:1.5rem;text-align:center;transition:transform 0.2s,box-shadow 0.2s;}
+        .process-card:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(22,163,74,0.12);}
 
-        .bg-yellow-accent {
-            background-color: var(--color-accent-yellow);
-        }
+        .cta-section{background:linear-gradient(135deg,var(--green-800),var(--green-600));position:relative;overflow:hidden;}
+        .cta-section::before{content:'';position:absolute;top:-50%;right:-10%;width:400px;height:400px;background:radial-gradient(circle,rgba(255,255,255,0.06) 0%,transparent 70%);}
 
-        /* Mobile menu specific styles */
-        #mobile-menu {
-            transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
-            max-height: 0;
-            overflow: hidden;
-            opacity: 0;
-        }
+        .footer-main{background:var(--green-900);}
+        .footer-bottom{background:#020f07;}
 
-        #mobile-menu.open {
-            max-height: 500px;
-            /* Arbitrary large enough number */
-            opacity: 1;
-        }
-        
+        .whatsapp-float{position:fixed;bottom:28px;right:28px;background:#25D366;color:white;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.4);z-index:999;transition:transform 0.2s,box-shadow 0.2s;text-decoration:none;}
+        .whatsapp-float:hover{transform:scale(1.1);box-shadow:0 8px 32px rgba(37,211,102,0.5);}
+
+        @keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+        .fade-up{animation:fadeUp 0.6s ease both;}
     </style>
-
 </head>
+<body>
 
-<body class="min-h-screen flex flex-col">
-    <!-- Navigation Header (MODIFIED) -->
-    <header class="sticky top-0 z-50 bg-white shadow-md">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <!-- Logo/Company Name -->
-            <a href="/" class="flex items-center space-x-2">
-                <img src="/images/1000693979.png" alt="Peak Renewable Logo" class="w-10 h-10 rounded-full">
-                <span class="text-2xl font-bold text-blue-peak">Peak Renewable</span>
-            </a>
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/2348087829365?text=Hello%20Peak%20Renewable,%20I%20want%20a%20free%20solar%20consultation." target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
 
-            <!-- Desktop Navigation (MODIFIED) -->
-            <nav class="hidden md:flex space-x-8 font-medium">
-                <a href="/" class="text-gray-700 hover:text-green-peak transition duration-150">Home</a>
-                <a href="/about" class="text-gray-700 hover:text-green-peak transition duration-150">About Us</a>
-                <a href="/services" class="text-gray-700 hover:text-green-peak transition duration-150">Services</a>
-                <a href="/product" class="text-gray-700 hover:text-green-peak transition duration-150">Products</a>
-                <a href="/articles" class="text-gray-700 hover:text-green-peak transition duration-150">Articles</a>
-            </nav>
-
-            <!-- Mobile Menu Button (UNCHANGED) -->
-            <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100" aria-label="Toggle menu">
-                <i data-lucide="menu" class="w-6 h-6"></i>
-            </button>
-        </div>
-
-        <!-- Mobile Menu (MODIFIED) -->
-        <nav id="mobile-menu" class="md:hidden bg-gray-50 border-t border-gray-200">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="/" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-200 transition duration-150">Home</a>
-                <a href="/about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-200 transition duration-150">About Us</a>
-                <a href="/services" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-200 transition duration-150">Services</a>
-                <a href="/product" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-200 transition duration-150">Products</a>
-                <a href="/articles" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-200 transition duration-150">Articles</a>
-            </div>
+<!-- NAVBAR -->
+<header class="sticky top-0 z-50 bg-white shadow-sm border-b border-gray-100">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+        <a href="/" class="flex items-center space-x-2">
+            <img src="/images/1000693979.png" alt="Peak Renewable Energy Logo" class="w-10 h-10 rounded-full">
+            <span class="text-xl font-bold" style="color:var(--green-700)">Peak Renewable</span>
+        </a>
+        <nav class="hidden md:flex space-x-8 font-medium">
+            <a href="/" class="text-gray-600 hover:text-green-700 transition">Home</a>
+            <a href="/about" class="text-gray-600 hover:text-green-700 transition">About Us</a>
+            <a href="/services" class="font-semibold" style="color:var(--green-600)">Services</a>
+            <a href="/product" class="text-gray-600 hover:text-green-700 transition">Products</a>
+            <a href="/articles" class="text-gray-600 hover:text-green-700 transition">Articles</a>
         </nav>
-    </header>
+        <a href="https://wa.me/2348087829365?text=Hello%20Peak%20Renewable,%20I%20want%20a%20free%20solar%20consultation." target="_blank" class="hidden md:inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-white font-semibold text-sm transition" style="background:var(--green-600)" onmouseover="this.style.background='var(--green-700)'" onmouseout="this.style.background='var(--green-600)'">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Free Consultation
+        </a>
+        <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100" aria-label="Toggle menu">
+            <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+    </div>
+    <nav id="mobile-menu" class="md:hidden bg-white border-t border-gray-100">
+        <div class="px-4 pt-2 pb-4 space-y-1">
+            <a href="/" class="block px-3 py-2.5 rounded-lg text-base font-medium text-gray-700 hover:bg-gray-50">Home</a>
+            <a href="/about" class="block px-3 py-2.5 rounded-lg text-base font-medium text-gray-700 hover:bg-gray-50">About Us</a>
+            <a href="/services" class="block px-3 py-2.5 rounded-lg text-base font-semibold" style="color:var(--green-600);background:var(--green-50)">Services</a>
+            <a href="/product" class="block px-3 py-2.5 rounded-lg text-base font-medium text-gray-700 hover:bg-gray-50">Products</a>
+            <a href="/articles" class="block px-3 py-2.5 rounded-lg text-base font-medium text-gray-700 hover:bg-gray-50">Articles</a>
+            <a href="https://wa.me/2348087829365" target="_blank" class="block px-3 py-2.5 rounded-lg text-base font-semibold text-white text-center mt-2" style="background:var(--green-600)">Get Free Consultation</a>
+        </div>
+    </nav>
+</header>
 
-    <!-- Main Content Area -->
-    <main id="content" class="flex-grow">
-        
-        <!-- --------------------------------- SERVICES PAGE (UNCHANGED) --------------------------------- -->
-        <section id="services" class="page-content py-12 md:py-20 bg-gray-50">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-12">
-                    <h2 class="text-4xl font-extrabold text-blue-peak">Our Renewable Energy Services</h2>
-                    <p class="text-xl text-gray-600 mt-3">Solutions designed for reliability, efficiency, and sustainability.</p>
+<main>
+    <!-- PAGE HERO -->
+    <section class="page-hero py-16 px-4 md:py-24">
+        <div class="container mx-auto max-w-4xl text-center fade-up">
+            <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold mb-6" style="background:rgba(74,222,128,0.15);color:var(--green-400);border:1px solid rgba(74,222,128,0.3)">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                Professional Solar Services
+            </span>
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6">
+                Solar Services Built for <span style="color:var(--green-400)">Nigerian Homes & Businesses</span>
+            </h1>
+            <p class="text-xl max-w-2xl mx-auto mb-8" style="color:rgba(255,255,255,0.8)">From first consultation to long-term maintenance — we handle everything so you can enjoy clean, reliable energy without the stress.</p>
+            <div class="flex flex-wrap gap-4 justify-center">
+                <a href="#installation" class="px-6 py-3 rounded-xl font-bold text-gray-900 transition" style="background:var(--green-400)" onmouseover="this.style.background='#86efac'" onmouseout="this.style.background='var(--green-400)'">View Our Services</a>
+                <a href="https://wa.me/2348087829365?text=Hello%20Peak%20Renewable,%20I%20want%20a%20free%20solar%20consultation." target="_blank" class="px-6 py-3 rounded-xl font-bold text-white transition" style="border:2px solid rgba(255,255,255,0.3)" onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='transparent'">Get Free Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="py-20 px-4" style="background:var(--green-50)">
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center mb-16">
+                <span class="inline-block px-4 py-1.5 rounded-full text-sm font-semibold mb-4" style="background:var(--green-100);color:var(--green-700)">What We Offer</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold mb-4" style="color:var(--green-900)">Our Solar Energy Services</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto text-lg">Everything you need to go solar — done right the first time, with support that lasts.</p>
+            </div>
+
+            <div class="space-y-8">
+
+                <!-- SERVICE 1: INSTALLATION -->
+                <div id="installation" class="service-block flex">
+                    <div class="service-accent" style="background:linear-gradient(180deg,var(--green-400),var(--green-600))"></div>
+                    <div class="flex-1 p-8 lg:p-10">
+                        <div class="grid lg:grid-cols-3 gap-10 items-start">
+                            <div class="lg:col-span-2">
+                                <div class="flex items-center gap-4 mb-5">
+                                    <div class="w-14 h-14 rounded-2xl flex items-center justify-center" style="background:var(--green-100)">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--green-600)"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                                    </div>
+                                    <div>
+                                        <span class="text-xs font-bold uppercase tracking-wider" style="color:var(--green-600)">Service 01</span>
+                                        <h2 class="text-2xl md:text-3xl font-extrabold" style="color:var(--green-900)">Solar System Installation</h2>
+                                    </div>
+                                </div>
+                                <p class="text-gray-600 leading-relaxed mb-5 text-lg">From site assessment and custom system design to final commissioning — our certified technicians handle the entire installation process. We use high-quality solar panels, inverters and battery storage systems to deliver a reliable, powerful solution built specifically for your home or business.</p>
+                                <p class="text-gray-600 leading-relaxed mb-6">We do not do one-size-fits-all. Every system we install is sized precisely for your energy consumption, roof configuration, budget and future expansion plans. We test every component before we leave your property — because your satisfaction on day one and year twenty-five matters equally to us.</p>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
+                                    <div class="flex items-center gap-3 p-3 rounded-lg" style="background:var(--green-50)">
+                                        <div class="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0" style="background:var(--green-600)"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                        <span class="text-sm font-medium text-gray-700">Residential & Commercial Projects</span>
+                                    </div>
+                                    <div class="flex items-center gap-3 p-3 rounded-lg" style="background:var(--green-50)">
+                                        <div class="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0" style="background:var(--green-600)"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                        <span class="text-sm font-medium text-gray-700">Load Auditing & Precise Sizing</span>
+                                    </div>
+                                    <div class="flex items-center gap-3 p-3 rounded-lg" style="background:var(--green-50)">
+                                        <div class="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0" style="background:var(--green-600)"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                        <span class="text-sm font-medium text-gray-700">Quality Assurance & Warranty</span>
+                                    </div>
+                                    <div class="flex items-center gap-3 p-3 rounded-lg" style="background:var(--green-50)">
+                                        <div class="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0" style="background:var(--green-600)"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                        <span class="text-sm font-medium text-gray-700">Full System Commissioning</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <img src="/images/in2.jpg" alt="Solar panel installation by Peak Renewable in Lagos Nigeria" class="w-full rounded-2xl shadow-lg mb-5 h-48 object-cover" onerror="this.src='https://placehold.co/400x300/14532d/4ade80?text=Installation'">
+                                <h4 class="font-bold text-gray-800 mb-3">Ready to install?</h4>
+                                <div class="space-y-3">
+                                    <a href="https://wa.me/2348087829365?text=Hello%20Peak%20Renewable,%20I%20am%20interested%20in%20Solar%20Installation." target="_blank" class="flex items-center justify-center gap-2 w-full px-5 py-3 rounded-xl font-bold text-white transition" style="background:var(--green-600)" onmouseover="this.style.background='var(--green-700)'" onmouseout="this.style.background='var(--green-600)'">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                                        Chat on WhatsApp
+                                    </a>
+                                    <a href="mailto:peakrenewable@gmail.com?subject=Solar%20Installation%20Inquiry" class="flex items-center justify-center gap-2 w-full px-5 py-3 rounded-xl font-bold text-gray-800 transition" style="background:var(--green-100);border:1px solid var(--green-200)" onmouseover="this.style.background='var(--green-200)'" onmouseout="this.style.background='var(--green-100)'">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                                        Email for Quote
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="space-y-12">
-                    <!-- Service Block 1: Solar Installation (UNCHANGED) -->
-                    <div class="p-8 bg-white rounded-xl shadow-2xl lg:grid lg:grid-cols-3 lg:gap-10 border-l-8 border-yellow-accent">
-                        <div class="col-span-2">
-                            <i data-lucide="sun" class="w-10 h-10 text-green-peak mb-4"></i>
-                            <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-3">Solar System Installation</h3>
-                            <p class="text-gray-700 mb-4 leading-relaxed">
-                                From site assessment and custom system design to final commissioning, our certified technicians handle the entire installation process. We use the highest-quality <strong>solar panels, inverters, and battery storage</strong> systems to provide you with a reliable and powerful off-grid or grid-tied solution.
-                            </p>
-                            <ul class="list-disc pl-5 text-gray-600 space-y-1">
-                                <li>Residential and Commercial Projects</li>
-                                <li>Load Auditing and Sizing</li>
-                                <li>Quality Assurance and Warranty</li>
-                            </ul>
-                        </div>
-                        <div class="mt-6 lg:mt-0 flex flex-col space-y-4">
-                            <!-- Placeholder Image (UNCHANGED) -->
-                            <img src="/images/in2.jpg" 
-                                 alt="Solar panel installation in progress" 
-                                 class="w-full h-auto rounded-xl shadow-md mb-4"
-                                 onerror="this.src='https://placehold.co/400x300/047857/ffffff?text=Image+Placeholder'">
-                            <h4 class="text-lg font-semibold text-gray-700">Ready to install?</h4>
-                            <a href="https://wa.me/2348087829365?text=Hello%20Peak%20Renewable,%20I%20am%20interested%20in%20Solar%20Installation%20Services." target="_blank" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg shadow-lg transition duration-300 ease-in-out bg-green-peak text-white hover:bg-green-700">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 mr-2">
-                                    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.247.604 4.341 1.768 6.136l-1.127 4.144 4.254-1.118A11.97 11.97 0 0 0 12 24c6.627 0 12-5.373 12-12C24 5.373 18.627 0 12 0zM12 22a9.982 9.982 0 0 1-5.11-.989l-.364-.216-3.79 1l1.01-3.743-.24-.383A9.998 9.998 0 0 1 12 2C6.477 2 2 6.477 2 12a9.983 9.983 0 0 0 2.63 6.64l.115.176-1.077 3.974 4.075-1.071.18.106A9.969 9.969 0 0 0 12 22zm3.3-6.42a.846.846 0 0 0-.251-.212c-.1-.055-.65-.32-.756-.358a.833.833 0 0 0-.154.025c-.097.037-.563.687-.69.832a.56.56 0 0 1-.3.26c-.15.056-.27-.015-.46-.07-.49-.15-1.896-.7-3.61-2.222a4.99 4.99 0 0 1-1.116-1.503.738.738 0 0 1 .15-.71c.07-.076.155-.18.225-.262.068-.08.136-.17.18-.25a.333.333 0 0 0 .044-.24.78.78 0 0 0-.115-.195c-.06-.115-.55-.66-.757-.89a.955.955 0 0 0-.36-.26c-.15-.054-.31-.03-.47-.03-.17 0-.35.06-.52.27-.17.21-1.11 1.07-1.11 2.607 0 1.537 1.135 2.923 1.285 3.123.15.2.29.23.56.23 1.04 0 2.93-.9 3.69-1.24a5.05 5.05 0 0 0 2.06-.678.868.868 0 0 0 .53-.88c-.02-.21-.085-.355-.16-.47z" />
-                                </svg>
-                                Chat on WhatsApp
-                            </a>
-                            <!-- EMAIL UPDATED HERE -->
-                            <a href="mailto:peakrenewable@gmail.com?subject=Inquiry:%20Solar%20Installation%20Service" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg shadow-lg transition duration-300 ease-in-out bg-yellow-accent text-gray-900 hover:bg-yellow-500">
-                                <i data-lucide="mail" class="w-5 h-5 mr-2"></i>
-                                Email for Quote
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Service Block 2: Maintenance & Repair (UNCHANGED) -->
-                    <div class="p-8 bg-white rounded-xl shadow-2xl lg:grid lg:grid-cols-3 lg:gap-10 border-l-8 border-yellow-accent">
-                        <div class="col-span-2">
-                            <i data-lucide="wrench" class="w-10 h-10 text-green-peak mb-4"></i>
-                            <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-3">Preventive & Corrective Maintenance</h3>
-                            <p class="text-gray-700 mb-4 leading-relaxed">
-                                Regular maintenance is key to maximizing your system's output and lifespan. We offer comprehensive service plans, fault diagnosis, and quick repairs for <strong>inverters, batteries, and panel cleaning</strong>. Don't wait for a breakdown—keep your power at its peak.
-                            </p>
-                            <ul class="list-disc pl-5 text-gray-600 space-y-1">
-                                <li>Annual Service Contracts</li>
-                                <li>Inverter and Battery Health Checks</li>
-                                <li>Emergency Repair Call-outs</li>
-                            </ul>
-                        </div>
-                        <div class="mt-6 lg:mt-0 flex flex-col space-y-4">
-                            <!-- Placeholder Image (UNCHANGED) -->
-                            <img src="/images/me1.jpg" 
-                                 alt="Technician maintaining solar panels" 
-                                 class="w-full h-auto rounded-xl shadow-md mb-4"
-                                 onerror="this.src='https://placehold.co/400x300/047857/ffffff?text=Image+Placeholder'">
-                            <h4 class="text-lg font-semibold text-gray-700">Need maintenance?</h4>
-                            <a href="https://wa.me/2348087829365?text=Hello%20Peak%20Renewable,%20I%20need%20Maintenance%20Service." target="_blank" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg shadow-lg transition duration-300 ease-in-out bg-green-peak text-white hover:bg-green-700">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 mr-2">
-                                    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.247.604 4.341 1.768 6.136l-1.127 4.144 4.254-1.118A11.97 11.97 0 0 0 12 24c6.627 0 12-5.373 12-12C24 5.373 18.627 0 12 0zM12 22a9.982 9.982 0 0 1-5.11-.989l-.364-.216-3.79 1l1.01-3.743-.24-.383A9.998 9.998 0 0 1 12 2C6.477 2 2 6.477 2 12a9.983 9.983 0 0 0 2.63 6.64l.115.176-1.077 3.974 4.075-1.071.18.106A9.969 9.969 0 0 0 12 22zm3.3-6.42a.846.846 0 0 0-.251-.212c-.1-.055-.65-.32-.756-.358a.833.833 0 0 0-.154.025c-.097.037-.563.687-.69.832a.56.56 0 0 1-.3.26c-.15.056-.27-.015-.46-.07-.49-.15-1.896-.7-3.61-2.222a4.99 4.99 0 0 1-1.116-1.503.738.738 0 0 1 .15-.71c.07-.076.155-.18.225-.262.068-.08.136-.17.18-.25a.333.333 0 0 0 .044-.24.78.78 0 0 0-.115-.195c-.06-.115-.55-.66-.757-.89a.955.955 0 0 0-.36-.26c-.15-.054-.31-.03-.47-.03-.17 0-.35.06-.52.27-.17.21-1.11 1.07-1.11 2.607 0 1.537 1.135 2.923 1.285 3.123.15.2.29.23.56.23 1.04 0 2.93-.9 3.69-1.24a5.05 5.05 0 0 0 2.06-.678.868.868 0 0 0 .53-.88c-.02-.21-.085-.355-.16-.47z" />
-                                </svg>
-                                Chat on WhatsApp
-                            </a>
-                            <!-- EMAIL UPDATED HERE -->
-                            <a href="mailto:peakrenewable@gmail.com?subject=Inquiry:%20Maintenance%20and%20Repair%20Service" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg shadow-lg transition duration-300 ease-in-out bg-yellow-accent text-gray-900 hover:bg-yellow-500">
-                                <i data-lucide="mail" class="w-5 h-5 mr-2"></i>
-                                Email Service Request
-                            </a>
+                <!-- SERVICE 2: MAINTENANCE -->
+                <div id="maintenance" class="service-block flex">
+                    <div class="service-accent" style="background:linear-gradient(180deg,var(--green-500),var(--green-800))"></div>
+                    <div class="flex-1 p-8 lg:p-10">
+                        <div class="grid lg:grid-cols-3 gap-10 items-start">
+                            <div class="lg:col-span-2">
+                                <div class="flex items-center gap-4 mb-5">
+                                    <div class="w-14 h-14 rounded-2xl flex items-center justify-center" style="background:var(--green-100)">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--green-600)"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                                    </div>
+                                    <div>
+                                        <span class="text-xs font-bold uppercase tracking-wider" style="color:var(--green-600)">Service 02</span>
+                                        <h2 class="text-2xl md:text-3xl font-extrabold" style="color:var(--green-900)">Preventive & Corrective Maintenance</h2>
+                                    </div>
+                                </div>
+                                <p class="text-gray-600 leading-relaxed mb-5 text-lg">A solar system installed correctly can last 25+ years. But only if it is maintained correctly. Our maintenance service keeps every component of your system — panels, inverter, batteries, cables and mounting — operating at peak efficiency year after year.</p>
+                                <p class="text-gray-600 leading-relaxed mb-6">We offer both scheduled preventive maintenance and emergency corrective repairs. Our technicians are based across Lagos, Ogun and Ibadan — so when you need us, we are never far away. Don't wait for a breakdown to cost you money and frustration.</p>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
+                                    <div class="flex items-center gap-3 p-3 rounded-lg" style="background:var(--green-50)">
+                                        <div class="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0" style="background:var(--green-600)"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                        <span class="text-sm font-medium text-gray-700">Annual Service Contracts</span>
+                                    </div>
+                                    <div class="flex items-center gap-3 p-3 rounded-lg" style="background:var(--green-50)">
+                                        <div class="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0" style="background:var(--green-600)"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                        <span class="text-sm font-medium text-gray-700">Inverter & Battery Health Checks</span>
+                                    </div>
+                                    <div class="flex items-center gap-3 p-3 rounded-lg" style="background:var(--green-50)">
+                                        <div class="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0" style="background:var(--green-600)"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                        <span class="text-sm font-medium text-gray-700">Emergency Repair Call-outs</span>
+                                    </div>
+                                    <div class="flex items-center gap-3 p-3 rounded-lg" style="background:var(--green-50)">
+                                        <div class="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0" style="background:var(--green-600)"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                        <span class="text-sm font-medium text-gray-700">Panel Cleaning & Inspection</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <img src="/images/me1.jpg" alt="Peak Renewable technician maintaining solar panels in Nigeria" class="w-full rounded-2xl shadow-lg mb-5 h-48 object-cover" onerror="this.src='https://placehold.co/400x300/14532d/4ade80?text=Maintenance'">
+                                <h4 class="font-bold text-gray-800 mb-3">Need maintenance?</h4>
+                                <div class="space-y-3">
+                                    <a href="https://wa.me/2348087829365?text=Hello%20Peak%20Renewable,%20I%20need%20solar%20maintenance." target="_blank" class="flex items-center justify-center gap-2 w-full px-5 py-3 rounded-xl font-bold text-white transition" style="background:var(--green-600)" onmouseover="this.style.background='var(--green-700)'" onmouseout="this.style.background='var(--green-600)'">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                                        Chat on WhatsApp
+                                    </a>
+                                    <a href="mailto:peakrenewable@gmail.com?subject=Solar%20Maintenance%20Request" class="flex items-center justify-center gap-2 w-full px-5 py-3 rounded-xl font-bold text-gray-800 transition" style="background:var(--green-100);border:1px solid var(--green-200)" onmouseover="this.style.background='var(--green-200)'" onmouseout="this.style.background='var(--green-100)'">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                                        Email Service Request
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Service Block 3: Consultation & Design (UNCHANGED) -->
-                    <div class="p-8 bg-white rounded-xl shadow-2xl lg:grid lg:grid-cols-3 lg:gap-10 border-l-8 border-yellow-accent">
-                        <div class="col-span-2">
-                            <i data-lucide="lightbulb" class="w-10 h-10 text-green-peak mb-4"></i>
-                            <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-3">Expert Energy Consultation</h3>
-                            <p class="text-gray-700 mb-4 leading-relaxed">
-                                Unsure where to start? Our consultation services provide you with a clear roadmap to energy independence. We analyze your consumption, budget, and location to recommend the perfect mix of <strong>equipment (inverter, panel, battery)</strong> and services.
-                            </p>
-                            <ul class="list-disc pl-5 text-gray-600 space-y-1">
-                                <li>Feasibility Studies and ROI Analysis</li>
-                                <li>Optimal System Sizing and Component Selection</li>
-                                <li>Future-proofing Advice</li>
-                            </ul>
-                        </div>
-                        <div class="mt-6 lg:mt-0 flex flex-col space-y-4">
-                            <!-- Placeholder Image (UNCHANGED) -->
-                            <img src="/images/co1.jpg" 
-                                 alt="Expert consultation" 
-                                 class="w-full h-auto rounded-xl shadow-md mb-4"
-                                 onerror="this.src='https://placehold.co/400x300/047857/ffffff?text=Image+Placeholder'">
-                            <h4 class="text-lg font-semibold text-gray-700">Need expert advice?</h4>
-                            <a href="https://wa.me/2348087829365?text=Hello%20Peak%20Renewable,%20I%20need%20Energy%20Consultation." target="_blank" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg shadow-lg transition duration-300 ease-in-out bg-green-peak text-white hover:bg-green-700">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 mr-2">
-                                    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.247.604 4.341 1.768 6.136l-1.127 4.144 4.254-1.118A11.97 11.97 0 0 0 12 24c6.627 0 12-5.373 12-12C24 5.373 18.627 0 12 0zM12 22a9.982 9.982 0 0 1-5.11-.989l-.364-.216-3.79 1l1.01-3.743-.24-.383A9.998 9.998 0 0 1 12 2C6.477 2 2 6.477 2 12a9.983 9.983 0 0 0 2.63 6.64l.115.176-1.077 3.974 4.075-1.071.18.106A9.969 9.969 0 0 0 12 22zm3.3-6.42a.846.846 0 0 0-.251-.212c-.1-.055-.65-.32-.756-.358a.833.833 0 0 0-.154.025c-.097.037-.563.687-.69.832a.56.56 0 0 1-.3.26c-.15.056-.27-.015-.46-.07-.49-.15-1.896-.7-3.61-2.222a4.99 4.99 0 0 1-1.116-1.503.738.738 0 0 1 .15-.71c.07-.076.155-.18.225-.262.068-.08.136-.17.18-.25a.333.333 0 0 0 .044-.24.78.78 0 0 0-.115-.195c-.06-.115-.55-.66-.757-.89a.955.955 0 0 0-.36-.26c-.15-.054-.31-.03-.47-.03-.17 0-.35.06-.52.27-.17.21-1.11 1.07-1.11 2.607 0 1.537 1.135 2.923 1.285 3.123.15.2.29.23.56.23 1.04 0 2.93-.9 3.69-1.24a5.05 5.05 0 0 0 2.06-.678.868.868 0 0 0 .53-.88c-.02-.21-.085-.355-.16-.47z" />
-                                </svg>
-                                Chat on WhatsApp
-                            </a>
-                            <!-- EMAIL UPDATED HERE -->
-                            <a href="mailto:peakrenewable@gmail.com?subject=Inquiry:%20Energy%20Consultation%2Service" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg shadow-lg transition duration-300 ease-in-out bg-yellow-accent text-gray-900 hover:bg-yellow-500">
-                                <i data-lucide="mail" class="w-5 h-5 mr-2"></i>
-                                Email for Consultation
-                            </a>
+                <!-- SERVICE 3: CONSULTATION -->
+                <div id="consultation" class="service-block flex">
+                    <div class="service-accent" style="background:linear-gradient(180deg,var(--green-400),var(--green-900))"></div>
+                    <div class="flex-1 p-8 lg:p-10">
+                        <div class="grid lg:grid-cols-3 gap-10 items-start">
+                            <div class="lg:col-span-2">
+                                <div class="flex items-center gap-4 mb-5">
+                                    <div class="w-14 h-14 rounded-2xl flex items-center justify-center" style="background:var(--green-100)">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--green-600)"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                                    </div>
+                                    <div>
+                                        <span class="text-xs font-bold uppercase tracking-wider" style="color:var(--green-600)">Service 03</span>
+                                        <h2 class="text-2xl md:text-3xl font-extrabold" style="color:var(--green-900)">Expert Energy Consultation</h2>
+                                    </div>
+                                </div>
+                                <p class="text-gray-600 leading-relaxed mb-5 text-lg">Not sure where to start? Our energy consultation service gives you a clear, honest roadmap to solar energy independence — tailored to your specific situation. No guesswork. No pressure. No overselling.</p>
+                                <p class="text-gray-600 leading-relaxed mb-6">We sit down with you, understand your daily energy consumption, assess your property, review your budget and goals — then recommend the exact right system for you. We will tell you what you need, what you don't need, and why. That is what a trusted advisor does.</p>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
+                                    <div class="flex items-center gap-3 p-3 rounded-lg" style="background:var(--green-50)">
+                                        <div class="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0" style="background:var(--green-600)"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                        <span class="text-sm font-medium text-gray-700">Feasibility Studies & ROI Analysis</span>
+                                    </div>
+                                    <div class="flex items-center gap-3 p-3 rounded-lg" style="background:var(--green-50)">
+                                        <div class="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0" style="background:var(--green-600)"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                        <span class="text-sm font-medium text-gray-700">Optimal System Sizing</span>
+                                    </div>
+                                    <div class="flex items-center gap-3 p-3 rounded-lg" style="background:var(--green-50)">
+                                        <div class="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0" style="background:var(--green-600)"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                        <span class="text-sm font-medium text-gray-700">Component Selection Advice</span>
+                                    </div>
+                                    <div class="flex items-center gap-3 p-3 rounded-lg" style="background:var(--green-50)">
+                                        <div class="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0" style="background:var(--green-600)"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                        <span class="text-sm font-medium text-gray-700">Future-proofing Advice</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <img src="/images/co1.jpg" alt="Peak Renewable energy consultation session Nigeria" class="w-full rounded-2xl shadow-lg mb-5 h-48 object-cover" onerror="this.src='https://placehold.co/400x300/14532d/4ade80?text=Consultation'">
+                                <h4 class="font-bold text-gray-800 mb-3">Need expert advice?</h4>
+                                <div class="space-y-3">
+                                    <a href="https://wa.me/2348087829365?text=Hello%20Peak%20Renewable,%20I%20need%20energy%20consultation." target="_blank" class="flex items-center justify-center gap-2 w-full px-5 py-3 rounded-xl font-bold text-white transition" style="background:var(--green-600)" onmouseover="this.style.background='var(--green-700)'" onmouseout="this.style.background='var(--green-600)'">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                                        Chat on WhatsApp
+                                    </a>
+                                    <a href="mailto:peakrenewable@gmail.com?subject=Energy%20Consultation%20Request" class="flex items-center justify-center gap-2 w-full px-5 py-3 rounded-xl font-bold text-gray-800 transition" style="background:var(--green-100);border:1px solid var(--green-200)" onmouseover="this.style.background='var(--green-200)'" onmouseout="this.style.background='var(--green-100)'">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                                        Email for Consultation
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Service Block 4: Other Renewable Energy (Coming Soon) (MODIFIED) -->
-                    <div class="p-8 bg-white rounded-xl shadow-2xl text-center border-l-8 border-blue-peak">
-                        <i data-lucide="wind" class="w-10 h-10 text-blue-peak mb-4 mx-auto"></i>
-                        <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-3">Other Renewable Energy Solutions (Coming Soon)</h3>
-                        <p class="text-gray-700 mb-4 leading-relaxed max-w-3xl mx-auto">
-                            We are expanding beyond solar to integrate other forms of sustainable energy, including <strong>wind, hydro, and geothermal power</strong>. Stay connected to be the first to utilize these cutting-edge services!
-                        </p>
-                        <!-- Link updated to point to about.html -->
-                        <a href="about.html" class="mt-2 inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg shadow-lg transition duration-300 ease-in-out bg-green-peak text-white hover:bg-green-700">
+                <!-- SERVICE 4: COMING SOON -->
+                <div class="service-block flex" style="border:2px dashed var(--green-200)">
+                    <div class="service-accent" style="background:linear-gradient(180deg,var(--green-300),var(--green-500));opacity:0.5"></div>
+                    <div class="flex-1 p-8 lg:p-10 text-center">
+                        <div class="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-5" style="background:var(--green-100)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--green-500)"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg>
+                        </div>
+                        <span class="inline-block px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-4" style="background:var(--green-100);color:var(--green-600)">Coming Soon</span>
+                        <h2 class="text-2xl md:text-3xl font-extrabold mb-4" style="color:var(--green-900)">Other Renewable Energy Solutions</h2>
+                        <p class="text-gray-600 max-w-2xl mx-auto mb-6 text-lg">We are expanding beyond solar to integrate wind, hydro and biomass energy solutions. Peak Renewable's mission is complete energy independence for every Nigerian home and business — and we are actively building the capability to deliver it.</p>
+                        <a href="https://wa.me/2348087829365?text=Hello%20Peak%20Renewable,%20I%20want%20to%20know%20about%20your%20upcoming%20services." target="_blank" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-bold text-white transition" style="background:var(--green-600)" onmouseover="this.style.background='var(--green-700)'" onmouseout="this.style.background='var(--green-600)'">
                             Notify Me When Available
                         </a>
                     </div>
-
                 </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Footer (MODIFIED) -->
-    <footer class="bg-gray-900 text-white">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <!-- Company Info -->
-                <div>
-                    <a href="/" class="flex items-center space-x-2 mb-4">
-                        <img src="/images/1000693979.png" alt="Peak Renewable Logo" class="w-10 h-10 rounded-full">
-                        <span class="text-2xl font-bold text-white">Peak Renewable</span>
-                    </a>
-                    <p class="text-gray-400">Your trusted partner in renewable energy solutions in Nigeria. Powering a sustainable future, one installation at a time.</p>
-                    
-                    <!-- Social Media Links (UNCHANGED) -->
-                    <div class="flex space-x-4 mt-4">
-                        <a href="https://www.facebook.com/profile.php?id=61571879765300" target="_blank" rel="noopener" class="text-gray-400 hover:text-white" aria-label="Peak Renewable on Facebook">
-                            <i data-lucide="facebook" class="w-6 h-6"></i>
-                        </a>
-                        <a href="https://instagram.com/@ten_timesbetter" target="_blank" rel="noopener" class="text-gray-400 hover:text-white" aria-label="Peak Renewable on Instagram">
-                            <i data-lucide="instagram" class="w-6 h-6"></i>
-                        </a>
-                        <a href="https://twitter.com/@tenxbio" target="_blank" rel="noopener" class="text-gray-400 hover:text-white" aria-label="Peak Renewable on Twitter/X">
-                            <i data-lucide="twitter" class="w-6 h-6"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Quick Links (MODIFIED) -->
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
-                    <ul class="space-y-2">
-                        <li><a href="/" class="text-gray-400 hover:text-white transition">Home</a></li>
-                        <li><a href="/about" class="text-gray-400 hover:text-white transition">About Us</a></li>
-                        <li><a href="/services" class="text-gray-400 hover:text-white transition">Services</a></li>
-                        <li><a href="/product" class="text-gray-400 hover:text-white transition">Products</a></li>
-                        <li><a href="/articles" class="text-gray-400 hover:text-white transition">Articles</a></li>
-                    </ul>
-                </div>
-
-                <!-- Services (MODIFIED) -->
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Our Services</h3>
-                    <ul class="space-y-2">
-                        <li><a href="/services" class="text-gray-400 hover:text-white transition">Solar Installation</a></li>
-                        <li><a href="/services" class="text-gray-400 hover:text-white transition">System Maintenance</a></li>
-                        <li><a href="/services" class="text-gray-400 hover:text-white transition">Energy Consultation</a></li>
-                        <li><a href="/product" class="text-gray-400 hover:text-white transition">Product Supply</a></li>
-                    </ul>
-                </div>
-
-                <!-- Contact (MODIFIED) -->
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
-                    <ul class="space-y-3">
-                        <li class="flex items-center space-x-2">
-                            <i data-lucide="map-pin" class="w-5 h-5 text-gray-400"></i>
-                            <span class="text-gray-400">Lagos, Nigeria</span>
-                        </li>
-                        <li class="flex items-center space-x-2">
-                            <i data-lucide="phone" class="w-5 h-5 text-gray-400"></i>
-                            <a href="tel:+2348087829365" class="text-gray-400 hover:text-white transition">+234 808 782 9365</a>
-                        </li>
-                        <li class="flex items-center space-x-2">
-                            <i data-lucide="mail" class="w-5 h-5 text-gray-400"></i>
-                            <!-- EMAIL UPDATED HERE -->
-                            <a href="mailto:peakrenewable@gmail.com" class="text-gray-400 hover:text-white transition truncate">peakrenewable@gmail.com</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- COPYRIGHT SECTION (MODIFIED) -->
-            <div class="mt-8 border-t border-gray-700 pt-8 text-center text-gray-500">
-                <p>&copy; 2024 Peak Renewable. All rights reserved. Built for a sustainable tomorrow.</p>
-                <!-- NEW: Time Studio Credit -->
-                <p class="mt-2 text-sm">
-                    Website created by Time Studio. 
-                    <a href="https://wa.me/2349116541398" target="_blank" rel="noopener" class="text-gray-400 hover:text-white underline" aria-label="Contact Time Studio on WhatsApp">
-                        Contact them
-                    </a>
-                </p>
-                <!-- END: Time Studio Credit -->
             </div>
         </div>
-    </footer>
+    </section>
 
-    <!-- ----------------------------------------------------------------------------------- -->
-    <!-- ----------------- Custom JavaScript (MODIFIED) ----------------- -->
-    <!-- ----------------------------------------------------------------------------------- -->
-    <script type(="module")>
-        // This script is now only for the mobile menu and icons on this page.
+    <!-- HOW IT WORKS -->
+    <section class="py-20 px-4 bg-white">
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center mb-14">
+                <span class="inline-block px-4 py-1.5 rounded-full text-sm font-semibold mb-4" style="background:var(--green-100);color:var(--green-700)">Our Process</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold mb-4" style="color:var(--green-900)">How We Work</h2>
+                <p class="text-gray-600 max-w-xl mx-auto">Simple, transparent, professional. From first contact to system handover — here is exactly what to expect.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="process-card">
+                    <div class="step-badge mx-auto mb-4" style="background:var(--green-600);color:white">1</div>
+                    <h3 class="font-bold text-gray-900 mb-2">Free Consultation</h3>
+                    <p class="text-gray-500 text-sm">Contact us via WhatsApp or email. We discuss your energy needs, goals and budget — completely free, no obligation.</p>
+                </div>
+                <div class="process-card">
+                    <div class="step-badge mx-auto mb-4" style="background:var(--green-600);color:white">2</div>
+                    <h3 class="font-bold text-gray-900 mb-2">Site Assessment</h3>
+                    <p class="text-gray-500 text-sm">Our team visits your property, assesses your roof, measures consumption and designs the optimal system for your situation.</p>
+                </div>
+                <div class="process-card">
+                    <div class="step-badge mx-auto mb-4" style="background:var(--green-600);color:white">3</div>
+                    <h3 class="font-bold text-gray-900 mb-2">Installation</h3>
+                    <p class="text-gray-500 text-sm">Our certified technicians install your system professionally and safely. We keep the site clean and finish on schedule.</p>
+                </div>
+                <div class="process-card">
+                    <div class="step-badge mx-auto mb-4" style="background:var(--green-600);color:white">4</div>
+                    <h3 class="font-bold text-gray-900 mb-2">Handover & Support</h3>
+                    <p class="text-gray-500 text-sm">We commission the system, walk you through its operation, and remain available for maintenance and support long-term.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        /**
-         * Initializes all event listeners for static content.
-         */
-        function initializeEventListeners() {
-            // Mobile menu toggle
-            const menuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            
-            if (menuButton && mobileMenu) {
-                menuButton.addEventListener('click', () => {
-                    const isOpen = mobileMenu.classList.toggle('open');
-                    if (isOpen) {
-                        menuButton.innerHTML = `<i data-lucide="x" class="w-6 h-6"></i>`;
-                    } else {
-                        menuButton.innerHTML = `<i data-lucide="menu" class="w-6 h-6"></i>`;
-                    }
-                    lucide.createIcons();
-                });
-            }
-        }
-        
-        // Initial setup on DOM content loaded
-        document.addEventListener('DOMContentLoaded', () => {
-            // Initialize Lucide icons
-            lucide.createIcons();
-            
-            // Setup event listeners
-            initializeEventListeners();
-        });
+    <!-- CTA -->
+    <section class="cta-section py-20 px-4">
+        <div class="container mx-auto max-w-4xl text-center relative z-10">
+            <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-6">Start Your Solar Journey Today</h2>
+            <p class="text-xl mb-10 max-w-2xl mx-auto" style="color:rgba(255,255,255,0.85)">Get a free, no-pressure consultation from Nigeria's trusted solar experts. We serve Lagos, Ogun and Ibadan.</p>
+            <div class="flex flex-wrap gap-4 justify-center">
+                <a href="https://wa.me/2348087829365?text=Hello%20Peak%20Renewable,%20I%20want%20a%20free%20solar%20quote." target="_blank" class="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-bold text-gray-900 text-lg transition" style="background:var(--green-400)" onmouseover="this.style.background='#86efac'" onmouseout="this.style.background='var(--green-400)'">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    Chat on WhatsApp Now
+                </a>
+                <a href="mailto:peakrenewable@gmail.com" class="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-bold text-white text-lg transition" style="border:2px solid rgba(255,255,255,0.4)" onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='transparent'">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    Send Us an Email
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
 
-    </script>
+<!-- FOOTER -->
+<footer class="footer-main">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+            <div class="lg:col-span-1">
+                <a href="/" class="flex items-center space-x-2 mb-5">
+                    <img src="/images/1000693979.png" alt="Peak Renewable Energy Logo" class="w-12 h-12 rounded-full border-2" style="border-color:var(--green-500)">
+                    <span class="text-xl font-bold text-white">Peak Renewable</span>
+                </a>
+                <p class="text-sm leading-relaxed mb-6" style="color:rgba(255,255,255,0.6)">Nigeria's trusted solar energy company. Professional solar installation, maintenance and consultation across Lagos, Ogun and Ibadan.</p>
+                <div class="flex items-center gap-4">
+                    <a href="https://www.facebook.com/share/1BnS3tCH4W/" target="_blank" rel="noopener" aria-label="Peak Renewable on Facebook" class="w-10 h-10 rounded-lg flex items-center justify-center transition" style="background:rgba(255,255,255,0.08)" onmouseover="this.style.background='var(--green-600)'" onmouseout="this.style.background='rgba(255,255,255,0.08)'">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                    </a>
+                    <a href="https://instagram.com/peak_renewable_energy" target="_blank" rel="noopener" aria-label="Peak Renewable on Instagram" class="w-10 h-10 rounded-lg flex items-center justify-center transition" style="background:rgba(255,255,255,0.08)" onmouseover="this.style.background='var(--green-600)'" onmouseout="this.style.background='rgba(255,255,255,0.08)'">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                    </a>
+                    <a href="https://wa.me/2348087829365" target="_blank" rel="noopener" aria-label="Peak Renewable on WhatsApp" class="w-10 h-10 rounded-lg flex items-center justify-center transition" style="background:rgba(255,255,255,0.08)" onmouseover="this.style.background='#25D366'" onmouseout="this.style.background='rgba(255,255,255,0.08)'">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    </a>
+                    <a href="https://twitter.com/@PeakRenewa76354" target="_blank" rel="noopener" aria-label="Peak Renewable on Twitter" class="w-10 h-10 rounded-lg flex items-center justify-center transition" style="background:rgba(255,255,255,0.08)" onmouseover="this.style.background='var(--green-600)'" onmouseout="this.style.background='rgba(255,255,255,0.08)'">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-white font-bold mb-5 text-sm uppercase tracking-wider">Quick Links</h3>
+                <ul class="space-y-3">
+                    <li><a href="/" class="text-sm transition hover:text-white flex items-center gap-2" style="color:rgba(255,255,255,0.6)"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg> Home</a></li>
+                    <li><a href="/about" class="text-sm transition hover:text-white flex items-center gap-2" style="color:rgba(255,255,255,0.6)"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg> About Us</a></li>
+                    <li><a href="/services" class="text-sm transition hover:text-white flex items-center gap-2" style="color:rgba(255,255,255,0.6)"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg> Services</a></li>
+                    <li><a href="/product" class="text-sm transition hover:text-white flex items-center gap-2" style="color:rgba(255,255,255,0.6)"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg> Products</a></li>
+                    <li><a href="/articles" class="text-sm transition hover:text-white flex items-center gap-2" style="color:rgba(255,255,255,0.6)"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg> Articles</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-white font-bold mb-5 text-sm uppercase tracking-wider">Our Services</h3>
+                <ul class="space-y-3">
+                    <li><a href="#installation" class="text-sm transition hover:text-white flex items-center gap-2" style="color:rgba(255,255,255,0.6)"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg> Solar Installation</a></li>
+                    <li><a href="#maintenance" class="text-sm transition hover:text-white flex items-center gap-2" style="color:rgba(255,255,255,0.6)"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg> System Maintenance</a></li>
+                    <li><a href="#consultation" class="text-sm transition hover:text-white flex items-center gap-2" style="color:rgba(255,255,255,0.6)"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg> Energy Consultation</a></li>
+                    <li><a href="/product" class="text-sm transition hover:text-white flex items-center gap-2" style="color:rgba(255,255,255,0.6)"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg> Product Supply</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-white font-bold mb-5 text-sm uppercase tracking-wider">Contact Us</h3>
+                <ul class="space-y-4">
+                    <li class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 flex-shrink-0" style="color:var(--green-400)"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span class="text-sm" style="color:rgba(255,255,255,0.6)">Lagos, Ogun & Ibadan, Nigeria</span></li>
+                    <li class="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--green-400);flex-shrink:0"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+2348087829365" class="text-sm transition hover:text-white" style="color:rgba(255,255,255,0.6)">+234 808 782 9365</a></li>
+                    <li class="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--green-400);flex-shrink:0"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:peakrenewable@gmail.com" class="text-sm transition hover:text-white truncate" style="color:rgba(255,255,255,0.6)">peakrenewable@gmail.com</a></li>
+                    <li class="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--green-400);flex-shrink:0"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><a href="https://www.peakret.cloud" class="text-sm transition hover:text-white" style="color:rgba(255,255,255,0.6)">www.peakret.cloud</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom py-5 px-4">
+        <div class="container mx-auto max-w-6xl flex flex-col md:flex-row justify-between items-center gap-3">
+            <p class="text-sm" style="color:rgba(255,255,255,0.4)">&copy; 2026 Peak Renewable Energy. All rights reserved.</p>
+            <p class="text-sm" style="color:rgba(255,255,255,0.4)">Website created by Time Studio. <a href="https://wa.me/2349116541398" target="_blank" rel="noopener" class="hover:text-white underline transition">Contact them</a></p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    const menuBtn=document.getElementById('mobile-menu-button');
+    const mobileMenu=document.getElementById('mobile-menu');
+    const menuIcon=document.getElementById('menu-icon');
+    let open=false;
+    menuBtn.addEventListener('click',()=>{
+        open=!open;
+        mobileMenu.classList.toggle('open',open);
+        menuIcon.innerHTML=open
+            ?'<line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>'
+            :'<line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/>';
+    });
+</script>
 </body>
 </html>
