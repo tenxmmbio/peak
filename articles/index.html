@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solar Energy Articles & Guides in Nigeria | Peak Renewable</title>
-    <meta name="description" content="Read expert articles on solar energy, installation tips, product guides and renewable energy trends in Lagos, Ogun and Ibadan from the Peak Renewable team.">
-    <meta name="keywords" content="solar energy Nigeria, solar panel price Lagos, best inverter battery Nigeria, solar installation guide, renewable energy Nigeria">
+    <meta name="description" content="Expert articles on solar energy, installation tips, product guides and renewable energy trends in Lagos, Ogun and Ibadan. Written by the Peak Renewable team.">
+    <meta name="keywords" content="solar energy Nigeria, solar panel guide Lagos, solar installation tips Nigeria, renewable energy articles, solar cost Nigeria, inverter guide Nigeria">
     <meta property="og:title" content="Solar Energy Articles & Guides in Nigeria | Peak Renewable">
     <meta property="og:description" content="Expert solar energy articles, guides and tips for Nigerians. Learn about solar installation, costs, products and more.">
     <meta property="og:url" content="https://www.peakret.cloud/articles">
@@ -13,310 +13,365 @@
     <link rel="canonical" href="https://www.peakret.cloud/articles">
     <link rel="icon" type="image/png" href="/images/1000693979.png">
 
-    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KMGYG29H2C"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-KMGYG29H2C');
-    </script>
-
-    <!-- Google AdSense -->
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-KMGYG29H2C');</script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4818572928864743" crossorigin="anonymous"></script>
-
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
 
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-        :root {
-            --color-primary-green: #047857;
-            --color-secondary-blue: #1d4ed8;
-            --color-accent-yellow: #facc15;
-            --font-family: 'Inter', sans-serif;
-        }
-        body { font-family: var(--font-family); background-color: white; }
-        .text-green-peak { color: var(--color-primary-green); }
-        .bg-green-peak { background-color: var(--color-primary-green); }
-        .bg-blue-peak { background-color: var(--color-secondary-blue); }
-        .bg-yellow-accent { background-color: var(--color-accent-yellow); }
-        .text-blue-peak { color: var(--color-secondary-blue); }
-        .border-yellow-accent { border-color: var(--color-accent-yellow); }
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap');
+        :root{--green-900:#052e16;--green-800:#14532d;--green-700:#15803d;--green-600:#16a34a;--green-500:#22c55e;--green-400:#4ade80;--green-100:#dcfce7;--green-50:#f0fdf4;}
+        *{margin:0;padding:0;box-sizing:border-box;}
+        body{font-family:'Plus Jakarta Sans',sans-serif;background:white;color:#111827;}
+        #mobile-menu{transition:max-height 0.3s ease-out,opacity 0.3s ease-out;max-height:0;overflow:hidden;opacity:0;}
+        #mobile-menu.open{max-height:500px;opacity:1;}
 
-        #mobile-menu {
-            transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
-            max-height: 0;
-            overflow: hidden;
-            opacity: 0;
-        }
-        #mobile-menu.open { max-height: 500px; opacity: 1; }
+        .page-hero{background:linear-gradient(135deg,var(--green-900) 0%,var(--green-800) 50%,var(--green-700) 100%);position:relative;overflow:hidden;}
+        .page-hero::before{content:'';position:absolute;top:-100px;right:-100px;width:400px;height:400px;background:radial-gradient(circle,rgba(74,222,128,0.12) 0%,transparent 70%);pointer-events:none;}
 
-        .article-card {
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .article-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-        }
+        .article-card{background:white;border-radius:16px;overflow:hidden;border:1px solid #e5e7eb;box-shadow:0 2px 12px rgba(0,0,0,0.05);transition:transform 0.25s,box-shadow 0.25s;display:flex;flex-direction:column;}
+        .article-card:hover{transform:translateY(-5px);box-shadow:0 16px 40px rgba(22,163,74,0.12);}
+
+        .featured-card{background:white;border-radius:20px;overflow:hidden;border:1px solid #e5e7eb;box-shadow:0 4px 20px rgba(0,0,0,0.07);transition:transform 0.25s,box-shadow 0.25s;}
+        .featured-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(22,163,74,0.12);}
+
+        .category-tag{display:inline-block;padding:3px 10px;border-radius:20px;font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;}
+
+        .search-input{width:100%;padding:14px 16px 14px 48px;border:2px solid #e5e7eb;border-radius:12px;font-family:'Plus Jakarta Sans',sans-serif;font-size:0.95rem;outline:none;transition:border-color 0.2s;}
+        .search-input:focus{border-color:var(--green-500);}
+
+        .cta-section{background:linear-gradient(135deg,var(--green-800),var(--green-600));position:relative;overflow:hidden;}
+        .cta-section::before{content:'';position:absolute;top:-50%;right:-10%;width:400px;height:400px;background:radial-gradient(circle,rgba(255,255,255,0.06) 0%,transparent 70%);}
+
+        .footer-main{background:var(--green-900);}
+        .footer-bottom{background:#020f07;}
+
+        .whatsapp-float{position:fixed;bottom:28px;right:28px;background:#25D366;color:white;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.4);z-index:999;transition:transform 0.2s;text-decoration:none;}
+        .whatsapp-float:hover{transform:scale(1.1);}
+
+        @keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+        .fade-up{animation:fadeUp 0.6s ease both;}
     </style>
 </head>
+<body>
 
-<body class="min-h-screen flex flex-col">
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/2348087829365?text=Hello%20Peak%20Renewable,%20I%20want%20a%20free%20solar%20consultation." target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
 
-    <!-- NAVBAR (exact match) -->
-    <header class="sticky top-0 z-50 bg-white shadow-md">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <a href="/" class="flex items-center space-x-2">
-                <img src="/images/1000693979.png" alt="Peak Renewable Logo" class="w-10 h-10 rounded-full">
-                <span class="text-2xl font-bold text-blue-peak">Peak Renewable</span>
-            </a>
-            <nav class="hidden md:flex space-x-8 font-medium">
-                <a href="/" class="text-gray-700 hover:text-green-peak transition duration-150">Home</a>
-                <a href="/about" class="text-gray-700 hover:text-green-peak transition duration-150">About Us</a>
-                <a href="/services" class="text-gray-700 hover:text-green-peak transition duration-150">Services</a>
-                <a href="/product" class="text-gray-700 hover:text-green-peak transition duration-150">Products</a>
-                <a href="/articles" class="text-green-peak font-semibold transition duration-150">Articles</a>
-            </nav>
-            <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100" aria-label="Toggle menu">
-                <i data-lucide="menu" class="w-6 h-6"></i>
-            </button>
-        </div>
-        <nav id="mobile-menu" class="md:hidden bg-gray-50 border-t border-gray-200">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="/" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-200">Home</a>
-                <a href="/about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-200">About Us</a>
-                <a href="/services" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-200">Services</a>
-                <a href="/product" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-200">Products</a>
-                <a href="/articles" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-200">Articles</a>
-            </div>
+<!-- NAVBAR -->
+<header class="sticky top-0 z-50 bg-white shadow-sm border-b border-gray-100">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+        <a href="/" class="flex items-center space-x-2">
+            <img src="/images/1000693979.png" alt="Peak Renewable Energy Logo" class="w-10 h-10 rounded-full">
+            <span class="text-xl font-bold" style="color:var(--green-700)">Peak Renewable</span>
+        </a>
+        <nav class="hidden md:flex space-x-8 font-medium">
+            <a href="/" class="text-gray-600 hover:text-green-700 transition">Home</a>
+            <a href="/about" class="text-gray-600 hover:text-green-700 transition">About Us</a>
+            <a href="/services" class="text-gray-600 hover:text-green-700 transition">Services</a>
+            <a href="/product" class="text-gray-600 hover:text-green-700 transition">Products</a>
+            <a href="/articles" class="font-semibold" style="color:var(--green-600)">Articles</a>
         </nav>
-    </header>
+        <a href="https://wa.me/2348087829365?text=Hello%20Peak%20Renewable,%20I%20want%20a%20free%20solar%20consultation." target="_blank" class="hidden md:inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-white font-semibold text-sm transition" style="background:var(--green-600)" onmouseover="this.style.background='var(--green-700)'" onmouseout="this.style.background='var(--green-600)'">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Free Consultation
+        </a>
+        <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100" aria-label="Toggle menu">
+            <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+    </div>
+    <nav id="mobile-menu" class="md:hidden bg-white border-t border-gray-100">
+        <div class="px-4 pt-2 pb-4 space-y-1">
+            <a href="/" class="block px-3 py-2.5 rounded-lg text-base font-medium text-gray-700 hover:bg-gray-50">Home</a>
+            <a href="/about" class="block px-3 py-2.5 rounded-lg text-base font-medium text-gray-700 hover:bg-gray-50">About Us</a>
+            <a href="/services" class="block px-3 py-2.5 rounded-lg text-base font-medium text-gray-700 hover:bg-gray-50">Services</a>
+            <a href="/product" class="block px-3 py-2.5 rounded-lg text-base font-medium text-gray-700 hover:bg-gray-50">Products</a>
+            <a href="/articles" class="block px-3 py-2.5 rounded-lg text-base font-semibold" style="color:var(--green-600);background:var(--green-50)">Articles</a>
+            <a href="https://wa.me/2348087829365" target="_blank" class="block px-3 py-2.5 rounded-lg text-base font-semibold text-white text-center mt-2" style="background:var(--green-600)">Get Free Consultation</a>
+        </div>
+    </nav>
+</header>
 
-    <main class="flex-grow">
-        <section class="py-12 md:py-20 bg-white">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-
-                <!-- HEADING -->
-                <div class="text-center mb-12">
-                    <h1 class="text-4xl font-extrabold text-green-peak">Renewable Energy Insights</h1>
-                    <p class="text-xl text-gray-600 mt-3">Stay informed with the latest trends and guides from Peak Renewable experts.</p>
-                </div>
-
-                <!-- SEARCH -->
-                <div class="mb-10 max-w-2xl mx-auto">
-                    <div class="relative">
-                        <input type="search" id="search-input" placeholder="Search articles by title or topic..." class="w-full p-4 pl-12 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-green-peak focus:border-green-peak outline-none">
-                        <i data-lucide="search" class="w-5 h-5 text-gray-400 absolute left-4 top-1/2 -translate-y-1/2"></i>
-                    </div>
-                </div>
-
-                <!-- ARTICLES GRID - Static HTML so Google can read it -->
-                <div id="articles-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-                    <!-- ARTICLE 1 -->
-                    <article class="article-card bg-white rounded-xl shadow-lg overflow-hidden flex flex-col border-b-4 border-yellow-accent" data-title="future of solar next 5 years perovskite bifacial panels">
-                        <div class="p-6 flex-grow">
-                            <span class="text-sm text-gray-500">November 5, 2025</span>
-                            <h2 class="text-xl font-semibold text-blue-peak mt-2 mb-2">The Future of Solar: What to Expect in the Next 5 Years</h2>
-                            <p class="text-gray-600 text-sm mb-4">From perovskite cells to bifacial panels, the solar industry is evolving fast. Here's what's coming and how it affects Nigerian homes...</p>
-                        </div>
-                        <div class="p-6 bg-gray-50">
-                            <a href="/articles/future-of-solar-next-5-years" class="font-semibold text-green-peak hover:text-green-700 flex items-center">
-                                Read Full Article <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- ARTICLE 2 -->
-                    <article class="article-card bg-white rounded-xl shadow-lg overflow-hidden flex flex-col border-b-4 border-yellow-accent" data-title="how to choose right inverter home string microinverter hybrid">
-                        <div class="p-6 flex-grow">
-                            <span class="text-sm text-gray-500">October 28, 2025</span>
-                            <h2 class="text-xl font-semibold text-blue-peak mt-2 mb-2">How to Choose the Right Inverter for Your Home in Nigeria</h2>
-                            <p class="text-gray-600 text-sm mb-4">String inverter, microinverter or hybrid? This guide breaks down the differences and helps you pick the best option for your Nigerian home...</p>
-                        </div>
-                        <div class="p-6 bg-gray-50">
-                            <a href="/articles/how-to-choose-right-inverter" class="font-semibold text-green-peak hover:text-green-700 flex items-center">
-                                Read Full Article <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- ARTICLE 3 -->
-                    <article class="article-card bg-white rounded-xl shadow-lg overflow-hidden flex flex-col border-b-4 border-yellow-accent" data-title="solar maintenance tips keep system peak performance Nigeria">
-                        <div class="p-6 flex-grow">
-                            <span class="text-sm text-gray-500">October 15, 2025</span>
-                            <h2 class="text-xl font-semibold text-blue-peak mt-2 mb-2">Simple Maintenance Tips to Keep Your Solar System at Peak Performance</h2>
-                            <p class="text-gray-600 text-sm mb-4">Solar systems are low-maintenance, but a few simple checks during Harmattan and rainy season can add years to your investment...</p>
-                        </div>
-                        <div class="p-6 bg-gray-50">
-                            <a href="/articles/solar-maintenance-tips-nigeria" class="font-semibold text-green-peak hover:text-green-700 flex items-center">
-                                Read Full Article <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- ARTICLE 4 -->
-                    <article class="article-card bg-white rounded-xl shadow-lg overflow-hidden flex flex-col border-b-4 border-yellow-accent" data-title="what is renewable energy comprehensive guide solar wind hydro">
-                        <div class="p-6 flex-grow">
-                            <span class="text-sm text-gray-500">November 14, 2025</span>
-                            <h2 class="text-xl font-semibold text-blue-peak mt-2 mb-2">What is renewable energy engineering </h2>
-                            <p class="text-gray-600 text-sm mb-4">Solar, wind, hydro, geothermal — what exactly is renewable energy and why does it matter for World's power crisis? Everything explained simply...</p>
-                        </div>
-                        <div class="p-6 bg-gray-50">
-                            <a href="/articles/what-is-renewable-energy-engineering" class="font-semibold text-green-peak hover:text-green-700 flex items-center">
-                                Read Full Article <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- ARTICLE 5 -->
-                    <article class="article-card bg-white rounded-xl shadow-lg overflow-hidden flex flex-col border-b-4 border-yellow-accent" data-title="solar installation cost Lagos Nigeria price 2025">
-                        <div class="p-6 flex-grow">
-                            <span class="text-sm text-gray-500">January 10, 2025</span>
-                            <h2 class="text-xl font-semibold text-blue-peak mt-2 mb-2">How Much Does Solar Installation Cost in Lagos Nigeria in 2025?</h2>
-                            <p class="text-gray-600 text-sm mb-4">Real price ranges for solar installation in Lagos — from small home systems to full commercial setups. Don't get overcharged, read this first...</p>
-                        </div>
-                        <div class="p-6 bg-gray-50">
-                            <a href="/articles/solar-installation-cost-lagos" class="font-semibold text-green-peak hover:text-green-700 flex items-center">
-                                Read Full Article <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- ARTICLE 6 -->
-                    <article class="article-card bg-white rounded-xl shadow-lg overflow-hidden flex flex-col border-b-4 border-yellow-accent" data-title="solar vs NEPA electricity bill cheaper Nigeria 2025">
-                        <div class="p-6 flex-grow">
-                            <span class="text-sm text-gray-500">February 3, 2025</span>
-                            <h2 class="text-xl font-semibold text-blue-peak mt-2 mb-2">Solar vs NEPA Bill — Which is Cheaper for Nigerian Homes in 2026?</h2>
-                            <p class="text-gray-600 text-sm mb-4">A real honest breakdown comparing solar power costs vs NEPA electricity bills in Nigeria. Actual numbers, real calculations, honest verdict...</p>
-                        </div>
-                        <div class="p-6 bg-gray-50">
-                            <a href="/articles/solar-vs-nepa-bill-nigeria" class="font-semibold text-green-peak hover:text-green-700 flex items-center">
-                                Read Full Article <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
-                            </a>
-                        </div>
-                    </article>
-
-                </div>
-
-                <!-- NO RESULTS MESSAGE -->
-                <div id="no-results" class="text-center py-8 hidden">
-                    <p class="text-lg text-gray-600">No articles found matching your search. Try a different keyword.</p>
-                </div>
-
-                <!-- CTA (exact match) -->
-                <div class="mt-16 text-center p-8 bg-blue-peak rounded-xl">
-                    <h3 class="text-3xl font-bold text-white mb-4">Have a burning question?</h3>
-                    <p class="text-lg text-white opacity-90 mb-6">Reach out to our experts for a personalized consultation today.</p>
-                    <a href="/about" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg shadow-lg transition duration-300 ease-in-out bg-yellow-accent text-gray-900 hover:bg-yellow-500">Contact Us Now</a>
-                </div>
-
-            </div>
-        </section>
-    </main>
-
-    <!-- FOOTER (exact match) -->
-    <footer class="bg-gray-900 text-white">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div>
-                    <a href="/" class="flex items-center space-x-2 mb-4">
-                        <img src="/images/1000693979.png" alt="Peak Renewable Logo" class="w-10 h-10 rounded-full">
-                        <span class="text-2xl font-bold text-white">Peak Renewable</span>
-                    </a>
-                    <p class="text-gray-400">Your trusted partner in renewable energy solutions in Nigeria. Powering a sustainable future, one installation at a time.</p>
-                    <div class="flex space-x-4 mt-4">
-                        <a href="https://www.facebook.com/profile.php?id=61571879765300" target="_blank" rel="noopener" class="text-gray-400 hover:text-white" aria-label="Peak Renewable on Facebook">
-                            <i data-lucide="facebook" class="w-6 h-6"></i>
-                        </a>
-                        <a href="https://instagram.com/@ten_timesbetter" target="_blank" rel="noopener" class="text-gray-400 hover:text-white" aria-label="Peak Renewable on Instagram">
-                            <i data-lucide="instagram" class="w-6 h-6"></i>
-                        </a>
-                        <a href="https://twitter.com/@tenxbio" target="_blank" rel="noopener" class="text-gray-400 hover:text-white" aria-label="Peak Renewable on Twitter/X">
-                            <i data-lucide="twitter" class="w-6 h-6"></i>
-                        </a>
-                    </div>
-                </div>
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
-                    <ul class="space-y-2">
-                        <li><a href="/" class="text-gray-400 hover:text-white transition">Home</a></li>
-                        <li><a href="/about" class="text-gray-400 hover:text-white transition">About Us</a></li>
-                        <li><a href="/services" class="text-gray-400 hover:text-white transition">Services</a></li>
-                        <li><a href="/product" class="text-gray-400 hover:text-white transition">Products</a></li>
-                        <li><a href="/articles" class="text-gray-400 hover:text-white transition">Articles</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Our Services</h3>
-                    <ul class="space-y-2">
-                        <li><a href="/services" class="text-gray-400 hover:text-white transition">Solar Installation</a></li>
-                        <li><a href="/services" class="text-gray-400 hover:text-white transition">System Maintenance</a></li>
-                        <li><a href="/services" class="text-gray-400 hover:text-white transition">Energy Consultation</a></li>
-                        <li><a href="/product" class="text-gray-400 hover:text-white transition">Product Supply</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
-                    <ul class="space-y-3">
-                        <li class="flex items-center space-x-2">
-                            <i data-lucide="map-pin" class="w-5 h-5 text-gray-400"></i>
-                            <span class="text-gray-400">Lagos, Nigeria</span>
-                        </li>
-                        <li class="flex items-center space-x-2">
-                            <i data-lucide="phone" class="w-5 h-5 text-gray-400"></i>
-                            <a href="tel:+2348087829365" class="text-gray-400 hover:text-white transition">+234 808 782 9365</a>
-                        </li>
-                        <li class="flex items-center space-x-2">
-                            <i data-lucide="mail" class="w-5 h-5 text-gray-400"></i>
-                            <a href="mailto:peakrenewable@gmail.com" class="text-gray-400 hover:text-white transition truncate">peakrenewable@gmail.com</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="mt-8 border-t border-gray-700 pt-8 text-center text-gray-500">
-                <p>&copy; 2025 Peak Renewable. All rights reserved. Built for a sustainable tomorrow.</p>
-                <p class="mt-2 text-sm">Website created by Time Studio.
-                    <a href="https://wa.me/2349116541398" target="_blank" rel="noopener" class="text-gray-400 hover:text-white underline">Contact them</a>
-                </p>
+<main>
+    <!-- HERO -->
+    <section class="page-hero py-16 px-4 md:py-24">
+        <div class="container mx-auto max-w-4xl text-center fade-up">
+            <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold mb-6" style="background:rgba(74,222,128,0.15);color:var(--green-400);border:1px solid rgba(74,222,128,0.3)">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                Solar Knowledge Hub
+            </span>
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6">
+                Renewable Energy <span style="color:var(--green-400)">Insights & Guides</span>
+            </h1>
+            <p class="text-xl max-w-2xl mx-auto mb-8" style="color:rgba(255,255,255,0.8)">Real guides, honest comparisons and expert advice on solar energy in Nigeria — written by our team to help you make smarter energy decisions.</p>
+            <!-- SEARCH -->
+            <div class="max-w-xl mx-auto relative">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="absolute left-4 top-1/2 -translate-y-1/2" style="color:#9ca3af"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                <input type="search" id="search-input" placeholder="Search articles — solar cost, inverter, maintenance..." class="search-input bg-white">
             </div>
         </div>
-    </footer>
+    </section>
 
-    <script>
-        // Mobile menu
-        document.getElementById('mobile-menu-button').addEventListener('click', function() {
-            const menu = document.getElementById('mobile-menu');
-            const isOpen = menu.classList.toggle('open');
-            this.innerHTML = isOpen
-                ? `<i data-lucide="x" class="w-6 h-6"></i>`
-                : `<i data-lucide="menu" class="w-6 h-6"></i>`;
-            lucide.createIcons();
+    <!-- STATS BAR -->
+    <section class="py-8 px-4" style="background:var(--green-600)">
+        <div class="container mx-auto max-w-4xl">
+            <div class="grid grid-cols-3 gap-6 text-center text-white">
+                <div><div class="text-2xl font-extrabold">6</div><div class="text-xs mt-1" style="color:rgba(255,255,255,0.8)">Articles Published</div></div>
+                <div><div class="text-2xl font-extrabold">Nigeria</div><div class="text-xs mt-1" style="color:rgba(255,255,255,0.8)">Focused Content</div></div>
+                <div><div class="text-2xl font-extrabold">Free</div><div class="text-xs mt-1" style="color:rgba(255,255,255,0.8)">Always Free to Read</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ARTICLES -->
+    <section class="py-20 px-4" style="background:var(--green-50)">
+        <div class="container mx-auto max-w-6xl">
+
+            <!-- FEATURED -->
+            <div class="mb-10">
+                <span class="inline-block px-4 py-1.5 rounded-full text-sm font-semibold mb-6" style="background:var(--green-100);color:var(--green-700)">Featured Articles</span>
+                <div class="grid md:grid-cols-2 gap-8">
+
+                    <a href="/articles/solar-vs-nepa-bill-nigeria" class="featured-card block group">
+                        <div class="p-7">
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="category-tag" style="background:var(--green-100);color:var(--green-700)">Cost & Savings</span>
+                                <span class="text-xs text-gray-400">February 3, 2026 · 9 min read</span>
+                            </div>
+                            <h2 class="text-xl font-extrabold mb-3 group-hover:text-green-700 transition" style="color:var(--green-900)">Solar vs NEPA Bill — Which is Actually Cheaper for Nigerian Homes?</h2>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-4">Real numbers. Honest calculations. No marketing spin. The truth about what costs more in Nigeria today — with actual naira figures and 10-year projections.</p>
+                            <span class="inline-flex items-center gap-1 font-semibold text-sm" style="color:var(--green-600)">Read article <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+                        </div>
+                    </a>
+
+                    <a href="/articles/solar-installation-cost-lagos" class="featured-card block group">
+                        <div class="p-7">
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="category-tag" style="background:var(--green-100);color:var(--green-700)">Nigeria Guide</span>
+                                <span class="text-xs text-gray-400">January 10, 2026 · 10 min read</span>
+                            </div>
+                            <h2 class="text-xl font-extrabold mb-3 group-hover:text-green-700 transition" style="color:var(--green-900)">How Much Does Solar Installation Cost in Lagos Nigeria?</h2>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-4">Real price ranges for every system size — from ₦600k starter setups to ₦18m+ large homes. Don't get overcharged. Read this before you buy.</p>
+                            <span class="inline-flex items-center gap-1 font-semibold text-sm" style="color:var(--green-600)">Read article <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+
+            <!-- ALL ARTICLES -->
+            <span class="inline-block px-4 py-1.5 rounded-full text-sm font-semibold mb-6" style="background:var(--green-100);color:var(--green-700)">All Articles</span>
+            <div id="articles-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- ARTICLE 1 -->
+                <article class="article-card" data-title="future solar next 5 years perovskite bifacial panels technology">
+                    <div class="p-6 flex-1 flex flex-col">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="category-tag" style="background:var(--green-100);color:var(--green-700)">Future Tech</span>
+                            <span class="text-xs text-gray-400">Nov 5, 2025</span>
+                        </div>
+                        <h2 class="text-lg font-bold mb-2 flex-1" style="color:var(--green-900)">The Future of Solar: What to Expect in the Next 5 Years</h2>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">From perovskite cells to bifacial panels and AI-powered grids — the solar industry is evolving fast. Here's what's coming and how it affects Nigerian homes.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-gray-400">8 min read</span>
+                            <a href="/articles/future-of-solar-next-5-years" class="inline-flex items-center gap-1 font-bold text-sm transition" style="color:var(--green-600)" onmouseover="this.style.color='var(--green-800)'" onmouseout="this.style.color='var(--green-600)'">Read <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ARTICLE 2 -->
+                <article class="article-card" data-title="choose right inverter home string microinverter hybrid Nigeria">
+                    <div class="p-6 flex-1 flex flex-col">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="category-tag" style="background:var(--green-100);color:var(--green-700)">Products</span>
+                            <span class="text-xs text-gray-400">Oct 28, 2025</span>
+                        </div>
+                        <h2 class="text-lg font-bold mb-2 flex-1" style="color:var(--green-900)">How to Choose the Right Inverter for Your Home in Nigeria</h2>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">String inverter, microinverter or hybrid? This guide breaks down the real differences and helps you pick the best option for your Nigerian home and budget.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-gray-400">10 min read</span>
+                            <a href="/articles/how-to-choose-right-inverter" class="inline-flex items-center gap-1 font-bold text-sm transition" style="color:var(--green-600)" onmouseover="this.style.color='var(--green-800)'" onmouseout="this.style.color='var(--green-600)'">Read <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ARTICLE 3 -->
+                <article class="article-card" data-title="solar maintenance tips keep system peak performance Nigeria harmattan">
+                    <div class="p-6 flex-1 flex flex-col">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="category-tag" style="background:var(--green-100);color:var(--green-700)">Maintenance</span>
+                            <span class="text-xs text-gray-400">Oct 15, 2025</span>
+                        </div>
+                        <h2 class="text-lg font-bold mb-2 flex-1" style="color:var(--green-900)">Simple Maintenance Tips to Keep Your Solar System at Peak Performance</h2>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">Solar systems are low-maintenance — but a few simple checks during Harmattan and rainy season can add years to your investment and prevent expensive repairs.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-gray-400">8 min read</span>
+                            <a href="/articles/solar-maintenance-tips-nigeria" class="inline-flex items-center gap-1 font-bold text-sm transition" style="color:var(--green-600)" onmouseover="this.style.color='var(--green-800)'" onmouseout="this.style.color='var(--green-600)'">Read <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ARTICLE 4 -->
+                <article class="article-card" data-title="what is renewable energy engineering solar wind hydro geothermal Nigeria">
+                    <div class="p-6 flex-1 flex flex-col">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="category-tag" style="background:var(--green-100);color:var(--green-700)">Education</span>
+                            <span class="text-xs text-gray-400">Nov 14, 2025</span>
+                        </div>
+                        <h2 class="text-lg font-bold mb-2 flex-1" style="color:var(--green-900)">What is Renewable Energy Engineering?</h2>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">Solar, wind, hydro, geothermal — what exactly is renewable energy and why does it matter for Nigeria's power crisis? Everything explained simply and clearly.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-gray-400">12 min read</span>
+                            <a href="/articles/what-is-renewable-energy-engineering" class="inline-flex items-center gap-1 font-bold text-sm transition" style="color:var(--green-600)" onmouseover="this.style.color='var(--green-800)'" onmouseout="this.style.color='var(--green-600)'">Read <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ARTICLE 5 -->
+                <article class="article-card" data-title="solar installation cost Lagos Nigeria price residential commercial">
+                    <div class="p-6 flex-1 flex flex-col">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="category-tag" style="background:var(--green-100);color:var(--green-700)">Nigeria Guide</span>
+                            <span class="text-xs text-gray-400">Jan 10, 2026</span>
+                        </div>
+                        <h2 class="text-lg font-bold mb-2 flex-1" style="color:var(--green-900)">How Much Does Solar Installation Cost in Lagos Nigeria?</h2>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">Real price ranges for every system size — from small apartments to large commercial buildings. Don't get overcharged. Read this before you spend a kobo.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-gray-400">10 min read</span>
+                            <a href="/articles/solar-installation-cost-lagos" class="inline-flex items-center gap-1 font-bold text-sm transition" style="color:var(--green-600)" onmouseover="this.style.color='var(--green-800)'" onmouseout="this.style.color='var(--green-600)'">Read <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ARTICLE 6 -->
+                <article class="article-card" data-title="solar vs NEPA electricity bill cheaper Nigeria generator fuel cost">
+                    <div class="p-6 flex-1 flex flex-col">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="category-tag" style="background:var(--green-100);color:var(--green-700)">Cost & Savings</span>
+                            <span class="text-xs text-gray-400">Feb 3, 2026</span>
+                        </div>
+                        <h2 class="text-lg font-bold mb-2 flex-1" style="color:var(--green-900)">Solar vs NEPA Bill — Which is Actually Cheaper for Nigerian Homes?</h2>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">A real honest breakdown comparing solar power costs vs NEPA electricity bills. Actual numbers, real calculations, honest verdict — no marketing spin.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-gray-400">9 min read</span>
+                            <a href="/articles/solar-vs-nepa-bill-nigeria" class="inline-flex items-center gap-1 font-bold text-sm transition" style="color:var(--green-600)" onmouseover="this.style.color='var(--green-800)'" onmouseout="this.style.color='var(--green-600)'">Read <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- NO RESULTS -->
+            <div id="no-results" class="text-center py-12 hidden">
+                <div class="text-4xl mb-3">🔍</div>
+                <p class="text-lg font-bold text-gray-700 mb-1">No articles found</p>
+                <p class="text-gray-500">Try a different keyword like "cost", "inverter", "maintenance" or "solar".</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section py-20 px-4">
+        <div class="container mx-auto max-w-4xl text-center relative z-10">
+            <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-6">Have a Solar Question?</h2>
+            <p class="text-xl mb-10 max-w-2xl mx-auto" style="color:rgba(255,255,255,0.85)">Our team is ready to give you honest, personalised advice — for free. No pressure. No upselling. Just real answers.</p>
+            <div class="flex flex-wrap gap-4 justify-center">
+                <a href="https://wa.me/2348087829365?text=Hello%20Peak%20Renewable,%20I%20have%20a%20solar%20question." target="_blank" class="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-bold text-gray-900 text-lg transition" style="background:var(--green-400)" onmouseover="this.style.background='#86efac'" onmouseout="this.style.background='var(--green-400)'">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    Ask on WhatsApp
+                </a>
+                <a href="/about" class="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-bold text-white text-lg transition" style="border:2px solid rgba(255,255,255,0.4)" onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='transparent'">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer-main">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+            <div class="lg:col-span-1">
+                <a href="/" class="flex items-center space-x-2 mb-5">
+                    <img src="/images/1000693979.png" alt="Peak Renewable Energy Logo" class="w-12 h-12 rounded-full border-2" style="border-color:var(--green-500)">
+                    <span class="text-xl font-bold text-white">Peak Renewable</span>
+                </a>
+                <p class="text-sm leading-relaxed mb-6" style="color:rgba(255,255,255,0.6)">Nigeria's trusted solar energy company. Professional solar installation, maintenance and consultation across Lagos, Ogun and Ibadan.</p>
+                <div class="flex items-center gap-4">
+                    <a href="https://www.facebook.com/share/1BnS3tCH4W/" target="_blank" rel="noopener" aria-label="Facebook" class="w-10 h-10 rounded-lg flex items-center justify-center transition" style="background:rgba(255,255,255,0.08)" onmouseover="this.style.background='var(--green-600)'" onmouseout="this.style.background='rgba(255,255,255,0.08)'"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+                    <a href="https://instagram.com/peak_renewable_energy" target="_blank" rel="noopener" aria-label="Instagram" class="w-10 h-10 rounded-lg flex items-center justify-center transition" style="background:rgba(255,255,255,0.08)" onmouseover="this.style.background='var(--green-600)'" onmouseout="this.style.background='rgba(255,255,255,0.08)'"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+                    <a href="https://wa.me/2348087829365" target="_blank" rel="noopener" aria-label="WhatsApp" class="w-10 h-10 rounded-lg flex items-center justify-center transition" style="background:rgba(255,255,255,0.08)" onmouseover="this.style.background='#25D366'" onmouseout="this.style.background='rgba(255,255,255,0.08)'"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+                    <a href="https://twitter.com/@PeakRenewa76354" target="_blank" rel="noopener" aria-label="Twitter" class="w-10 h-10 rounded-lg flex items-center justify-center transition" style="background:rgba(255,255,255,0.08)" onmouseover="this.style.background='var(--green-600)'" onmouseout="this.style.background='rgba(255,255,255,0.08)'"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg></a>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-white font-bold mb-5 text-sm uppercase tracking-wider">Quick Links</h3>
+                <ul class="space-y-3">
+                    <li><a href="/" class="text-sm transition hover:text-white flex items-center gap-2" style="color:rgba(255,255,255,0.6)"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg> Home</a></li>
+                    <li><a href="/about" class="text-sm transition hover:text-white flex items-center gap-2" style="color:rgba(255,255,255,0.6)"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg> About Us</a></li>
+                    <li><a href="/services" class="text-sm transition hover:text-white flex items-center gap-2" style="color:rgba(255,255,255,0.6)"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg> Services</a></li>
+                    <li><a href="/product" class="text-sm transition hover:text-white flex items-center gap-2" style="color:rgba(255,255,255,0.6)"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg> Products</a></li>
+                    <li><a href="/articles" class="text-sm transition hover:text-white flex items-center gap-2" style="color:rgba(255,255,255,0.6)"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg> Articles</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-white font-bold mb-5 text-sm uppercase tracking-wider">Our Services</h3>
+                <ul class="space-y-3">
+                    <li><a href="/services" class="text-sm transition hover:text-white flex items-center gap-2" style="color:rgba(255,255,255,0.6)"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg> Solar Installation</a></li>
+                    <li><a href="/services" class="text-sm transition hover:text-white flex items-center gap-2" style="color:rgba(255,255,255,0.6)"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg> System Maintenance</a></li>
+                    <li><a href="/services" class="text-sm transition hover:text-white flex items-center gap-2" style="color:rgba(255,255,255,0.6)"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg> Energy Consultation</a></li>
+                    <li><a href="/product" class="text-sm transition hover:text-white flex items-center gap-2" style="color:rgba(255,255,255,0.6)"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg> Product Supply</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-white font-bold mb-5 text-sm uppercase tracking-wider">Contact Us</h3>
+                <ul class="space-y-4">
+                    <li class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 flex-shrink-0" style="color:var(--green-400)"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span class="text-sm" style="color:rgba(255,255,255,0.6)">Lagos, Ogun & Ibadan, Nigeria</span></li>
+                    <li class="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--green-400);flex-shrink:0"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+2348087829365" class="text-sm transition hover:text-white" style="color:rgba(255,255,255,0.6)">+234 808 782 9365</a></li>
+                    <li class="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--green-400);flex-shrink:0"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:peakrenewable@gmail.com" class="text-sm transition hover:text-white truncate" style="color:rgba(255,255,255,0.6)">peakrenewable@gmail.com</a></li>
+                    <li class="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--green-400);flex-shrink:0"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><a href="https://www.peakret.cloud" class="text-sm transition hover:text-white" style="color:rgba(255,255,255,0.6)">www.peakret.cloud</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom py-5 px-4">
+        <div class="container mx-auto max-w-6xl flex flex-col md:flex-row justify-between items-center gap-3">
+            <p class="text-sm" style="color:rgba(255,255,255,0.4)">&copy; 2026 Peak Renewable Energy. All rights reserved.</p>
+            <p class="text-sm" style="color:rgba(255,255,255,0.4)">Website created by Time Studio. <a href="https://wa.me/2349116541398" target="_blank" rel="noopener" class="hover:text-white underline transition">Contact them</a></p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Mobile menu
+    const menuBtn=document.getElementById('mobile-menu-button');
+    const mobileMenu=document.getElementById('mobile-menu');
+    const menuIcon=document.getElementById('menu-icon');
+    let open=false;
+    menuBtn.addEventListener('click',()=>{
+        open=!open;
+        mobileMenu.classList.toggle('open',open);
+        menuIcon.innerHTML=open?'<line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>':'<line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/>';
+    });
+
+    // Search
+    document.getElementById('search-input').addEventListener('input',function(){
+        const term=this.value.toLowerCase();
+        const articles=document.querySelectorAll('#articles-grid article');
+        let visible=0;
+        articles.forEach(a=>{
+            const title=a.querySelector('h2').textContent.toLowerCase();
+            const data=a.dataset.title.toLowerCase();
+            const excerpt=a.querySelector('p').textContent.toLowerCase();
+            const show=!term||title.includes(term)||data.includes(term)||excerpt.includes(term);
+            a.style.display=show?'flex':'none';
+            if(show)visible++;
         });
-
-        // Search
-        document.getElementById('search-input').addEventListener('input', function() {
-            const term = this.value.toLowerCase();
-            const articles = document.querySelectorAll('#articles-grid article');
-            let visible = 0;
-
-            articles.forEach(article => {
-                const title = article.querySelector('h2').textContent.toLowerCase();
-                const data = article.dataset.title.toLowerCase();
-                const excerpt = article.querySelector('p').textContent.toLowerCase();
-                if (title.includes(term) || data.includes(term) || excerpt.includes(term)) {
-                    article.style.display = 'flex';
-                    visible++;
-                } else {
-                    article.style.display = 'none';
-                }
-            });
-
-            document.getElementById('no-results').classList.toggle('hidden', visible > 0);
-        });
-
-        lucide.createIcons();
-    </script>
+        document.getElementById('no-results').classList.toggle('hidden',visible>0||!term);
+    });
+</script>
 </body>
 </html>
